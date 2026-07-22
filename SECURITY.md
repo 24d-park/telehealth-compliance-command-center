@@ -109,15 +109,21 @@ person, citing this source" must be reconstructable. An audit log:
 The log must be append-only and protected from the same users who generate it — an audit
 trail an ordinary user can edit is not an audit trail.
 
-### 7. Rate limiting on search / chat endpoints
-**What:** Per-user and per-IP request caps on expensive or abusable endpoints (search, any
-chat/AI endpoint), with sensible burst + sustained limits and clear 429 responses.
+### 7. Rate limiting on search / query endpoints
+**What:** Per-user and per-IP request caps on expensive or abusable endpoints (search, and any
+future server-side query/AI endpoint), with sensible burst + sustained limits and clear 429
+responses.
 
-**Why it matters:** Search and chat endpoints are expensive (DB queries, possibly LLM calls)
-and abusable. Without limits: a single client can exhaust resources and deny service to
-everyone; an attacker can brute-force or scrape the entire dataset; and if chat calls a paid
-API, an abuser can run up cost. Rate limiting keeps the system available and bounds both the
-financial and data-exfiltration blast radius of a misbehaving or hostile client.
+**Why it matters:** Search endpoints are expensive (DB queries) and abusable. Without limits: a
+single client can exhaust resources and deny service to everyone, and an attacker can brute-force
+or scrape the entire dataset. Rate limiting keeps the system available and bounds both the resource
+and data-exfiltration blast radius of a misbehaving or hostile client.
+
+**Applies to the Ask box only if it is upgraded server-side.** The current "Ask (grounded)"
+feature (see §11) runs entirely client-side with no endpoint and no LLM, so there is nothing to
+rate-limit or run up cost against today. If it is ever upgraded to a server-side RAG proxy, this
+control (and the secrets control in §9) becomes mandatory for that endpoint — a chat endpoint that
+calls a paid API is a classic cost-exhaustion and scraping target.
 
 ### 8. Input validation
 **What:** Validate and sanitize *all* input server-side — types, lengths, formats, allowed
@@ -155,6 +161,26 @@ against a bad edit (you can see and revert it), preserves the provenance chain t
 dashboard is built on, and makes regulatory *change* visible over time rather than erasing it.
 Combined with the audit log (who/when) and the provenance model (which source), source history
 completes the "trustworthy record" promise.
+
+### 11. Grounded "Ask" box — client-side retrieval, no key, no endpoint
+**What:** The natural-language "Ask (grounded)" feature is **retrieval-only**: it runs entirely in
+the browser, uses **no language model, no API key, and no server endpoint**. It maps a question to a
+state + topic and returns the exact verified note + primary-source citation already in the page's
+data, or an honest "needs legal review" for unsourced fields.
+
+**Why it matters (security-positive by design):**
+- **No secret to leak.** There is no API key in the client code, so there is nothing for a viewer
+  to lift from DevTools on the public GitHub Pages build — the failure mode that ruled out the
+  client-side-LLM option is structurally impossible here.
+- **No abusable endpoint.** With no server call, there is no paid API to run up, no request to
+  rate-limit, and no server-side injection surface reachable through the box.
+- **Cannot fabricate.** It can only surface data already vetted under the provenance rule, so it
+  cannot invent a citation or a compliance answer — consistent with the no-fabrication guarantee.
+
+**If upgraded later (Option B RAG):** phrasing could be improved by sending the *retrieved records*
+to an LLM behind a serverless proxy. In that design the key lives in the server environment (never
+client-side, per §9) and the endpoint is rate-limited (per §7); the grounding still prevents
+hallucination because the model is constrained to the retrieved records.
 
 ---
 

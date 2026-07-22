@@ -30,3 +30,10 @@ Telehealth practice standard = **SDCL ch. 34-52** (SL 2019 ch 156, amended throu
 
 ## FOLLOW-UP
 - Independently open ARSD 20:51:31:32 to lock the compounding cite at subsection level (currently subagent-read).
+
+
+## UPDATE 2026-07-22 (sweep) — +1 field (15 -> 16/20)
+
+- **provider.telehealthReg (wired):** SDCL §34-52-2 read verbatim on sdlegislature.gov — telehealth providers "shall be (1) Fully licensed to practice in the state ... and (2) Subject to any rule adopted by the applicable South Dakota licensing body." Full SD licensure; no separate registration. [sd_telehealth]
+
+Still red (4), all honest: modality.audioOnly (§34-52-1(5) enumerates "interactive audio WITH store and forward," NOT standalone audio-only — not a clean permit), prescribing.pdmp (§34-20E-11 expressly makes the query non-mandatory), pharmacy.csDispense, ecommerce.website.

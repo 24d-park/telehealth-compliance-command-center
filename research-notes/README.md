@@ -35,7 +35,7 @@ may differ by the ±2 federal defaults; see each note for the exact breakdown.
 | [Georgia](GA.md) | 14 / 20 |  |
 | [Hawaii](HI.md) | 13 / 20 | capitol.hawaii.gov Cloudflare-blocked; recovered via Wayback id_ + DCCA PDF |
 | [Iowa](IA.md) | 15 / 20 |  |
-| [Idaho](ID.md) | 14 / 20 |  |
+| [Idaho](ID.md) | 17 / 20 | +telehealthReg/consent/audio-only (Idaho Code 54-5713/5708/5703, Virtual Care Access Act) |
 | [Illinois](IL.md) | 17 / 20 |  |
 | [Indiana](IN.md) | 9 / 20 | Telehealth core (IC 25-1-9.5 §§7-10) via Justia/Wayback id_ + 4 federal-framework defaults; pharmacy/PDMP/compounding still open |
 | [Kansas](KS.md) | 13 / 20 | +audio-only exclusion (K.S.A. 40-2,211); prescribing/compounding in K.A.R. (sos.ks.gov path 404s) |
@@ -51,7 +51,7 @@ may differ by the ±2 federal defaults; see each note for the exact breakdown.
 | [Montana](MT.md) | 13 / 20 |  |
 | [North Carolina](NC.md) | 16 / 20 | audio-only/in-person-Rx/compounding red (NC OAH admin-code server blocks; board position statement non-statutory) |
 | [North Dakota](ND.md) | 13 / 20 |  |
-| [Nebraska](NE.md) | 13 / 20 |  |
+| [Nebraska](NE.md) | 15 / 20 | +fullLicense + telehealthReg (Neb. Rev. Stat. 38-121 UCA); pdmp red (dispenser-report only, no mandatory query) |
 | [New Hampshire](NH.md) | 11 / 20 | all live NH hosts WAF-403; recovered via Wayback id_ |
 | [New Jersey](NJ.md) | 14 / 20 | Telehealth Act (P.L.2017 c.117) via pdf.js; pharmacy/e-commerce behind Imperva-blocked N.J.A.C. 13:39 |
 | [New Mexico](NM.md) | 17 / 20 | nmonesource.com 403; sourced via NMAC (srca.nm.gov) |
@@ -63,7 +63,7 @@ may differ by the ±2 federal defaults; see each note for the exact breakdown.
 | [Pennsylvania](PA.md) | 14 / 20 |  |
 | [Rhode Island](RI.md) | 15 / 20 |  |
 | [South Carolina](SC.md) | 17 / 20 | +audio-only permitted (medium-neutral def 40-47-20(53)); async/consent/website remain |
-| [South Dakota](SD.md) | 15 / 20 |  |
+| [South Dakota](SD.md) | 16 / 20 | +telehealthReg (SDCL 34-52-2 full-licensure); audio-only/pdmp red (audio needs store-forward; 34-20E-11 non-mandatory) |
 | [Tennessee](TN.md) | 13 / 20 | Wayback-sourced statute text |
 | [Texas](TX.md) | 20 / 20 | COMPLETE — Occ. Code 151.056/562.056/562.101/562.1045 (incl. rare real on-website disclosure mandate) |
 | [Utah](UT.md) | 16 / 20 | +telehealthReg (26B-4-704 Title 58 licensure); reds genuine (audio-only needs A+V, no consent statute, DOPL e-commerce) |

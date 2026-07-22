@@ -25,3 +25,13 @@ The former "Idaho Telehealth Access Act" is now the **Idaho Virtual Care Access 
 
 ## FOLLOW-UP
 - Re-open IDAPA 24.36.01 on the live adminrules.idaho.gov once the outage clears, to re-confirm the compounding "in consideration of" language and check for any hardened PIC/nonresident rule detail.
+
+
+## UPDATE 2026-07-22 (sweep) — +3 fields (14 -> 17/20)
+
+Read verbatim on legislature.idaho.gov (Idaho Virtual Care Access Act, Title 54 Ch. 57):
+- **provider.telehealthReg (wired):** §54-5713(1) — "Prior to delivering health care services via virtual care, a provider must obtain a license from the applicable licensing board," with only narrow out-of-state exemptions (temporary-visitor continuity, facility-credentialed, disaster, pre-visit prep, consult/referral). Full Idaho licensure; no separate telehealth registration. [id_virtualcare]
+- **relationship.consent (wired):** §54-5708 — "A patient's informed consent for the use of virtual care shall be obtained as required by any applicable law." [id_virtualcare]
+- **modality.audioOnly (wired):** §54-5703(5) — "virtual care" is a technology-neutral umbrella ("synchronous and asynchronous ... telemedicine, telehealth, m-health, e-consults, e-visits, video visits, remote patient monitoring, and similar technologies"); audio-only is not excluded, so permitted at the standard of care. [id_virtualcare]
+
+Still red (3): prescribing.pdmp, pharmacy.csDispense, ecommerce.website.

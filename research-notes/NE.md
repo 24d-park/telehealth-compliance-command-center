@@ -27,3 +27,12 @@ The **entire Nebraska Telehealth Act (§§71-8501–71-8512) is MEDICAID-FRAMED.
 ## FOLLOW-UP
 - Title 172 NAC (DHHS regulations) for the general community-pharmacy PIC rule, questionnaire/DTC ban, and any Board of Medicine telehealth practice standard (would let fullLicense/dtc/pic go green outside the Medicaid frame).
 - Monitor: §71-2454.01 repealed operative 7/1/2026 (LB905); §38-2850 amended operative 7/18/2026 (LB912).
+
+
+## UPDATE 2026-07-22 (sweep) — +2 fields (13 -> 15/20)
+
+Read verbatim on nebraskalegislature.gov:
+- **provider.fullLicense (wired):** Neb. Rev. Stat. §38-121(1)(y) — "No individual shall engage in the following practices unless such individual has obtained a credential under the Uniform Credentialing Act: ... (y) Medicine and surgery." NE regulates at the patient's location, so a NE license is required to treat NE patients via telehealth. [ne_38121]
+- **provider.telehealthReg (wired):** Chapter 38 (incl. Telehealth Act definitions) creates NO separate telehealth registration — practice via telehealth uses the same underlying UCA credential. [ne_38121]
+
+Still red (5): prescribing.inPersonRx, prescribing.pdmp (§71-2454 is a dispenser-REPORTING mandate that only "allow[s]" prescriber access — NOT a mandatory query, so left red honestly), pharmacy.pic, ecommerce.website, ecommerce.dtc.
