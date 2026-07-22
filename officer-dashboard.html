@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>State Pharmacy Compliance Officer — Command Center</title>
+<style>
+  :root{
+    --bg:#0b1220;--panel:#111c30;--panel2:#16233b;--line:#22324f;
+    --ink:#e7eefb;--dim:#8ea3c4;--faint:#5f739a;
+    --pic:#34d399;--tele:#5b9dff;--pic:#34d399;--tele:#5b9dff;--comp:#c084fc;--ecom:#fbbf24;
+    --accent:#5b9dff;--accent2:#8b7bff;--shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1100px 560px at 82% -12%,#15233d 0,transparent 60%),var(--bg);
+    color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+  .wrap{max-width:1080px;margin:0 auto;padding:22px 22px 80px}
+  header.top{display:flex;align-items:center;gap:13px;margin-bottom:6px}
+  .logo{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));
+    display:grid;place-items:center;font-weight:800;font-size:20px;color:#0b1220;box-shadow:var(--shadow)}
+  h1{font-size:20px;margin:0}.sub{color:var(--dim);font-size:12.5px;margin-top:2px}
+  .navlink{align-self:center;background:var(--panel);border:1px solid var(--line);color:var(--ink);
+    border-radius:10px;padding:9px 13px;font-size:13px;white-space:nowrap;text-decoration:none}
+  .navlink:hover{border-color:var(--accent);text-decoration:none}
+  .disc{background:#2a1e10;border:1px solid #6b4e1d;color:#ffd98a;border-radius:12px;padding:10px 14px;
+    font-size:12.5px;margin:14px 0 18px;display:flex;gap:9px}.disc b{color:#ffe6ad}
+
+  .pickrow{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+  select,input[type=search]{background:var(--panel);border:1px solid var(--line);color:var(--ink);
+    border-radius:10px;padding:11px 13px;font-size:14.5px;outline:none}
+  select{min-width:280px;font-weight:600}select:focus,input:focus{border-color:var(--accent)}
+  .verified{font-size:11px;color:var(--pic);display:inline-flex;align-items:center;gap:5px}
+  .flagged{font-size:11px;color:var(--ecom)}
+
+  .boardcard{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);
+    border-radius:14px;padding:16px 18px;margin:14px 0 16px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .boardcard .bn{font-size:17px;font-weight:700}
+  .boardcard .meta{color:var(--dim);font-size:12.5px;margin-top:3px}
+  .boardcard a.src{font-size:13px;word-break:break-all}
+
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 0}
+  .tab{background:var(--panel);border:1px solid var(--line);color:var(--dim);border-radius:11px 11px 0 0;
+    padding:11px 16px;font-size:13.5px;cursor:pointer;font-weight:600;border-bottom:none;display:flex;align-items:center;gap:8px}
+  .tab .d{width:9px;height:9px;border-radius:50%}
+  .tab.active{color:var(--ink);background:var(--panel2)}
+  .tab[data-p=pic] .d{background:var(--pic)}.tab[data-p=tele] .d{background:var(--tele)}
+  .tab[data-p=comp] .d{background:var(--comp)}.tab[data-p=ecom] .d{background:var(--ecom)}
+  .tab.active[data-p=pic]{border-top:2px solid var(--pic)}
+  .tab.active[data-p=tele]{border-top:2px solid var(--tele)}
+  .tab.active[data-p=comp]{border-top:2px solid var(--comp)}
+  .tab.active[data-p=ecom]{border-top:2px solid var(--ecom)}
+
+  .panel{background:var(--panel2);border:1px solid var(--line);border-radius:0 14px 14px 14px;padding:20px 22px;min-height:260px}
+  .panel h2{margin:0 0 3px;font-size:18px}.panel .who{color:var(--dim);font-size:12.5px;margin-bottom:16px}
+  .mon{list-style:none;padding:0;margin:0}
+  .mon li{padding:11px 0 11px 26px;position:relative;border-bottom:1px dashed var(--line);font-size:14px}
+  .mon li:last-child{border-bottom:0}
+  .mon li:before{content:"";position:absolute;left:2px;top:16px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+  .mon li b{color:#fff}
+  .mon li .n{display:block;color:var(--faint);font-size:12px;margin-top:3px}
+  .statebit{background:#0d1728;border:1px solid var(--line);border-radius:10px;padding:11px 14px;margin-top:16px;font-size:13px;color:var(--dim)}
+  .statebit b{color:var(--ink)}
+  .tag{display:inline-block;font-size:10.5px;padding:2px 8px;border-radius:20px;margin-left:8px;font-weight:700}
+  .tag.fed{background:#13324a;color:#7cc4ff}.tag.usp{background:#2c1f42;color:#c9a9ff}
+  /* provenance */
+  .prov{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+  .badge{font-size:10px;padding:2px 8px;border-radius:20px;font-weight:800;letter-spacing:.3px;white-space:nowrap}
+  .badge.ver{background:#0f3d2c;color:#34d399}
+  .badge.rev{background:#3d1414;color:#f87171}
+  .badge.na{background:#1c2740;color:#8ea3c4}
+  .prov .src{font-size:11px;word-break:break-all}
+  .prov .meta{color:var(--faint);font-size:10.5px}
+  .prov .meta b{color:var(--dim);font-weight:600}
+  footer{color:var(--faint);font-size:11.5px;margin-top:26px;text-align:center;line-height:1.7}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="logo">Rx</div>
+    <div style="flex:1"><h1>State Pharmacy Compliance Officer — Command Center</h1>
+      <div class="sub">Pick a state · see what a PIC, telehealth operator, and compounding/e-commerce team must monitor</div></div>
+    <a class="navlink" href="index.html">&larr; Command center</a>
+  </header>
+
+  <div class="disc"><span>&#9888;</span><div><b>Not legal advice. Every regulatory item shows its provenance.</b>
+   Items marked <span style="color:#34d399;font-weight:700">✓ VERIFIED SOURCE</span> link a primary source (agency + last-checked date) confirmed live this session;
+   items marked <span style="color:#f87171;font-weight:700">⚑ NEEDS LEGAL REVIEW</span> have no confirmed primary source in this build — do not rely on them until verified;
+   items marked <span style="color:#8ea3c4;font-weight:700">— NOT APPLICABLE</span> do not apply in that jurisdiction.
+   State-specific numbers (CE hours, ratios, permit fees, adoption dates) are never asserted here; always confirm current rule text on the linked official board site before acting.</div></div>
+
+  <div class="pickrow">
+    <select id="statePick"></select>
+    <span id="verBadge"></span>
+  </div>
+
+  <div class="boardcard" id="boardCard"></div>
+
+  <div class="tabs" id="tabs">
+    <div class="tab active" data-p="pic"><span class="d"></span>Pharmacist-in-Charge</div>
+    <div class="tab" data-p="tele"><span class="d"></span>Telehealth Operator</div>
+    <div class="tab" data-p="comp"><span class="d"></span>Compounding</div>
+    <div class="tab" data-p="ecom"><span class="d"></span>E-commerce / Mail-order</div>
+  </div>
+  <div class="panel" id="panel"></div>
+
+  <footer>
+    Board of Pharmacy directory cross-checked against live board sites. Framework primary sources (verified this session):
+    <a href="https://www.deadiversion.usdoj.gov/Telemedicine.html" target="_blank" rel="noopener">DEA Telemedicine</a>,
+    <a href="https://www.usp.org/compounding" target="_blank" rel="noopener">USP &lt;795&gt;/&lt;797&gt;/&lt;800&gt;</a>,
+    <a href="https://www.fda.gov/drugs/guidance-compliance-regulatory-information/human-drug-compounding" target="_blank" rel="noopener">FDA 503A/503B</a>,
+    <a href="https://imlcc.com/" target="_blank" rel="noopener">IMLC</a> (use imlcc.com — the .org domain is no longer official).<br>
+    Single-file app · no tracking · not legal advice · claims without a confirmed primary source are flagged Needs legal review.
+  </footer>
+</div>
+
+<script>
+const BOARDS = {"AL":{"state":"Alabama","board":"Alabama State Board of Pharmacy","url":"https://www.albop.com/","verified":true},"AK":{"state":"Alaska","board":"Alaska Board of Pharmacy","url":"https://www.commerce.alaska.gov/web/cbpl/ProfessionalLicensing/BoardofPharmacy.aspx","verified":true},"AZ":{"state":"Arizona","board":"Arizona State Board of Pharmacy","url":"https://pharmacy.az.gov/","verified":true},"AR":{"state":"Arkansas","board":"Arkansas State Board of Pharmacy","url":"https://www.pharmacyboard.arkansas.gov/","verified":true},"CA":{"state":"California","board":"California State Board of Pharmacy","url":"https://www.pharmacy.ca.gov/","verified":true},"CO":{"state":"Colorado","board":"Colorado State Board of Pharmacy","url":"https://dpo.colorado.gov/Pharmacy","verified":true},"CT":{"state":"Connecticut","board":"Connecticut Commission of Pharmacy","url":"https://portal.ct.gov/DCP/Drug-Control-Division/Commission-of-Pharmacy/The-Commission-of-Pharmacy","verified":true},"DE":{"state":"Delaware","board":"Delaware Board of Pharmacy","url":"https://dpr.delaware.gov/boards/pharmacy/","verified":true},"DC":{"state":"District of Columbia","board":"District of Columbia Board of Pharmacy","url":"https://dchealth.dc.gov/bop","verified":true},"FL":{"state":"Florida","board":"Florida Board of Pharmacy","url":"https://floridaspharmacy.gov/","verified":true},"GA":{"state":"Georgia","board":"Georgia State Board of Pharmacy","url":"https://gbp.georgia.gov/","verified":true},"HI":{"state":"Hawaii","board":"Hawaii Board of Pharmacy","url":"https://cca.hawaii.gov/pvl/boards/pharmacy/","verified":true},"ID":{"state":"Idaho","board":"Idaho State Board of Pharmacy","url":"https://bop.idaho.gov/","verified":false},"IL":{"state":"Illinois","board":"Illinois Board of Pharmacy (IDFPR)","url":"https://idfpr.illinois.gov/profs/pharm.html","verified":true},"IN":{"state":"Indiana","board":"Indiana Board of Pharmacy","url":"https://www.in.gov/pla/professions/pharmacy-home/","verified":true},"IA":{"state":"Iowa","board":"Iowa Board of Pharmacy","url":"https://pharmacy.iowa.gov/","verified":true},"KS":{"state":"Kansas","board":"Kansas State Board of Pharmacy","url":"https://pharmacy.ks.gov/","verified":true},"KY":{"state":"Kentucky","board":"Kentucky Board of Pharmacy","url":"https://pharmacy.ky.gov/","verified":true},"LA":{"state":"Louisiana","board":"Louisiana Board of Pharmacy","url":"https://www.pharmacy.la.gov/","verified":true},"ME":{"state":"Maine","board":"Maine Board of Pharmacy","url":"https://www.maine.gov/pfr/professional-licensing/professions/pharmacists","verified":false},"MD":{"state":"Maryland","board":"Maryland Board of Pharmacy","url":"https://health.maryland.gov/pharmacy/","verified":true},"MA":{"state":"Massachusetts","board":"Massachusetts Board of Registration in Pharmacy","url":"https://www.mass.gov/orgs/board-of-registration-in-pharmacy","verified":true},"MI":{"state":"Michigan","board":"Michigan Board of Pharmacy (LARA)","url":"https://www.michigan.gov/lara/bureau-list/bpl/health/hp-lic-health-prof/pharmacy","verified":true},"MN":{"state":"Minnesota","board":"Minnesota Board of Pharmacy","url":"https://mn.gov/boards/pharmacy/","verified":true},"MS":{"state":"Mississippi","board":"Mississippi Board of Pharmacy","url":"https://www.mbp.ms.gov/","verified":true},"MO":{"state":"Missouri","board":"Missouri Board of Pharmacy","url":"https://pr.mo.gov/pharmacists.asp","verified":true},"MT":{"state":"Montana","board":"Montana Board of Pharmacy","url":"https://boards.bsd.dli.mt.gov/pharmacy/","verified":true},"NE":{"state":"Nebraska","board":"Nebraska Board of Pharmacy (DHHS)","url":"https://dhhs.ne.gov/licensure/Pages/Pharmacy.aspx","verified":false},"NV":{"state":"Nevada","board":"Nevada State Board of Pharmacy","url":"https://bop.nv.gov/","verified":true},"NH":{"state":"New Hampshire","board":"New Hampshire Board of Pharmacy","url":"https://www.oplc.nh.gov/pharmacy","verified":true},"NJ":{"state":"New Jersey","board":"New Jersey Board of Pharmacy","url":"https://www.njconsumeraffairs.gov/phar","verified":true},"NM":{"state":"New Mexico","board":"New Mexico Board of Pharmacy","url":"https://www.rld.nm.gov/boards-and-commissions/individual-boards-and-commissions/pharmacy/","verified":false},"NY":{"state":"New York","board":"New York State Board of Pharmacy","url":"https://www.op.nysed.gov/professions/pharmacist","verified":true},"NC":{"state":"North Carolina","board":"North Carolina Board of Pharmacy","url":"https://www.ncbop.org/","verified":true},"ND":{"state":"North Dakota","board":"North Dakota Board of Pharmacy","url":"https://www.nodakpharmacy.com/","verified":true},"OH":{"state":"Ohio","board":"Ohio State Board of Pharmacy","url":"https://pharmacy.ohio.gov/","verified":true},"OK":{"state":"Oklahoma","board":"Oklahoma State Board of Pharmacy","url":"https://oklahoma.gov/pharmacy.html","verified":true},"OR":{"state":"Oregon","board":"Oregon Board of Pharmacy","url":"https://www.oregon.gov/pharmacy/","verified":true},"PA":{"state":"Pennsylvania","board":"Pennsylvania State Board of Pharmacy","url":"https://www.dos.pa.gov/ProfessionalLicensing/BoardsCommissions/Pharmacy/Pages/default.aspx","verified":true},"RI":{"state":"Rhode Island","board":"Rhode Island Board of Pharmacy","url":"https://health.ri.gov/licenses/detail.php?id=231","verified":true},"SC":{"state":"South Carolina","board":"South Carolina Board of Pharmacy (LLR)","url":"https://llr.sc.gov/pharm/","verified":true},"SD":{"state":"South Dakota","board":"South Dakota Board of Pharmacy","url":"https://doh.sd.gov/boards/pharmacy/","verified":true},"TN":{"state":"Tennessee","board":"Tennessee Board of Pharmacy","url":"https://www.tn.gov/health/health-program-areas/health-professional-boards/pharmacy-board.html","verified":false},"TX":{"state":"Texas","board":"Texas State Board of Pharmacy","url":"https://www.pharmacy.texas.gov/","verified":true},"UT":{"state":"Utah","board":"Utah Board of Pharmacy (DOPL)","url":"https://dopl.utah.gov/pharmacy/","verified":true},"VT":{"state":"Vermont","board":"Vermont Board of Pharmacy","url":"https://sos.vermont.gov/pharmacy/","verified":true},"VA":{"state":"Virginia","board":"Virginia Board of Pharmacy","url":"https://www.dhp.virginia.gov/pharmacy/","verified":true},"WA":{"state":"Washington","board":"Washington Pharmacy Quality Assurance Commission","url":"https://doh.wa.gov/","verified":false},"WV":{"state":"West Virginia","board":"West Virginia Board of Pharmacy","url":"https://www.wvbop.com/","verified":true},"WI":{"state":"Wisconsin","board":"Wisconsin Pharmacy Examining Board","url":"https://dsps.wi.gov/Pages/BoardsCouncils/Pharmacy/Default.aspx","verified":true},"WY":{"state":"Wyoming","board":"Wyoming State Board of Pharmacy","url":"https://pharmacyboard.wyo.gov/","verified":true}};
+
+/* ---------- PRIMARY-SOURCE REGISTRY ----------
+   Project rule: every regulatory claim must cite a primary source with
+   URL + agency + effective/last-reviewed date + verification status, OR be
+   labelled "Needs legal review". Each source below was confirmed live on the
+   date shown. A persona item carries a source key ONLY when that source
+   actually supports the claim; otherwise it renders "Needs legal review". */
+const SOURCES = {
+  deaTele:{agency:"DEA — Diversion Control Division",url:"https://www.deadiversion.usdoj.gov/Telemedicine.html",
+    date:"Checked 2026-07-15 (DEA drafting updated telemedicine rules; 2023 listening sessions)",status:"verified"},
+  fdaComp:{agency:"U.S. FDA — Human Drug Compounding",url:"https://www.fda.gov/drugs/guidance-compliance-regulatory-information/human-drug-compounding",
+    date:"FDA content current as of 2026-06-15 (checked 2026-07-15)",status:"verified"},
+  usp:{agency:"U.S. Pharmacopeia (USP) — Compounding Standards",url:"https://www.usp.org/compounding",
+    date:"Checked 2026-07-15",status:"verified"},
+  imlc:{agency:"Interstate Medical Licensure Compact Commission",url:"https://imlcc.com/",
+    date:"Checked 2026-07-15 (Alaska = 46th member jurisdiction, effective 2026-06-22). NOTE: the .org domain is no longer official.",status:"verified"}
+};
+
+/* Persona monitoring checklists. Item = [title, description, kind, sourceKey|null].
+   sourceKey present  -> claim is backed by that verified primary source.
+   sourceKey null     -> NO confirmed primary source in this build -> "Needs legal review".
+   We do NOT assert state-specific numbers anywhere. */
+const PERSONAS = {
+  pic:{title:"Pharmacist-in-Charge (PIC)",who:"The licensed pharmacist legally accountable for the pharmacy's operations & compliance.",
+    items:[
+      ["Board licensure & PIC designation","Most states require a designated PIC of record who holds an active resident license and notifies the board on any change of PIC. State detail — confirm designation rules & notice window on the board site.","state",null],
+      ["Continuing education (CE)","Maintain required CE hours per renewal cycle, often including law/opioid-specific hours. State detail — exact hours vary.","state",null],
+      ["Self-inspection & recordkeeping","Perform periodic self-inspections; retain dispensing, purchase, and disposition records for the state-mandated retention period.","state",null],
+      ["Controlled-substance accountability","Inventory, DEA Form 222 / CSOS ordering, and theft/loss reporting (DEA Form 106) obligations. Confirm the exact DEA form set & recordkeeping rules against DEA source text.","fed",null],
+      ["PDMP participation","Register with and query the state Prescription Drug Monitoring Program per mandate. State detail — query triggers vary.","state",null],
+      ["Staffing & supervision ratios","Pharmacist-to-technician ratios and supervision requirements. State detail — ratios vary.","state",null],
+      ["USP compliance oversight","Where compounding occurs, meet applicable USP &lt;795&gt;/&lt;797&gt;/&lt;800&gt; standards.","usp","usp"]
+    ]},
+  tele:{title:"Telehealth Operator",who:"Provider/platform prescribing or dispensing to patients remotely across state lines.",
+    items:[
+      ["Prescriber licensure in patient's state","The prescriber generally must be licensed where the PATIENT is located. Confirm each state's telehealth-practice rules on the board site.","state",null],
+      ["IMLC — expedited multistate licensure","The Interstate Medical Licensure Compact offers an expedited licensure pathway across member jurisdictions. Confirm current membership for a given state on the live IMLC map.","fed","imlc"],
+      ["Valid practitioner-patient relationship","States require a legitimate relationship before prescribing; some accept a real-time telehealth exam, others require in-person first. State detail.","state",null],
+      ["Controlled substances (Ryan Haight Act)","Federal law generally requires an in-person medical evaluation before prescribing controlled substances via telemedicine, subject to DEA telemedicine flexibilities/exceptions. Confirm current DEA rule status — rules are being updated.","fed","deaTele"],
+      ["Audio-only limits","Whether audio-only (telephone) visits are permitted — and for what — varies by state and payer. State detail.","state",null],
+      ["Informed consent for telehealth","Documented patient consent to the telehealth modality is commonly required. State detail.","state",null],
+      ["Telepharmacy rules","If operating remote dispensing sites, comply with the state's telepharmacy licensure & supervision framework where one exists. State detail.","state",null]
+    ]},
+  comp:{title:"Compounding Pharmacy",who:"Team preparing patient-specific (503A) or outsourced (503B) compounded preparations.",
+    items:[
+      ["USP &lt;795&gt; — non-sterile","USP &lt;795&gt; governs non-sterile compounding (facilities, ingredients, BUD, documentation). Confirm current chapter text & effective date at USP.","usp","usp"],
+      ["USP &lt;797&gt; — sterile","USP &lt;797&gt; governs sterile compounding: air quality/ISO classes, garbing, BUD, environmental monitoring. Confirm current chapter text at USP.","usp","usp"],
+      ["USP &lt;800&gt; — hazardous drugs","USP &lt;800&gt; governs handling of hazardous drugs (containment, PPE, storage). Confirm current chapter text at USP.","usp","usp"],
+      ["503A vs 503B status","503A patient-specific compounding is state-board regulated; 503B outsourcing facilities register with FDA and follow cGMP. Confirm your category at FDA.","fed","fdaComp"],
+      ["State sterile-compounding permit","Many states require a separate sterile-compounding license/permit and periodic board inspection. State detail — confirm permit type on board site.","state",null],
+      ["Beyond-use dating & testing","Assign BUDs and perform sterility/potency testing consistent with USP chapters (plus any state overlay). Confirm at USP.","usp","usp"]
+    ]},
+  ecom:{title:"E-commerce / Mail-order Pharmacy",who:"Pharmacy shipping prescriptions to patients in other states.",
+    items:[
+      ["Nonresident pharmacy permit","Most states require an out-of-state pharmacy to hold a NONRESIDENT (mail-order) permit before shipping in. State detail — confirm requirement, application & renewal on each board site.","state",null],
+      ["PIC-of-record for the nonresident license","States typically require you name a PIC and provide proof of home-state licensure in good standing. State detail.","state",null],
+      ["Home-state inspection / accreditation","Many boards require a recent inspection report or accreditation (e.g., NABP .pharmacy / DMEPOS) as a condition of the nonresident permit. State detail.","state",null],
+      ["Shipping controlled substances","Interstate CS shipments must comply with DEA registration and the destination state's CS rules. Confirm specific DEA requirements against DEA source text.","fed",null],
+      ["Cold-chain & labeling","Maintain drug integrity in transit and meet destination-state labeling/patient-counseling offer requirements. State detail.","state",null],
+      ["Report discipline & changes","Report disciplinary actions and ownership/PIC changes to each state where you hold a nonresident permit. State detail.","state",null]
+    ]}
+};
+
+const sel=document.getElementById('statePick');
+Object.keys(BOARDS).sort((a,b)=>BOARDS[a].state.localeCompare(BOARDS[b].state))
+  .forEach(a=>{const o=document.createElement('option');o.value=a;o.textContent=BOARDS[a].state+" ("+a+")";sel.appendChild(o);});
+
+let cur='CA', persona='pic';
+function renderBoard(){
+  const b=BOARDS[cur];
+  document.getElementById('verBadge').innerHTML = b.verified
+    ? '<span class="verified">✓ board link verified live</span>'
+    : '<span class="flagged">⚠ link may have moved — verify on board homepage</span>';
+  document.getElementById('boardCard').innerHTML=
+    '<div><div class="bn">'+b.board+'</div>'+
+    '<div class="meta">Official compliance authority for '+b.state+'</div></div>'+
+    '<div style="align-self:center"><a class="src" href="'+b.url+'" target="_blank" rel="noopener">'+b.url+' ↗</a></div>';
+}
+function renderPanel(){
+  const p=PERSONAS[persona], b=BOARDS[cur];
+  const rows=p.items.map(([t,d,kind,srcKey,naNote])=>{
+    let tag = kind==='fed'?'<span class="tag fed">federal</span>':kind==='usp'?'<span class="tag usp">USP/FDA</span>':'';
+    let prov;
+    if(naNote){
+      prov='<div class="prov"><span class="badge na">— NOT APPLICABLE</span>'+
+        '<span class="meta">'+naNote+'</span></div>';
+    } else if(srcKey && SOURCES[srcKey]){
+      const s=SOURCES[srcKey];
+      prov='<div class="prov"><span class="badge ver">✓ VERIFIED SOURCE</span>'+
+        '<a class="src" href="'+s.url+'" target="_blank" rel="noopener">'+s.url+' ↗</a>'+
+        '<span class="meta"><b>'+s.agency+'</b> · '+s.date+'</span></div>';
+    } else {
+      prov='<div class="prov"><span class="badge rev">⚑ NEEDS LEGAL REVIEW</span>'+
+        '<span class="meta">No primary source confirmed in this build — verify current rule text on the '+
+        '<a href="'+b.url+'" target="_blank" rel="noopener">'+b.board+' ↗</a> before relying on this.</span></div>';
+    }
+    return '<li><b>'+t+'</b>'+tag+'<span class="n">'+d+'</span>'+prov+'</li>';
+  }).join('');
+  document.getElementById('panel').innerHTML=
+    '<h2>'+p.title+'</h2><div class="who">'+p.who+'</div>'+
+    '<ul class="mon">'+rows+'</ul>'+
+    '<div class="statebit">For <b>'+b.state+'</b>-specific rule text (numbers, permits, deadlines), confirm on the '+
+    '<a href="'+b.url+'" target="_blank" rel="noopener">'+b.board+' ↗</a>. '+
+    'Items marked <span class="badge ver">✓ VERIFIED SOURCE</span> link a primary source confirmed live; '+
+    'items marked <span class="badge rev">⚑ NEEDS LEGAL REVIEW</span> have no confirmed primary source in this build and must not be relied on until verified.</div>';
+}
+sel.onchange=e=>{cur=e.target.value;renderBoard();renderPanel();};
+document.querySelectorAll('#tabs .tab').forEach(t=>t.onclick=()=>{
+  document.querySelectorAll('#tabs .tab').forEach(x=>x.classList.remove('active'));
+  t.classList.add('active');persona=t.dataset.p;renderPanel();
+});
+sel.value=cur;renderBoard();renderPanel();
+</script>
+</body>
+</html>
