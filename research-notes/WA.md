@@ -55,3 +55,19 @@ Most remaining reds are **genuine absences, not access failures** (confirmed aga
 - prescribing.inPersonRx — no WA state CS in-person mandate (federal Ryan Haight governs separately).
 - provider.telehealthReg — no separate registration (RCW 43.70.495 is training/attestation, not a registry).
 Only **pharmacy.csDispense** (WAC 246-945 Subpart C) and **ecommerce.website/dtc** are true unread gaps; the individual WAC-rule fetches timed out this session. Honest hold. FOLLOW-UP: WAC 246-945 Subpart C controlled-substance dispensing rules when the WAC fetch is stable.
+
+
+---
+
+## Update 2026-07-23 (wave 5) — +1 (13 -> 14 verified)
+
+**pharmacy.csDispense wired** — WAC 246-945-011 "Prescription validity" (eff. 6/13/24), read verbatim on app.leg.wa.gov (Chapter 246-945 full HTML): "(1) Prior to dispensing and delivering a prescription, a pharmacist shall verify its validity. (2) A prescription shall be considered invalid if: (a) ... alteration, erasure, or addition ...; (b) ... does not contain the required information ...; (c) ... is expired; or (d) The prescription is for a controlled substance and does not comply with the requirements in RCW 69.50.308." (3)(a): Schedule II-V Rx expires 6 months after issue. Mandatory pharmacist CS-validity gate. [wa_945011] This closes the ONE true unread gap flagged in the prior WA note (WAC 246-945 Subpart C).
+
+NOTE on other Subpart C sections: 246-945-040 (Uniform Controlled Substance Act) is a definitional/stimulant-designation rule, and 246-945-346 is CS prescription transfers — 246-945-011 is the operative dispensing-validity gate.
+
+### Remaining reds (6) — all confirmed GENUINE ABSENCES, not access failures:
+- provider.telehealthReg — RCW 43.70.495 is a training/attestation for non-physicians, NOT a telehealth registry. No separate registration exists.
+- relationship.inPerson — no general in-person-exam-to-establish mandate in WA statute.
+- relationship.consent — former WAC 246-919-855 telehealth informed-consent rule REPEALED; only a narrow audio-only BILLING consent (RCW 74.09.325(8)) remains, too narrow for a general consent mandate.
+- prescribing.inPersonRx — no WA state CS in-person mandate (federal Ryan Haight governs separately).
+- ecommerce.website, ecommerce.dtc — not located in RCW/WAC read; no on-website display mandate or general questionnaire ban.

@@ -53,3 +53,32 @@ reachable.
 - prescribing.pdmp — K-TRACS prescriber access is permissive (65-1685(c) "authorized to provide"), no "shall review before prescribing" (genuine).
 - provider.telehealthReg (no separate registry), ecommerce.website, ecommerce.dtc.
 FOLLOW-UP: K.A.R. Art. 68 (compounding) + Art. 100 (telemedicine prescribing) via a working sos.ks.gov path or Wayback.
+
+
+---
+
+## Update 2026-07-23 (wave 5) — +1 (13 -> 14 verified)
+
+**provider.telehealthReg wired** — K.S.A. 40-2,211(a)(2),(4) (Kansas Telemedicine Act, read verbatim on ksrevisor.gov): a telemedicine "healthcare provider" = a "physician" ("a person licensed to practice medicine and surgery by the state board of healing arts"), licensed PA/APRN, or a person authorized by the Behavioral Sciences Regulatory Board. Providers must already hold their underlying KS license; the Act creates NO separate telehealth registration. VERIFIED-NULL. Eff. Jan. 1, 2019 (L. 2018, ch. 98, §2). [ks_teleact]
+
+Still red:
+- relationship.consent — K.S.A. 40-2,212(d) is a conditional care-coordination REPORT ("shall send within three business days a report to such primary care or other treating physician"), NOT a consent-to-treat mandate; 40-2,212(b) allows telemedicine to establish the relationship. GENUINE red.
+- prescribing.pdmp — K.S.A. 65-1685(c): "The board is hereby authorized to provide data ... to ... individuals authorized to prescribe" — PERMISSIVE access, no "shall review before prescribing." VOLUNTARY.
+- prescribing.inPersonRx + compounding.stateReg — K.A.R. Art.100 (Healing Arts telemedicine prescribing) + Art.68 Art.13 (Board of Pharmacy compounding: 68-13-2/3/4). **BLOCKED: sos.ks.gov/kssos.org CloudFront-403; 68-13-3/4 have NO Wayback captures.** Honestly UNREAD — held, not guessed. FOLLOW-UP: current KS Board of Pharmacy regs PDF (not the stale 2014 book) + Board of Healing Arts Art.100 rulebook PDF; retry Wayback for pubs_kar_Regs.aspx?KAR=68-13-3/68-13-4 at other timestamps.
+- ecommerce.website/dtc — same blocked K.A.R.; likely absent but unconfirmed.
+
+
+---
+
+## Update 2026-07-23 (wave 6) — KS K.A.R. unblock ATTEMPTED, no change (stays 14/20)
+
+Tried to close the two K.A.R.-locked fields (compounding.stateReg = K.A.R. 68-13-3/4 Board of Pharmacy; prescribing.inPersonRx = K.A.R. Art.100 Board of Healing Arts). ALL access routes exhausted this session — documented so the next session doesn't re-walk them:
+
+- **pharmacy.ks.gov** — bot-blocked ("Access Denied", title-level bot detection).
+- **sos.ks.gov** (official K.A.R. viewer `pubs_kar_Regs.aspx?KAR=68-13-4`) — CloudFront-403 live; cross-origin fetch from archive.org origin = "Failed to fetch". Guessed compiled-PDF paths (`/publications/kar/2024/68.pdf`, `Article_68-13.pdf`, `Vol_2_Agency_68.pdf`) all fail.
+- **Wayback** — "has not archived that URL" for 68-13-4 (confirmed via web.archive.org/web/2id_/). The KAR viewer's query-string URLs are essentially uncaptured; only the 68-13 ARTICLE INDEX and a few unrelated rules (68-21-2) have captures, not 68-13-3/4 or Art.100 bodies.
+- **casetext.com** (free KAR reproduction) — now redirects to Westlaw/CoCounsel (paywalled); no readable body.
+- **kslegislature.gov** — hosts STATUTES (K.S.A.) only, no K.A.R. administrative regulations.
+- **Historical kansas.gov/pharmacy** — CDX shows no pharmacy regs PDFs (only old INK board agendas).
+
+**Honest hold** (access-blocked, NOT a research gap): compounding.stateReg + prescribing.inPersonRx + ecommerce.website/dtc all live in the unreachable K.A.R. Do NOT guess the USP-adoption or telemedicine-prescribing text. FOLLOW-UP to close: obtain a CURRENT KS Board of Pharmacy "Pharmacy Act & Regulations" consolidated PDF (the 2014 book the subagent found is stale) or a current Board of Healing Arts Art.100 rulebook PDF from a direct download link, or retry sos.ks.gov when the CloudFront block lifts / from a residential-proxy session.

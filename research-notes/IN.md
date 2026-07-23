@@ -72,3 +72,18 @@ Enactment: all sections added P.L.78-2016 SEC.2, amended through P.L.109-2022 (s
 ### To close the remaining fields
 1. **Register a free IGA API key** at docs.api.iga.in.gov -> fetch structured statute JSON for IC 25-26 + the section 6 definition directly.
 2. Or find archived captures of IC 25-26 (pharmacy) + 856 IAC (Board of Pharmacy rules) on an un-walled mirror.
+
+
+---
+
+## Update 2026-07-23 — laggard push (9 -> 10 verified)
+
+**provider.fullLicense wired** — Ind. Code 25-22.5-3-1(a) read verbatim via Internet Archive id_ capture of the FindLaw/Westlaw reproduction: "The minimum requirements for all applicants for an unlimited license to practice medicine or osteopathic medicine in Indiana must include but are not limited to the requirements prescribed by this section." Supported by 25-22.5-1-1.1(a)(4) (services "transmitted through electronic communications" on a regular basis are within the practice of medicine). Capture: https://web.archive.org/web/20180313060437id_/http://codes.findlaw.com/in/title-25-professions-and-occupations/in-code-sect-25-22-5-3-1.html — src in_med_lic. CAVEAT: 2018 capture; the "unlimited license" verb is long-standing but the note flags re-verifying current consolidated text.
+
+**Re-confirmed still blocked (10 reds remain):** iga.in.gov is still a dead JS SPA. A fresh subagent pass checked Justia, FindLaw AND Casetext via Wayback CDX + id_ captures and confirmed the coverage gap is real, not a technique failure:
+- IC 25-1-9.5-**6** (Telehealth DEFINITION — needed for modality.video/audioOnly/async) is NOT captured on Justia (only 7-10 are), nor on FindLaw/Casetext.
+- IC 25-1-9.6 / IC 35-48-7 (INSPECT PDMP) — zero captures anywhere.
+- IC 25-26-13 (PIC), 25-26-17 (nonresident pharmacy), 25-26-18 (mail-order/internet pharmacy) — Article-26 index confirms these chapters EXIST but no section pages are archived on any host.
+- 856 IAC (compounding/USP) — only 6 stray pages archived, none on compounding.
+
+**The only clean unblock left: register a free api.iga.in.gov x-api-key** (docs.api.iga.in.gov) and fetch structured statute JSON for IC 25-1-9.5-6, 25-1-9.6, 25-26-13/17/18, and Title 35 ch. 7. The archived-mirror path is exhausted for Indiana.

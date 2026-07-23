@@ -83,3 +83,23 @@
 
 ---
 > **DISCLAIMER:** Operational research tool; **not legal advice.** Verify with counsel and the applicable board before acting.
+
+
+---
+
+## Update 2026-07-23 — laggard push wave 3 (12 -> 17 verified)
+
+All statutes read verbatim in-browser on leg.state.fl.us (2025 FL Statutes). Two subagent PREMISE CORRECTIONS confirmed and honored (did NOT overreach):
+
+Newly wired:
+- **provider.fullLicense** — Fla. Stat. 458.311(1) ("the department shall license each applicant who the board certifies" meets ch. 458) + 458.311(6) ("Each applicant who meets the requirements of this chapter shall be licensed as a physician"); telehealth providers are "licensed ... under chapter 458" per 456.47(1)(b). [fl_458311]
+- **modality.video** — 456.47(1)(a): "Telehealth means the use of synchronous or asynchronous telecommunications technology..." synchronous (real-time video) included. [fl_tele]
+- **modality.async** — 456.47(1)(a): asynchronous expressly included ("transfer of medical data"). [fl_tele]
+- **pharmacy.csDispense** — 893.04(1): pharmacist "may dispense controlled substances upon a written, oral, or electronic prescription..." under signed/dated-Rx + full identifier + DEA# + 2-year retention + labeling conditions. [fl_89304]
+- **pharmacy.pic** — 465.018(2): "No permit shall be issued unless a licensed pharmacist is designated as the prescription department manager." (FL's PIC equivalent.) [fl_465018]
+
+**PREMISE CORRECTIONS (avoided two overreach traps):**
+1. **modality.audioOnly stays RED.** FL's 456.47(1)(a) definition excludes ONLY "e-mail messages or facsimile transmissions" — it does NOT exclude audio-only telephone (unlike TN). Audio-only is neither excluded nor affirmatively addressed → honest red, NOT greened as "excluded."
+2. **ecommerce.dtc stays RED.** 456.47(2)(b) affirmatively states a telehealth provider "is not required to research a patient's medical history or conduct a physical examination" — FL does NOT ban questionnaire-only prescribing. The old Board of Medicine rules 64B8-9.014 (Repealed 10-26-14) and 64B8-9.0141 (Repealed 10-14-19) are both gone. No positive requirement to green → honest red.
+
+Still red (3): modality.audioOnly (not addressed), relationship.consent (no active F.A.C. rule — 64B8-9.0141 repealed; 456.47 has no consent clause), ecommerce.dtc (no ban exists). These are genuine absences, not access failures.

@@ -63,3 +63,19 @@ Still red (honest): telehealthReg (no separate telemedicine license), modality.a
 ## UPDATE 2026-07-22 — gap-fill attempted, NO change (stays 12/20)
 
 The fillable reds (modality.async, relationship.consent under **CRS §12-30-108**; prescribing.inPersonRx) live only in the **CRS Title 12 OLLS whole-title PDF (~1,000 pp)** at content.leg.colorado.gov, which **would NOT initialize in this browser's PDF.js within the time budget** this session (same large-PDF choke as the NJ Pharmacy Act). No Justia/Wayback mirror exists — CO Title 12 was **renumbered in 2019** and only pre-renumber 2016 captures are archived; the per-section CRS is Lexis-hosted/barred. Left honest-red rather than guess. FOLLOW-UP: a ranged/section fetch of §12-30-108 (telehealth) + §12-280 (pharmacy CS) once the large PDF can be loaded, or a non-Lexis section mirror.
+
+
+---
+
+## Update 2026-07-23 — laggard push wave 3 (12 -> 15 verified) + SECTION-NUMBER CORRECTION
+
+**CRITICAL CORRECTION: the CO telehealth PRACTICE section is C.R.S. 12-30-124, NOT 12-30-108.** In the current (post-2019 renumber) code, 12-30-108 is "Confidential agreement to limit practice." The telehealth practice statute is 12-30-124 (added SB 24-141, eff. June 7, 2024). Prior CO field notes mis-cited 12-30-108; corrected this session (fullLicense note annotated; modality.video repointed to 12-30-124(6); relationship.inPerson repointed to 3 CCR 719-1 Rule 3.00.21).
+
+**ACCESS BREAKTHROUGH: the official OLLS CRS 2025 Title 12 HTML loads fully into the DOM** at https://olls.info/crs/crs2025-title-12.htm (linked from leg.colorado.gov "2025 CRS Titles for Download"). This AVOIDS the ~1,000pp whole-title PDF.js choke that blocked every prior CO session. Fully searchable via document.body.innerText. Use this for any future CO Title 12 work. Version: current through the 75th General Assembly 1st Extraordinary Session, Aug. 2025.
+
+Newly wired (all parent-verified verbatim on the OLLS HTML):
+- **modality.async** — 12-30-124(1)(g): telehealth def includes "store-and-forward transfers." [co_1230124]
+- **relationship.consent** — 12-30-124(6): in-person practice standards "including standards and laws relating to prescribing medication or treatment, identity verification, documentation, informed consent, confidentiality, disclosures, privacy, and security, apply to the provision of health-care services through telehealth in Colorado." Mandatory "apply." [co_1230124]
+- **provider.telehealthReg** — 12-30-124: out-of-state registration "provides an alternative to licensure" (10); registrant barred from opening a CO office (8)(a) and from prescribing controlled substances (11); in-state providers still need full CO licensure. A genuine out-of-state telehealth registration pathway. [co_1230124]
+
+Still red (confirmed ABSENT from Title 12 — 0 hits — so they live in 3 CCR 713 Board of Medicine rules, unread): **modality.audioOnly** (no "audio-only"/"audio only" anywhere in Title 12), **prescribing.inPersonRx** (no bright-line in-person mandate; 12-240-121(1)(aa) is a standard-of-care "fails to meet generally accepted standards" rule only), **pharmacy.csDispense**, **ecommerce.website**, **ecommerce.dtc**. FOLLOW-UP: 3 CCR 713 (Board of Medicine Rule 800 telemedicine) + 3 CCR 719-1 for the pharmacy CS/e-commerce fields.

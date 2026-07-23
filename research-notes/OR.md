@@ -51,3 +51,18 @@ prescribing. Registration is compelled; query is not. Verified directly rather t
 
 ---
 > **DISCLAIMER:** Operational research tool; **not legal advice.** Verify with counsel and the applicable board before acting.
+
+
+---
+
+## Update 2026-07-23 (wave 5) — +1 (13 -> 14 verified); OR at honest ceiling
+
+**pharmacy.csDispense wired** — OAR 855-080-0085(1) (Board of Pharmacy Division 80), read verbatim on oregon.public.law (official OARD host bot-blocked): "the provisions of 21 CFR 1306.01 through 1306.27 and 1304.03(d) shall be complied with by the registrants, practitioners and pharmacists as specified therein in the issuance, preparation, labeling dispensing, recordkeeping and filing of prescriptions for controlled substances." Mandatory "shall." [or_855080]
+
+The other 6 reds are CONFIRMED GENUINE ABSENCES (verbatim-verified where a rule exists), not access failures:
+- modality.audioOnly — ORS 677.494(1) defines telemedicine as synchronous/asynchronous "electronic communications" generically; audio-only never named/permitted/addressed.
+- relationship.consent — no telehealth consent statute/rule (ORS 677.494 silent; OAR ch.847 div.25 has only records/confidentiality + cross-state limits).
+- prescribing.inPersonRx — ORS 677.494(2) permits telemedicine prescribing with NO in-person prerequisite.
+- prescribing.pdmp — ORS 431A.877 compels REGISTRATION only ("shall register"); query VOLUNTARY. Re-confirmed verbatim.
+- ecommerce.website — no on-website display mandate.
+- ecommerce.dtc — OAR ch.847 div.25 is titled "Rules for Licensure to Practice Medicine Across State Lines" and applies solely to out-of-state licensees; no general questionnaire ban.

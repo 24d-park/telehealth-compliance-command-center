@@ -31,3 +31,19 @@
 
 ## FOLLOW-UP
 - Open ARM 24.174.841, 24.174.805, and 24.174.14xx "View in PDF" downloads to pin subsection-level quotes (would harden PIC/compounding/csDispense from chapter-level). Watch MAR Notice 2025-206 (eff. 12/6/25) amending pharmacy rules.
+
+
+---
+
+## Update 2026-07-23 (wave 4) — +3 (13 -> 16 verified) + TWO STALE-ANCHOR CORRECTIONS
+
+**CORRECTIONS (subagent caught, parent confirmed):** MCA 37-3-343 is REPEALED (Sec. 18, Ch. 154, L. 2015); ARM 24.156.809 is superseded — the current telemedicine rule is **ARM 24.156.813**. The MT telehealth framework is now MCA 37-3-301(3) (rulemaking mandate) -> ARM 24.156.813 (standards).
+
+Newly wired (parent-verified verbatim):
+- **provider.telehealthReg** — MCA 37-3-301 (mca.legmt.gov, MCA 2025): "(2) The department may issue two kinds of licenses, a physician's license and a resident license. (3) The board shall provide guidelines by administrative rule for the practice of telemedicine by physicians." Only two license kinds; telemedicine under the ordinary license = VERIFIED-NULL. [mt_telehealth]
+- **prescribing.inPersonRx** — ARM 24.156.813(3)(c) (eff. 2/10/2024, read via the rules.mt.gov Esper WEB-VIEW toggle): a provider-patient relationship may be established "through telemedicine if the standard of care does not require an in-person encounter" — no blanket prior in-person exam; §(4) may prescribe Sch II per DEA + 37-20-404 MCA. [mt_arm813]
+- **pharmacy.csDispense** — MCA 37-7-401: prescriber "may not sell, give to, or prescribe ... any opium, morphine ... codeine, heroin, or any derivative ... except to a patient believed in good faith to require [them] for medical use and in quantities proportioned"; §(3) "A Schedule II prescription may not be refilled." [mt_37401]
+
+**ACCESS TIP:** rules.mt.gov (Esper SPA) renders rules as a PDF embed by default; the page has a "Switch to web view" toggle (checkbox) that swaps to HTML — after clicking it, document.body.innerText carries the full rule text. Use `?view=web` on the policy URL + click the toggle.
+
+Still red (honest): modality.async (ARM 24.156.813 has NO telemedicine definition; the only async def is the EXCLUDED insurance-title MCA 33-22-138(8)), relationship.consent (ARM 24.156.813 §(5) has mandatory identity/relationship/history duties but NO explicit "informed consent" term), ecommerce.website/dtc (no express mandate/questionnaire ban).

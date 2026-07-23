@@ -32,3 +32,20 @@
 ## FOLLOW-UP (NH is the weakest state — needs unblocking)
 - Route NH `.gov` fetches through a residential proxy / different egress IP, OR use curl, to reach gc.nh.gov live.
 - Priority reads once unblocked: RSA 318-B:31–42 (PDMP mandatory-query verb), NH Code Med 500 (telehealth consent + relationship), Ph 700 (PIC, compounding USP adoption, CS dispensing).
+
+
+---
+
+## Update 2026-07-23 — laggard push wave 2 (11 -> 17 verified)
+
+All read via Internet Archive id_ captures (every live NH .gov host still WAF-403). All quotes parent-verified verbatim.
+
+Newly wired (6):
+- **prescribing.pdmp** — RSA 318-B:41 II(a)(4)(A): boards' rules "shall ... contain mandatory standards" including "Querying the controlled drug prescription health and safety program (program) database ... when writing an initial schedule II, III, or IV opioid prescription ... and then periodically, at least twice a year" (exceptions: health-care-setting administration, program inaccessible, ED surge). MANDATORY (opioid-triggered, not every-CS). **ROUTING CORRECTION: the PDMP program moved from repealed RSA 318-B:31-38 (repealed 2021, 91:46) + 318-B:42 (repealed 2016) to RSA 126-A:89-96** — the prior session's collapsed-body problem was because it was looking at repealed sections. [nh_318b41]
+- **provider.telehealthReg** — RSA 329:1-d(II): out-of-state telemedicine physician "shall be deemed to be in the practice of medicine and shall be required to be licensed under this chapter." Full licensure = exclusive pathway. VERIFIED-NULL. [nh_329_1d]
+- **relationship.inPerson** — RSA 329:1-d(III) governs telehealth: relationship established via telemedicine, NO prior in-person required; in-person only "not less than annually" for ongoing Sch II-IV CS. The older RSA 318-B:1 XXVI-a "in-person exam" definition is the narrower CS-context def, superseded for telehealth by 329:1-d + 318:1 XV-a. [nh_329_1d]
+- **relationship.consent** — RSA 318:1 XV-a(iii): a valid telemedicine practitioner-patient relationship requires the practitioner to "obtain[] oral or written consent from the patient or from the patient's parent or guardian..." Informed consent is a statutory element. [nh_318_1]
+- **pharmacy.pic** — NH Code Admin. R. Ph 704.11: PIC "shall (1) Have worked as a pharmacist for a minimum of 2 years post-graduation; (2) Complete and pass with a minimum of 80% an exam...; and (3) Work a minimum of 20 hours per week." (RSA 318:1 X statutory PIC def repealed; rule governs.) Eff. 8-5-15. [nh_ph704]
+- **compounding.stateReg** — Ph 404.01(b): "The board shall require all compounders ... to adhere to and comply with the current edition of the United States Pharmacopeia including but not limited to Chapters 795 (USP 795) and 797 (USP 797)..." USP <795>/<797> adopted. Eff. 4-18-15. [nh_ph404]
+
+Still red (3): **pharmacy.csDispense** — Ph 704.05 only bars OTC codeine cough syrup (too narrow to green a general CS-dispensing rule); the broader CS dispensing detail is in RSA 126-A:91 (dispenser reporting) + Ph 700 sections not confirmed. **ecommerce.website** — no on-website disclosure mandate found. **ecommerce.dtc** — RSA 329:1-d(VI) questionnaire bar is OPHTHALMIC-ONLY ("Not determine an ophthalmic prescription solely by use of an online questionnaire"); no general DTC ban exists. FOLLOW-UP: NH Code Med 500 (host-blocked, 503 intermittently) for a fuller physician-side consent rule + Ph 700 CS-dispensing detail.

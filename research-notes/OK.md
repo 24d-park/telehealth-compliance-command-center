@@ -31,3 +31,19 @@ Telehealth practice standard = **59 O.S. §478.1** (Board of Medical Licensure &
 
 ## FOLLOW-UP
 - Dedicated OAC pass via okmedicalboard.org archived rule PDFs (OAC 435:10 telemedicine — audio-only/consent/DTC) + Board of Pharmacy OAC 535 (compounding USP-by-number, CS dispensing).
+
+
+---
+
+## Update 2026-07-23 (wave 4) — +3 (13 -> 16 verified)
+
+Read via Wayback id_ of the OK Allopathic Board MDRULES PDF (`https://web.archive.org/web/20220121201000id_/https://www.okmedicalboard.org/download/457/MDRULES_08.2021.pdf`) + pdf.js. oscn.net/rules.ok.gov Turnstile-blocked. All parent-verified verbatim.
+
+- **provider.telehealthReg** — OAC 435:10-7-13(a): "Physicians treating patients in Oklahoma through telemedicine must be fully licensed to practice medicine in Oklahoma." Exclusive licensure, no separate registration. VERIFIED-NULL. Eff. 9-12-14. [ok_mdrules]
+- **modality.audioOnly — EXCLUDED** — the telemedicine definition "is not a consultation provided by telephone or facsimile machine ... This definition excludes phone or Internet contact"; (b)(3)(A): "Audio and video equipment must permit interactive, real-time communications." Real-time audio AND video required. [ok_mdrules]
+- **relationship.consent** — OAC 435:10-7-13(b)(1): a telemedicine encounter must include "the documentation of a history, a physical exam, the ordering of any diagnostic tests, making a diagnosis and initiating a treatment plan with appropriate discussion and informed consent." [ok_mdrules]
+
+Still red (honest holds):
+- **compounding.stateReg** — OK Board of Pharmacy 2022 law-book: USP <797> adopted by number for STERILE (OAC 535:15-10-54), but "795" returns NO match — non-sterile compounding rules are self-contained, not a 795-by-number adoption. Held rather than green a partial. A newer 2023 red-marked Chapter 15 PDF may differ (not parsed).
+- **pharmacy.csDispense** — operative "shall ... legitimate medical purpose"/"shall not dispense ... without a valid preexisting relationship" language found in the concatenated law-book, but a clean standalone OAC 535 section cite couldn't be pinned. Held.
+- **ecommerce.website** — no on-website disclosure mandate (verified-absent). **ecommerce.dtc** — no standalone "online questionnaire" ban; the prohibition is achieved indirectly via the real-time-equipment/face-to-face requirement. Red.

@@ -59,3 +59,27 @@ Still red (LAC Title 46 Board of Pharmacy site 404 this session): relationship.c
 
 ---
 > **DISCLAIMER:** Operational research tool; **not legal advice.** Verify with counsel and the applicable board before acting.
+
+
+---
+
+## Update 2026-07-23 — laggard push (11 -> 19 verified)
+
+**BREAKTHROUGH: the OSR-compiled LAC .docx files are the reliable primary source** when the live Board sites are dead. Prior sessions were blocked by pharmacy.la.gov (404, mid-redesign) and the LSBME storyblok telemedicine PDF (no text layer). This session pulled the official Office of State Register compiled Louisiana Administrative Code as .docx from doa.la.gov and extracted section text verbatim in-browser (JSZip -> word/document.xml -> strip tags):
+- LAC Title 46:XLV (Medical Professions): https://doa.la.gov/media/t5scfw11/46v45.docx
+- LAC Title 46:LIII (Pharmacists): https://doa.la.gov/media/bfajf0q2/46v53.docx
+- Index page: https://doa.la.gov/doa/osr/louisiana-administrative-code/
+
+All 8 quotes below were parent-verified verbatim against those .docx files (subagent surfaced them; parent re-extracted and confirmed).
+
+Newly wired:
+- **relationship.consent** — LAC 46:XLV.7511(A) (physician "shall insure" patient informed of relationship + notified may decline/withdraw). [la_xlv_7511]
+- **prescribing.pdmp** — LAC 46:XLV.6935(A)-(B): "shall access and review" the PMP before initially prescribing any opioid / at least every 90 days if continued. **MANDATORY at BOARD-RULE level — resolves the long-standing red** (statute R.S. 40:1007 is only "may access" = voluntary; the LSBME rule imposes the mandate). Exceptions 6935(C): hospice/terminal, cancer pain, hospital inpatient, PMP inaccessible, single <=7-day supply. [la_xlv_6935]
+- **pharmacy.nonresident** — LAC 46:LIII.2301-2307 (permit + annual renewal; 2301 expressly names "the Internet"). [la_liii_nonres]
+- **pharmacy.csDispense** — LAC 46:LIII.2705(A) (CDS license required) + 2713 (21 CFR 1300-1399; Rx expiration Sch II 90d / III-IV 6mo / V 1yr). [la_liii_cds]
+- **pharmacy.pic** — LAC 46:LIII.1105 (active LA license + 1yr practice; "no less than 20 hours per week"; PIC+owner responsible for full compliance). [la_liii_pic]
+- **compounding.stateReg** — LAC 46:LIII.2535(A)(2)(a)-(b) adopts USP <797> (sterile) / <795> (non-sterile) by reference. [la_liii_compound]
+- **ecommerce.onlinePharmacy** — no separate class; internet dispensing folded into the nonresident chapter 2301. [la_liii_nonres]
+- **ecommerce.dtc** — LAC 46:LIII.2515(A) (questionnaire-only Rx "is not a valid prescription"; 2515(C) pharmacist "shall not fill") + companion LAC 46:XLV.7505(B). [la_liii_dtc]
+
+**Still red (1): ecommerce.website** — HONEST ABSENCE. No consumer-facing pharmacy-website-disclosure mandate exists in LAC 46:LIII; the only "website" references point to the Board's own site. Not an access failure — LA appears to have no such rule. Leave red unless R.S. Title 37 Ch. 14 turns up a provision.

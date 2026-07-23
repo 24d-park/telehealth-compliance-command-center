@@ -94,3 +94,17 @@ Still red — and these are GENUINE gaps, not access failures: **New York has NO
 ## UPDATE 2026-07-22 — gap-fill attempted, NO change (stays 11/20)
 
 Re-read **8 NYCRR Part 63** live on the reachable op.nysed.gov: it carries NO USP-by-number compounding-standards adoption (only CE / licensing / registration / internship), so **compounding.stateReg stays red**. Confirmed the note's structural conclusion: **New York has no standalone telehealth PRACTICE-standard statute** — modality (video/audio/async), relationship.inPerson, and relationship.consent live only in the insurance-parity law **PHL §2999-cc**, EXCLUDED per the project's insurance-vs-practice rule. provider.telehealthReg (§6526 exemptions only), prescribing.inPersonRx, and ecommerce.website/dtc likewise have no non-insurance practice-standard primary source. **NY's remaining reds are genuine statutory gaps, not access failures** — it will stay ~11/20 unless a practice-standard modality source outside the insurance title is found.
+
+
+---
+
+## Update 2026-07-23 — laggard push wave 2 (11 -> 12 verified)
+
+**ecommerce.website RESOLVED — the note's own contradiction is settled in favor of a real mandate.** Read 8 NYCRR 63.6 verbatim on op.nysed.gov (accordion body extracted from innerHTML): "Such registered pharmacies that offer to dispense prescription drugs to consumers through a website on the Internet shall post on such website a notice of the availability of the drug retail price list and a toll-free telephone number to obtain the list." A MANDATORY internet-pharmacy website-disclosure duty (corroborated by Ed. Law 6809: internet pharmacies "shall conspicuously provide such notification on their website"). The 2026-07-22 "no mandate, stays red" entry was WRONG — greened as [ny_63_6].
+
+**Confirmed STILL RED — genuine ceiling, re-verified this session (not access failures):**
+- modality.video / audioOnly / async, relationship.inPerson, relationship.consent, prescribing.inPersonRx — NO non-insurance practice-standard telehealth provision exists anywhere in the NYSED Education Law / 8 NYCRR corpus (Part 29, Part 63, Article 137 all 0 hits for telehealth/telemedicine/in-person). These live ONLY in the excluded insurance-parity PHL 2999-cc.
+- compounding.stateReg — 8 NYCRR Part 63 (143k chars) + Article 137 (138k chars) have 0 hits for "795"/"797"; Part 63's only manufacturing cites are 21 CFR 205.50/210/211. No USP-by-number adoption.
+- ecommerce.dtc — 8 NYCRR Part 29 + Part 63 + Art. 137 have no online-questionnaire prescribing ban; only general misconduct provisions. (The one Part 63 "questionnaire" hit is the 63.16 hormonal-contraceptive self-screening tool — a permission, not a ban.)
+
+NY is now at 12/20 and effectively at its honest ceiling: the remaining 8 reds are genuine statutory gaps (7 of them in the excluded insurance title or truly absent).
