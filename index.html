@@ -309,6 +309,11 @@
   .of-tag.fed{background:#13324a;color:#7cc4ff}.of-tag.usp{background:#2c1f42;color:#c9a9ff}
   .of-statebit{background:#0d1728;border:1px solid var(--line);border-radius:10px;padding:11px 14px;margin-top:16px;font-size:12.5px;color:var(--dim)}
   .of-statebit b{color:var(--ink)}
+
+  /* ---- keyboard focus visibility (a11y) ---- */
+  :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+  .card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .tabbar button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 </style>
 </head>
 <body>
@@ -328,8 +333,8 @@
     </div>
   </header>
 
-  <div class="disclaimer">
-    <span class="ico">&#9888;</span>
+  <div class="disclaimer" role="note">
+    <span class="ico" aria-hidden="true">&#9888;</span>
     <div><b>Not legal advice — every regulatory field shows its provenance.</b>
       Open any state to see each field marked
       <span style="color:#34d399;font-weight:700">✓ Verified source</span>,
@@ -339,19 +344,19 @@
       <b>your tracked org registrations</b> vs. requirements — it does not certify legality. Confirm with counsel before operating.</div>
   </div>
 
-  <div class="tabbar" id="tabbar">
-    <button data-view="map" class="active">50-state map</button>
-    <button data-view="operate">Can I operate?</button>
-    <button data-view="table">Data table</button>
-    <button data-view="compare">Compare states</button>
-    <button data-view="calendar">Compliance calendar</button>
-    <button data-view="changelog">Change log</button>
-    <button data-view="health">Source health</button>
-    <button data-view="officer">Board directory</button>
-    <button data-view="ask">Ask (grounded)</button>
+  <div class="tabbar" id="tabbar" role="tablist" aria-label="Views">
+    <button data-view="map" class="active" role="tab" aria-selected="true">50-state map</button>
+    <button data-view="operate" role="tab" aria-selected="false">Can I operate?</button>
+    <button data-view="table" role="tab" aria-selected="false">Data table</button>
+    <button data-view="compare" role="tab" aria-selected="false">Compare states</button>
+    <button data-view="calendar" role="tab" aria-selected="false">Compliance calendar</button>
+    <button data-view="changelog" role="tab" aria-selected="false">Change log</button>
+    <button data-view="health" role="tab" aria-selected="false">Source health</button>
+    <button data-view="officer" role="tab" aria-selected="false">Board directory</button>
+    <button data-view="ask" role="tab" aria-selected="false">Ask (grounded)</button>
   </div>
 
-  <section id="view-map">
+  <section id="view-map" role="tabpanel" aria-label="50-state map" tabindex="-1">
   <div class="kpis" id="kpis"></div>
 
   <div class="legend" id="legend"></div>
@@ -362,8 +367,8 @@
       <button data-v="research">Research status</button>
       <button data-v="freshness">Source freshness</button>
     </div>
-    <div class="field"><input type="search" id="search" placeholder="Search state…"></div>
-    <select id="fltDim">
+    <div class="field"><input type="search" id="search" placeholder="Search state…" aria-label="Search jurisdictions by name or abbreviation"></div>
+    <select id="fltDim" aria-label="Filter by compliance dimension">
       <option value="all">All dimensions</option>
       <option value="provider">Provider licensing</option>
       <option value="rx">Prescribing / controlled sub.</option>
@@ -385,17 +390,17 @@
     </div>
   </div>
 
-  <div class="grid" id="grid"></div>
+  <div class="grid" id="grid" role="group" aria-label="Jurisdictions — activate a card to open its full record"></div>
   </section>
 
-  <section id="view-table" hidden></section>
-  <section id="view-operate" hidden></section>
-  <section id="view-compare" hidden></section>
-  <section id="view-calendar" hidden></section>
-  <section id="view-changelog" hidden></section>
-  <section id="view-health" hidden></section>
-  <section id="view-officer" hidden></section>
-  <section id="view-ask" hidden></section>
+  <section id="view-table" role="tabpanel" aria-label="Data table" tabindex="-1" hidden></section>
+  <section id="view-operate" role="tabpanel" aria-label="Can I operate?" tabindex="-1" hidden></section>
+  <section id="view-compare" role="tabpanel" aria-label="Compare states" tabindex="-1" hidden></section>
+  <section id="view-calendar" role="tabpanel" aria-label="Compliance calendar" tabindex="-1" hidden></section>
+  <section id="view-changelog" role="tabpanel" aria-label="Change log" tabindex="-1" hidden></section>
+  <section id="view-health" role="tabpanel" aria-label="Source health" tabindex="-1" hidden></section>
+  <section id="view-officer" role="tabpanel" aria-label="Board directory" tabindex="-1" hidden></section>
+  <section id="view-ask" role="tabpanel" aria-label="Ask (grounded)" tabindex="-1" hidden></section>
 
   <footer>
     Regulatory data is provenance-gated — every green field carries a verbatim primary-source citation; unsourced fields stay flagged for legal review.
@@ -405,12 +410,12 @@
 
 <!-- MODAL -->
 <div class="overlay" id="overlay">
-  <div class="modal">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
     <div class="mhead">
-      <h2><span id="mDot" class="dot"></span><span id="mTitle"></span></h2>
+      <h2><span id="mDot" class="dot" aria-hidden="true"></span><span id="mTitle"></span></h2>
       <div class="mhead-actions">
         <button class="btn memo" id="mMemo" title="Open a clean, printable one-page compliance memo for this jurisdiction">🖨 Print memo</button>
-        <button class="close" id="mClose">&times;</button>
+        <button class="close" id="mClose" aria-label="Close dialog">&times;</button>
       </div>
     </div>
     <div class="mbody" id="mBody"></div>
@@ -1933,14 +1938,19 @@ function render(){
       const cv=coverageOf(a);
       badge = `<span class="cov cov-${coverageTier(cv.ver,cv.total)}">${cv.ver}/${cv.total}</span>`;
     }
-    return `<div class="card" data-a="${a}">
-      <div class="st"><span class="abbr">${a}</span>${badge}<span class="dot ${s}"></span></div>
+    const statusTxt=labelFor(s);
+    return `<div class="card" data-a="${a}" role="button" tabindex="0" aria-label="${n} (${a}) — ${statusTxt}. Open full record.">
+      <div class="st"><span class="abbr">${a}</span>${badge}<span class="dot ${s}" aria-hidden="true"></span></div>
       <div class="name">${n}</div>
-      <div class="chips">${chips}</div>
+      <div class="chips" aria-hidden="true">${chips}</div>
     </div>`;
   }).join("") || `<div style="color:var(--faint);padding:20px">No jurisdictions match.</div>`;
 
-  grid.querySelectorAll(".card").forEach(c=>c.onclick=()=>openModal(c.dataset.a));
+  grid.querySelectorAll(".card").forEach(c=>{
+    const open=()=>openModal(c.dataset.a);
+    c.onclick=open;
+    c.onkeydown=e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); open(); } };
+  });
   renderKpis();
   renderLegend();
 }
@@ -2183,6 +2193,7 @@ const PERSONAS = {
 /* ---------- MODAL ---------- */
 const overlay=document.getElementById("overlay");
 let modalState=null; // abbr of the state whose modal is open (drives Print memo)
+let lastFocused=null; // element to restore focus to when the modal closes
 function fieldRow(f){
   let prov;
   if(f.na){
@@ -2202,6 +2213,7 @@ function fieldRow(f){
 }
 function openModal(a){
   modalState=a;
+  lastFocused=document.activeElement; // remember what to restore focus to on close
   { const h="#state/"+a; if(location.hash!==h){ suppressHash=true; location.hash=h; } }
   const name=STATES.find(s=>s[0]===a)[1]; const d=DATA[a]; const s=statusFor(a); const o=orgFor(a);
   document.getElementById("mTitle").textContent=`${name} (${a})`;
@@ -2262,6 +2274,8 @@ function openModal(a){
     ${sectionsHtml}`;
   document.getElementById("mBody").innerHTML=body;
   overlay.classList.add("show");
+  // move focus into the dialog for screen-reader + keyboard users
+  document.getElementById("mClose").focus();
 
   document.querySelectorAll("#mBody .track input").forEach(inp=>{
     inp.onchange=()=>{
@@ -2277,9 +2291,22 @@ function closeModal(){
   modalState=null;
   // restore the hash to the active view (so back/forward + refresh land on the view, not the modal)
   const h="#"+activeView; if(location.hash!==h){ suppressHash=true; location.hash=h; }
+  // return focus to the element that opened the modal (keyboard/screen-reader users)
+  if(lastFocused && typeof lastFocused.focus==="function"){ lastFocused.focus(); }
+  lastFocused=null;
 }
 document.getElementById("mClose").onclick=closeModal;
 document.getElementById("mMemo").onclick=()=>{ if(modalState) printStateMemo(modalState); };
+/* Focus trap: while the dialog is open, keep Tab focus inside it. */
+overlay.addEventListener("keydown",e=>{
+  if(e.key!=="Tab" || !overlay.classList.contains("show")) return;
+  const f=overlay.querySelectorAll('button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+  const list=[...f].filter(el=>!el.disabled && el.offsetParent!==null);
+  if(!list.length) return;
+  const first=list[0], last=list[list.length-1];
+  if(e.shiftKey && document.activeElement===first){ e.preventDefault(); last.focus(); }
+  else if(!e.shiftKey && document.activeElement===last){ e.preventDefault(); first.focus(); }
+});
 
 /* ---------- COMPLIANCE MEMO (printable one-pager) ----------
    Opens a self-contained, print-optimized document for a single jurisdiction in a
@@ -3037,7 +3064,7 @@ function renderAsk(){
       isn't sourced yet. No API key, no server, works offline. Not legal advice.
     </div>
     <div class="ask-row">
-      <input type="text" id="askInput" placeholder="e.g. audio-only telehealth in Texas" autocomplete="off">
+      <input type="text" id="askInput" placeholder="e.g. audio-only telehealth in Texas" autocomplete="off" aria-label="Ask a compliance question">
       <button class="btn primary" id="askGo">Ask</button>
     </div>
     <div class="ask-chips">${chips.map(c=>`<button class="ask-chip">${c}</button>`).join("")}</div>
@@ -3053,7 +3080,11 @@ let activeView="map";
 let suppressHash=false; // guards programmatic hash writes from re-triggering the router
 function switchView(v,fromHash){
   activeView=v;
-  document.querySelectorAll("#tabbar button").forEach(b=>b.classList.toggle("active",b.dataset.view===v));
+  document.querySelectorAll("#tabbar button").forEach(b=>{
+    const on=b.dataset.view===v;
+    b.classList.toggle("active",on);
+    b.setAttribute("aria-selected",on?"true":"false");
+  });
   [["map","table","operate","compare","calendar","changelog","health","officer","ask"]].flat().forEach(n=>{
     document.getElementById("view-"+n).hidden = (n!==v);
   });
