@@ -203,6 +203,80 @@
   .cal-rel{font-size:11px;font-weight:700;margin-left:auto}
   .cal-rel.ok{color:#34d399}.cal-rel.bad{color:#f87171}
   @media(max-width:720px){.kpis{grid-template-columns:repeat(2,1fr)}}
+
+  /* ---- source-freshness pills (Feature: staleness surfacing) ---- */
+  .agepill{font-size:9.5px;font-weight:800;padding:1px 6px;border-radius:20px;margin-left:6px;letter-spacing:.3px;vertical-align:middle}
+  .agepill.ok{background:#0f3d2c;color:#34d399}
+  .agepill.warn{background:#3a2f10;color:#fbbf24}
+  .agepill.bad{background:#3d1414;color:#f87171}
+  .agepill.unk{background:#1c2740;color:#8ea3c4}
+
+  /* ---- "Can I operate?" wizard ---- */
+  .op-title{font-size:19px;font-weight:800;margin-bottom:4px}
+  .op-models{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin:12px 0 16px}
+  .op-model{text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:12px 14px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:border-color .15s,background .15s}
+  .op-model:hover{border-color:var(--accent)}
+  .op-model.active{border-color:var(--accent);background:var(--panel2);box-shadow:inset 0 0 0 1px var(--accent)}
+  .op-model-name{font-weight:700;font-size:13.5px;color:var(--ink)}
+  .op-model-blurb{font-size:11.5px;color:var(--dim);line-height:1.4}
+  .op-warn{background:#2a1e10;border:1px solid #6b4e1d;color:#ffd98a;border-radius:10px;padding:10px 13px;font-size:12.5px;margin-bottom:14px}
+  .op-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+  .op-kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center}
+  .op-kpi .n{font-size:26px;font-weight:800;line-height:1}
+  .op-kpi .l{font-size:11px;color:var(--dim);margin-top:4px;text-transform:uppercase;letter-spacing:.4px}
+  .op-kpi.ok .n{color:#34d399}.op-kpi.warn .n{color:#fbbf24}.op-kpi.bad .n{color:#f87171}.op-kpi.unk .n{color:#8ea3c4}
+  .op-tools{display:flex;justify-content:flex-end;margin-bottom:12px}
+  .op-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+  .op-card{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--line);border-radius:12px;padding:13px 15px}
+  .op-card.ok{border-left-color:#34d399}.op-card.warn{border-left-color:#fbbf24}
+  .op-card.bad{border-left-color:#f87171}.op-card.unk{border-left-color:#5f739a}
+  .op-card-top{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+  .op-dot{width:10px;height:10px;border-radius:50%;flex:none}
+  .op-dot.ok{background:#34d399}.op-dot.warn{background:#fbbf24}.op-dot.bad{background:#f87171}.op-dot.unk{background:#5f739a}
+  .op-state{font-weight:700;font-size:14px}.op-state .ab{color:var(--faint);font-weight:600;font-size:11.5px;margin-left:3px}
+  .op-status{margin-left:auto;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.3px;color:var(--dim)}
+  .op-card.ok .op-status{color:#34d399}.op-card.warn .op-status{color:#fbbf24}.op-card.bad .op-status{color:#f87171}
+  .op-card-desc{font-size:12px;color:var(--dim);margin-bottom:8px;line-height:1.45}
+  .op-held{font-size:11.5px;color:var(--pic);margin-bottom:8px}
+  .op-miss{background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:8px 10px;margin-bottom:7px}
+  .op-miss-h{font-size:12.5px;margin-bottom:3px;display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+  .op-miss-note{font-size:11.5px;color:var(--dim);line-height:1.5}
+  .op-miss-note a{word-break:break-all}
+  .op-open{font-size:11.5px;color:var(--accent);cursor:pointer;margin-top:6px}
+  .op-open:hover{text-decoration:underline}
+  @media(max-width:720px){.op-kpis{grid-template-columns:repeat(2,1fr)}}
+
+  /* ---- modal header actions + Print memo button ---- */
+  .mhead-actions{display:flex;align-items:center;gap:10px;margin-left:auto}
+  .btn.memo{background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:9px;
+    padding:7px 12px;font-size:12.5px;cursor:pointer;white-space:nowrap}
+  .btn.memo:hover{border-color:var(--accent)}
+
+  /* ---- Source health / re-verification queue ---- */
+  .hp-probe-note{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 14px;
+    font-size:12px;color:var(--dim);margin-bottom:14px;line-height:1.5}
+  .hp-probe-note b{color:var(--ink)}
+  .hp-probe-note .btn{margin:8px 8px 0 0}
+  .hp-list{display:flex;flex-direction:column;gap:9px}
+  .hp-card{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--line);border-radius:11px;padding:11px 14px}
+  .hp-card.ok{border-left-color:#34d399}.hp-card.warn{border-left-color:#fbbf24}.hp-card.bad{border-left-color:#f87171}
+  .hp-top{display:flex;align-items:center;gap:12px}
+  .hp-score{flex:none;width:38px;height:38px;border-radius:9px;display:grid;place-items:center;font-weight:800;font-size:15px}
+  .hp-score.ok{background:#0f3d2c;color:#34d399}.hp-score.warn{background:#3a2f10;color:#fbbf24}.hp-score.bad{background:#3d1414;color:#f87171}
+  .hp-agency{flex:1;min-width:0}
+  .hp-agency b{font-size:13px;display:block;line-height:1.35}
+  .hp-meta{font-size:11px;color:var(--faint);margin-top:2px}
+  .hp-badge{flex:none;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap}
+  .hp-badge.checking{background:#1c2740;color:#8ea3c4}
+  .hp-badge.reachable{background:#0f3d2c;color:#34d399}
+  .hp-badge.unreachable{background:#3a2f10;color:#fbbf24}
+  .hp-sigs{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 0}
+  .hp-sig{font-size:10.5px;background:var(--panel2);border:1px solid var(--line);color:var(--dim);border-radius:6px;padding:2px 8px}
+  .hp-sig.ok{color:var(--pic)}
+  .hp-actions{display:flex;gap:8px;margin-top:9px}
+  .btn.tiny{font-size:11.5px;padding:5px 10px;border-radius:8px;background:var(--panel2);border:1px solid var(--line);color:var(--ink);cursor:pointer;text-decoration:none}
+  .btn.tiny:hover{border-color:var(--accent);text-decoration:none}
 </style>
 </head>
 <body>
@@ -235,10 +309,12 @@
 
   <div class="tabbar" id="tabbar">
     <button data-view="map" class="active">50-state map</button>
+    <button data-view="operate">Can I operate?</button>
     <button data-view="table">Data table</button>
     <button data-view="compare">Compare states</button>
     <button data-view="calendar">Compliance calendar</button>
     <button data-view="changelog">Change log</button>
+    <button data-view="health">Source health</button>
     <button data-view="ask">Ask (grounded)</button>
   </div>
 
@@ -251,6 +327,7 @@
     <div class="seg" id="viewMode">
       <button data-v="coverage" class="active">My coverage</button>
       <button data-v="research">Research status</button>
+      <button data-v="freshness">Source freshness</button>
     </div>
     <div class="field"><input type="search" id="search" placeholder="Search state…"></div>
     <select id="fltDim">
@@ -279,9 +356,11 @@
   </section>
 
   <section id="view-table" hidden></section>
+  <section id="view-operate" hidden></section>
   <section id="view-compare" hidden></section>
   <section id="view-calendar" hidden></section>
   <section id="view-changelog" hidden></section>
+  <section id="view-health" hidden></section>
   <section id="view-ask" hidden></section>
 
   <footer>
@@ -295,7 +374,10 @@
   <div class="modal">
     <div class="mhead">
       <h2><span id="mDot" class="dot"></span><span id="mTitle"></span></h2>
-      <button class="close" id="mClose">&times;</button>
+      <div class="mhead-actions">
+        <button class="btn memo" id="mMemo" title="Open a clean, printable one-page compliance memo for this jurisdiction">🖨 Print memo</button>
+        <button class="close" id="mClose">&times;</button>
+      </div>
     </div>
     <div class="mbody" id="mBody"></div>
   </div>
@@ -1691,7 +1773,7 @@ function researchStatusFor(a){
   }}
   return review>0 ? "warn" : "ok";
 }
-function statusFor(a){ return state.view==="research" ? researchStatusFor(a) : coverageStatusFor(a); }
+function statusFor(a){ return state.view==="research" ? researchStatusFor(a) : state.view==="freshness" ? freshnessStatusFor(a) : coverageStatusFor(a); }
 
 /* live per-state research coverage: verified fields / total applicable fields */
 function coverageOf(a){
@@ -1713,10 +1795,55 @@ function coverageTier(ver,total){
   return "bad";
 }
 
+/* ---------- SOURCE FRESHNESS ----------
+   Every SOURCES entry carries a human "date" note; we pull the first ISO date
+   (YYYY-MM-DD) out of it as the last-verified anchor. Re-verify cadence:
+   fresh (< 6mo), review-due (6–12mo), overdue (> 12mo). This surfaces the
+   provenance discipline the project already invests in — a citation checked
+   14 months ago is not the same as one checked last week. Derived, honest:
+   the ISO date is when WE read the source, not a legal effective date. */
+const FRESH_DAYS=183, STALE_DAYS=365;               // 6 months / 12 months
+const NOW_MS=Date.now();
+/* The verification/last-checked date is the LATEST ISO date in the note: a source
+   can't be read in the future, while embedded statutory effective dates and Wayback
+   capture dates are always earlier. Taking max avoids anchoring on those. */
+function isoDateIn(str){ const all=(str||"").match(/20\d\d-\d\d-\d\d/g); return all&&all.length ? all.sort().pop() : null; }
+function sourceAgeDays(iso){ if(!iso) return null; const d=Date.parse(iso); if(isNaN(d)) return null; return Math.floor((NOW_MS-d)/864e5); }
+function ageTier(days){ if(days==null) return "unk"; if(days>STALE_DAYS) return "bad"; if(days>FRESH_DAYS) return "warn"; return "ok"; }
+/* compact human age: "5d", "3mo", "1.4y" */
+function fmtAge(days){
+  if(days==null) return "—";
+  if(days<31) return days+"d";
+  if(days<365) return Math.round(days/30.4)+"mo";
+  return (days/365).toFixed(1)+"y";
+}
+/* Oldest verified source age for a state = its weakest-freshness link (worst case). */
+function oldestSourceAge(a){
+  const d=DATA[a]; let oldest=null;
+  for(const grp in d){ for(const key in d[grp]){
+    const f=d[grp][key];
+    if(f&&f.na) continue;
+    if(f&&f.src&&SOURCES[f.src]){
+      const age=sourceAgeDays(isoDateIn(SOURCES[f.src].date));
+      if(age!=null && (oldest==null || age>oldest)) oldest=age;
+    }
+  }}
+  return oldest; // null → no verified source at all
+}
+/* Freshness status for the map: only states that HAVE verified sources get a
+   fresh/due/overdue rating; unresearched states stay grey (nothing to age). */
+function freshnessStatusFor(a){
+  if(!STATE_OVERRIDES[a]) return "unk";
+  const oldest=oldestSourceAge(a);
+  if(oldest==null) return "unk";
+  return ageTier(oldest);
+}
+
 const STATUS_RANK={ok:0,warn:1,bad:2,unk:3};
 const LABELS={
   coverage:{ok:"Compliant",warn:"Gaps",bad:"Blocked",unk:"Not assessed"},
-  research:{ok:"Verified & current",warn:"Review due / partial",bad:"Action required",unk:"Not researched"}
+  research:{ok:"Verified & current",warn:"Review due / partial",bad:"Action required",unk:"Not researched"},
+  freshness:{ok:"Fresh (< 6mo)",warn:"Review due (6–12mo)",bad:"Overdue (> 12mo)",unk:"No verified source"}
 };
 function labelFor(s){ return LABELS[state.view][s]; }
 /* back-compat alias used by modal/export */
@@ -1761,8 +1888,19 @@ function render(){
       `<span class="chip ${o.deaState?'on':'off'}">Rx</span>`,
       `<span class="chip ${o.pharmacyPermit?'on':'off'}">Pharm</span>`
     ].join("");
+    // freshness view swaps the ver/total badge for an "oldest cite age" badge
+    let badge;
+    if(state.view==="freshness"){
+      const age=oldestSourceAge(a);
+      badge = age==null
+        ? `<span class="cov cov-unk">no src</span>`
+        : `<span class="cov cov-${ageTier(age)}">${fmtAge(age)}</span>`;
+    } else {
+      const cv=coverageOf(a);
+      badge = `<span class="cov cov-${coverageTier(cv.ver,cv.total)}">${cv.ver}/${cv.total}</span>`;
+    }
     return `<div class="card" data-a="${a}">
-      <div class="st"><span class="abbr">${a}</span><span class="cov cov-${coverageTier(coverageOf(a).ver,coverageOf(a).total)}">${coverageOf(a).ver}/${coverageOf(a).total}</span><span class="dot ${s}"></span></div>
+      <div class="st"><span class="abbr">${a}</span>${badge}<span class="dot ${s}"></span></div>
       <div class="name">${n}</div>
       <div class="chips">${chips}</div>
     </div>`;
@@ -1777,6 +1915,8 @@ function renderLegend(){
   const L=LABELS[state.view];
   const desc = state.view==="research"
     ? {ok:"every field sourced / N-A",warn:"some fields need review",bad:"action required",unk:"not researched"}
+    : state.view==="freshness"
+    ? {ok:"oldest cite < 6 months old",warn:"oldest cite 6–12 months old",bad:"oldest cite > 12 months old",unk:"no verified source to age"}
     : {ok:"requirements met",warn:"partial coverage",bad:"required credential missing",unk:"not assessed"};
   document.getElementById("legend").innerHTML=
     `<span><span class="dot ok"></span> ${L.ok} — ${desc.ok}</span>`+
@@ -1959,6 +2099,7 @@ const RESEARCH_NOTES=new Set(["CA","TX","FL","NJ","NY","OH","IL","PA","MI","GA",
 
 /* ---------- MODAL ---------- */
 const overlay=document.getElementById("overlay");
+let modalState=null; // abbr of the state whose modal is open (drives Print memo)
 function fieldRow(f){
   let prov;
   if(f.na){
@@ -1977,6 +2118,7 @@ function fieldRow(f){
     <div class="note">${f.note}</div>${prov}</div></div>`;
 }
 function openModal(a){
+  modalState=a;
   const name=STATES.find(s=>s[0]===a)[1]; const d=DATA[a]; const s=statusFor(a); const o=orgFor(a);
   document.getElementById("mTitle").textContent=`${name} (${a})`;
   const md=document.getElementById("mDot"); md.className="dot "+s;
@@ -1984,8 +2126,18 @@ function openModal(a){
   const sum=stateSummary(a);
   const usedSrcKeys=[...new Set(FIELD_DEFS.flatMap(([,fs])=>fs.map(([p])=>fieldAt(a,p)).filter(f=>f.src&&SOURCES[f.src]).map(f=>f.src)))];
   const srcList = usedSrcKeys.length
-    ? usedSrcKeys.map(k=>{const s=SOURCES[k];return `<li><a href="${s.url}" target="_blank" rel="noopener">${s.agency}</a><span class="pmeta"> — ${s.date}</span></li>`;}).join("")
+    ? usedSrcKeys.map(k=>{const s=SOURCES[k];
+        const age=sourceAgeDays(isoDateIn(s.date));
+        const agePill = age==null ? "" : ` <span class="agepill ${ageTier(age)}" title="Last verified ${fmtAge(age)} ago — ${LABELS.freshness[ageTier(age)]}">${fmtAge(age)}</span>`;
+        return `<li><a href="${s.url}" target="_blank" rel="noopener">${s.agency}</a><span class="pmeta"> — ${s.date}</span>${agePill}</li>`;}).join("")
     : `<li class="pmeta">No primary sources sourced for this state yet.</li>`;
+  const oldest=oldestSourceAge(a);
+  const freshPill = oldest==null ? `<span class="pill unk">—</span>`
+    : `<span class="pill ${ageTier(oldest)}">${sum.lastReviewed||"—"} · ${fmtAge(oldest)} old</span>`;
+  const freshNote = oldest==null ? "" :
+    ageTier(oldest)==="bad" ? ` <b style="color:var(--ecom)">Oldest citation is over a year old — re-verify before relying on it.</b>`
+    : ageTier(oldest)==="warn" ? ` <span style="color:var(--dim)">Oldest citation is 6–12 months old — a re-check is due soon.</span>`
+    : ` <span style="color:var(--pic)">All citations checked within the last 6 months.</span>`;
   const execSummary=`
     <div class="section">
       <h3>Executive summary</h3>
@@ -1993,8 +2145,8 @@ function openModal(a){
         ${sum.researched?`<b>${sum.ver}</b> of ${sum.total} fields verified against a primary source, <b>${sum.rev}</b> need legal review${sum.na?`, ${sum.na} N/A`:""}.`
           :`<b>Not yet researched.</b> This state carries only inherited federal/USP framework defaults; all state-specific fields need legal review.`}
       </div>
-      <div class="row"><div class="k">Last reviewed<div class="note">Most recent date among this state's verified sources (derived, not a legal effective date).</div></div>
-        <div class="v">${sum.lastReviewed?`<span class="pill ok">${sum.lastReviewed}</span>`:`<span class="pill unk">—</span>`}</div></div>
+      <div class="row"><div class="k">Last reviewed<div class="note">Most recent date among this state's verified sources (derived, not a legal effective date). Age shown is the OLDEST citation — the weakest link.${freshNote}</div></div>
+        <div class="v">${freshPill}</div></div>
       <div class="row"><div class="k">Sources cited</div><div class="v" style="text-align:left"><ul style="margin:0;padding-left:16px">${srcList}</ul></div></div>
       ${RESEARCH_NOTES.has(a)?`<div class="row"><div class="k">Research note<div class="note">Full audit trail: sources checked, open questions, and pharmacist/attorney review checklist.</div></div>
         <div class="v"><a class="btn" href="research-notes/${a}.md" target="_blank" rel="noopener">📄 Open ${a} research note →</a></div></div>`:""}
@@ -2037,6 +2189,96 @@ function openModal(a){
   });
 }
 document.getElementById("mClose").onclick=()=>overlay.classList.remove("show");
+document.getElementById("mMemo").onclick=()=>{ if(modalState) printStateMemo(modalState); };
+
+/* ---------- COMPLIANCE MEMO (printable one-pager) ----------
+   Opens a self-contained, print-optimized document for a single jurisdiction in a
+   new window: every field with its status, verbatim note, and primary-source
+   citation, grouped by dimension, plus the org-tracking snapshot, a provenance
+   summary, and the standing disclaimer. Nothing new is asserted — this is the same
+   provenance-gated data reformatted as a document counsel can read/file/print-to-PDF.
+   Uses window.print(); the user picks "Save as PDF" in the print dialog. */
+function esc(s){ return String(s==null?"":s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c])); }
+function printStateMemo(a){
+  const name=STATES.find(s=>s[0]===a)[1];
+  const sum=stateSummary(a);
+  const o=orgFor(a);
+  const oldest=oldestSourceAge(a);
+  const freshWord = oldest==null?"—":`${sum.lastReviewed||"—"} (oldest cite ${fmtAge(oldest)} old, ${LABELS.freshness[ageTier(oldest)]})`;
+  const genDate=new Date().toISOString().slice(0,10);
+
+  const STATUS_WORD={ver:"Verified against primary source",rev:"Needs legal review",na:"Not applicable"};
+  const dims=FIELD_DEFS.map(([title,fs])=>{
+    const rows=fs.map(([p,label])=>{
+      const f=fieldAt(a,p), st=fieldState(f), s=(st==="ver")?SOURCES[f.src]:null;
+      const cite = s ? `<div class="cite"><b>${esc(s.agency)}</b><br><a href="${esc(s.url)}">${esc(s.url)}</a><br><span class="cdate">${esc(s.date)}</span></div>`
+        : st==="na" ? `<div class="cite na">${esc(f.naNote||"This requirement does not apply in this jurisdiction.")}</div>`
+        : `<div class="cite rev">No primary source confirmed in this build — verify against the state board before relying on this.</div>`;
+      return `<tr class="r-${st}">
+        <td class="fld">${esc(label)}</td>
+        <td class="stat s-${st}">${STATUS_WORD[st]}</td>
+        <td class="note">${esc(f.note||"")}${cite}</td></tr>`;
+    }).join("");
+    return `<h3>${esc(title)}</h3>
+      <table class="memo-t"><thead><tr><th>Requirement</th><th>Status</th><th>Finding &amp; source</th></tr></thead>
+      <tbody>${rows}</tbody></table>`;
+  }).join("");
+
+  const held=[
+    ["Active state medical license",o.medLicense],
+    ["Enrolled via IMLC compact",o.imlcEnrolled],
+    ["State controlled-substance / DEA registration",o.deaState],
+    ["Nonresident pharmacy permit",o.pharmacyPermit]
+  ].map(([l,v])=>`<li class="${v?'yes':'no'}">${v?'✓':'✗'} ${esc(l)}</li>`).join("");
+
+  const html=`<!DOCTYPE html><html><head><meta charset="utf-8">
+    <title>Compliance memo — ${esc(name)} (${esc(a)})</title>
+    <style>
+      *{box-sizing:border-box}
+      body{font:12px/1.5 "Segoe UI",Arial,sans-serif;color:#111;max-width:850px;margin:0 auto;padding:28px 30px}
+      h1{font-size:20px;margin:0 0 2px}
+      .sub{color:#555;font-size:12px;margin-bottom:14px}
+      .meta{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:11.5px;border:1px solid #ddd;border-radius:8px;padding:10px 14px;margin-bottom:16px;background:#f8f9fb}
+      .meta b{color:#000}
+      .disc{border:1px solid #d9b441;background:#fff8e6;color:#7a5b0b;border-radius:8px;padding:9px 13px;font-size:11px;margin-bottom:18px}
+      h3{font-size:13.5px;margin:20px 0 5px;padding-bottom:3px;border-bottom:2px solid #333}
+      table.memo-t{width:100%;border-collapse:collapse;margin-bottom:6px;font-size:11px}
+      .memo-t th{text-align:left;background:#f0f2f5;border:1px solid #ccc;padding:5px 7px;font-size:10.5px;text-transform:uppercase;letter-spacing:.3px}
+      .memo-t td{border:1px solid #ddd;padding:6px 7px;vertical-align:top}
+      td.fld{width:22%;font-weight:600}
+      td.stat{width:20%;font-weight:600}
+      td.note{width:58%}
+      .s-ver{color:#0a7f4f}.s-rev{color:#b42318}.s-na{color:#667}
+      .cite{margin-top:5px;padding-top:5px;border-top:1px dotted #ccc;font-size:10px;color:#333;word-break:break-word}
+      .cite a{color:#1a56db}
+      .cite.rev{color:#b42318;border-top:none}.cite.na{color:#667;border-top:none}
+      .cdate{color:#666}
+      ul.held{list-style:none;padding:0;margin:6px 0 0;columns:2;font-size:11.5px}
+      ul.held li.yes{color:#0a7f4f}ul.held li.no{color:#999}
+      .foot{margin-top:22px;padding-top:10px;border-top:1px solid #ccc;font-size:10px;color:#777}
+      @media print{body{padding:0}.noprint{display:none}
+        h3{break-after:avoid}table.memo-t{break-inside:auto}tr{break-inside:avoid}}
+      .pbtn{position:fixed;top:14px;right:14px;background:#1a56db;color:#fff;border:none;border-radius:8px;padding:9px 16px;font-size:13px;cursor:pointer}
+    </style></head><body>
+    <button class="pbtn noprint" onclick="window.print()">🖨 Print / Save as PDF</button>
+    <h1>Telehealth &amp; Pharmacy Compliance Memo</h1>
+    <div class="sub">${esc(name)} (${esc(a)}) · generated ${genDate}</div>
+    <div class="meta">
+      <span><b>Provenance:</b> ${sum.ver}/${sum.total} fields verified · ${sum.rev} need review${sum.na?` · ${sum.na} N/A`:""}</span>
+      <span><b>Last reviewed:</b> ${esc(freshWord)}</span>
+      <span><b>Research note on file:</b> ${RESEARCH_NOTES.has(a)?"Yes (research-notes/"+esc(a)+".md)":"No"}</span>
+    </div>
+    <div class="disc"><b>Not legal advice.</b> This memo reformats provenance-gated research data; it asserts no law beyond what each cited primary source states, and fields marked &ldquo;Needs legal review&rdquo; are honest gaps, not findings that no rule exists. Confirm every item with counsel and the state board before operating.</div>
+    <h3>Your organization's tracked credentials (this device)</h3>
+    <ul class="held">${held}</ul>
+    ${dims}
+    <div class="foot">Generated by the Telehealth &amp; Pharmacy Compliance Command Center · ${genDate}. Citations link to the primary sources read on the dates shown; verification dates are when the source was read, not legal effective dates.</div>
+    </body></html>`;
+
+  const w=window.open("","_blank");
+  if(!w){ alert("Pop-up blocked — allow pop-ups to open the printable memo."); return; }
+  w.document.open(); w.document.write(html); w.document.close();
+}
 overlay.onclick=e=>{if(e.target===overlay)overlay.classList.remove("show");};
 document.addEventListener("keydown",e=>{if(e.key==="Escape")overlay.classList.remove("show");});
 
@@ -2153,6 +2395,155 @@ function exportTableCSV(){
   downloadCSV(csvRows(rows),`telehealth-compliance-table_${stamp}.csv`);
 }
 
+/* ---------- "CAN I OPERATE?" GO/NO-GO WIZARD ----------
+   Turns the org-credential tracking (the same localStorage `track` that colours
+   the map) into an operator decision. Pick a business model → every jurisdiction
+   resolves to Clear / Action needed / Blocked, naming the SPECIFIC missing
+   credential and citing the state's own verified statute for that requirement
+   where one exists (honest "framework default / needs review" otherwise).
+   This asserts nothing new: it recombines the credentials you tracked with the
+   provenance-gated field data already in the build. Not legal advice. */
+
+/* Each model lists the credentials it requires. `cite` points at the state field
+   whose verified note+source best evidences WHY that credential is needed, so the
+   answer carries a citation instead of a bare assertion. */
+const OPERATE_MODELS=[
+  {id:"consult", name:"Telehealth consults only (no prescribing)",
+   blurb:"Synchronous/asynchronous visits, no prescriptions issued.",
+   reqs:[{cred:"medLicense",label:"Active state medical license",alt:"imlcEnrolled",altLabel:"IMLC compact enrollment",cite:"provider.fullLicense"}]},
+  {id:"rx", name:"Telehealth + prescribing (non-controlled)",
+   blurb:"Visits plus legend-drug prescriptions; no controlled substances.",
+   reqs:[{cred:"medLicense",label:"Active state medical license",alt:"imlcEnrolled",altLabel:"IMLC compact enrollment",cite:"provider.fullLicense"}]},
+  {id:"controlled", name:"Telehealth + controlled-substance prescribing",
+   blurb:"Visits plus Schedule II–V prescriptions via telehealth.",
+   reqs:[
+     {cred:"medLicense",label:"Active state medical license",alt:"imlcEnrolled",altLabel:"IMLC compact enrollment",cite:"provider.fullLicense"},
+     {cred:"deaState",label:"State controlled-substance / DEA registration",cite:"prescribing.controlled"}]},
+  {id:"dispense", name:"Mail-order / nonresident pharmacy dispensing",
+   blurb:"Shipping prescription drugs into the state from an out-of-state pharmacy.",
+   reqs:[{cred:"pharmacyPermit",label:"Nonresident pharmacy permit",cite:"pharmacy.nonresident"}]},
+  {id:"full", name:"Full stack (telehealth + controlled Rx + dispensing)",
+   blurb:"Provider visits, controlled prescribing, and pharmacy fulfillment end-to-end.",
+   reqs:[
+     {cred:"medLicense",label:"Active state medical license",alt:"imlcEnrolled",altLabel:"IMLC compact enrollment",cite:"provider.fullLicense"},
+     {cred:"deaState",label:"State controlled-substance / DEA registration",cite:"prescribing.controlled"},
+     {cred:"pharmacyPermit",label:"Nonresident pharmacy permit",cite:"pharmacy.nonresident"}]}
+];
+let operateModel="consult";
+
+/* For a state+model, return {status, held[], missing[]}.
+   status: ok=all held · warn=has med license but missing secondary · bad=missing the
+   foundational license (blocked) · unk=state marked N/A in tracking. */
+function operateResolve(a,model){
+  const o=orgFor(a);
+  if(o.na) return {status:"unk",held:[],missing:[],na:true};
+  const held=[],missing=[];
+  for(const r of model.reqs){
+    const ok = o[r.cred] || (r.alt && o[r.alt]);
+    if(ok) held.push(r); else missing.push(r);
+  }
+  let status;
+  if(!missing.length) status="ok";
+  else if(missing.some(r=>r.cred==="medLicense")) status="bad"; // no license = can't operate
+  else status="warn";
+  return {status,held,missing,na:false};
+}
+/* Citation string for a missing requirement, pulled from the state's own field. */
+function operateCite(a,req){
+  const f=fieldAt(a,req.cite), st=fieldState(f);
+  if(st==="ver"){const s=SOURCES[f.src];
+    return {kind:"ver",text:f.note,agency:s.agency,url:s.url,date:s.date};}
+  if(st==="na") return {kind:"na",text:f.naNote||"Not applicable in this jurisdiction."};
+  return {kind:"rev",text:f.note||"No state-specific primary source located yet — federal/framework default applies; confirm with counsel."};
+}
+
+const OP_WORD={ok:"Clear to operate",warn:"Action needed",bad:"Blocked",unk:"Marked N/A"};
+const OP_DESC={
+  ok:"Your tracked credentials satisfy this model's requirements here.",
+  warn:"You hold the medical license but are missing a secondary credential.",
+  bad:"You are missing the foundational state medical license — you cannot operate this model here yet.",
+  unk:"You marked this jurisdiction not-applicable in tracking."
+};
+
+function renderOperate(){
+  const host=document.getElementById("view-operate");
+  const model=OPERATE_MODELS.find(m=>m.id===operateModel);
+  // resolve every state
+  const rows=STATES.map(([a,n])=>({a,n,...operateResolve(a,model)}));
+  const counts={ok:0,warn:0,bad:0,unk:0}; rows.forEach(r=>counts[r.status]++);
+  const anyCred=STATES.some(([a])=>{const o=orgFor(a);return o.medLicense||o.imlcEnrolled||o.deaState||o.pharmacyPermit;});
+
+  const modelBtns=OPERATE_MODELS.map(m=>
+    `<button class="op-model ${m.id===operateModel?"active":""}" data-m="${m.id}">
+      <span class="op-model-name">${m.name}</span><span class="op-model-blurb">${m.blurb}</span></button>`).join("");
+
+  const kpi=`<div class="op-kpis">
+    <div class="op-kpi ok"><div class="n">${counts.ok}</div><div class="l">Clear</div></div>
+    <div class="op-kpi warn"><div class="n">${counts.warn}</div><div class="l">Action needed</div></div>
+    <div class="op-kpi bad"><div class="n">${counts.bad}</div><div class="l">Blocked</div></div>
+    <div class="op-kpi unk"><div class="n">${counts.unk}</div><div class="l">N/A</div></div>
+  </div>`;
+
+  const order={bad:0,warn:1,ok:2,unk:3};
+  const sorted=rows.slice().sort((x,y)=>order[x.status]-order[y.status]||x.a.localeCompare(y.a));
+  const cardHtml=sorted.map(r=>{
+    const missList=r.missing.map(req=>{
+      const c=operateCite(r.a,req);
+      const badge=c.kind==="ver"?`<span class="badge ver">✓ VERIFIED</span>`
+        :c.kind==="na"?`<span class="badge na">N/A</span>`:`<span class="badge rev">⚑ REVIEW</span>`;
+      const src=c.kind==="ver"?` <a href="${c.url}" target="_blank" rel="noopener">${c.agency}</a> · ${c.date}`:"";
+      return `<div class="op-miss"><div class="op-miss-h">Need: <b>${req.label}</b> ${badge}</div>
+        <div class="op-miss-note">${c.text}${src}</div></div>`;
+    }).join("");
+    const heldList=r.held.length?`<div class="op-held">Held: ${r.held.map(h=>h.label).join(", ")}</div>`:"";
+    return `<div class="op-card ${r.status}" data-a="${r.a}">
+      <div class="op-card-top"><span class="op-dot ${r.status}"></span>
+        <span class="op-state">${r.n} <span class="ab">${r.a}</span></span>
+        <span class="op-status">${OP_WORD[r.status]}</span></div>
+      <div class="op-card-desc">${OP_DESC[r.status]}</div>
+      ${heldList}${missList}
+      <div class="op-open" data-a="${r.a}">Open full ${r.a} record →</div>
+    </div>`;
+  }).join("");
+
+  host.innerHTML=`<div class="panelbox">
+    <div class="op-title">Can I operate?</div>
+    <div class="note" style="margin-bottom:12px">
+      Pick your business model. Every jurisdiction is scored against the credentials you've tracked
+      (toggle them per-state on the map, or below). Each gap names the missing credential and cites the
+      <b>state's own verified statute</b> where one is on file. This recombines your tracking with the
+      provenance-gated data — it asserts no new law. <b>Not legal advice.</b>
+    </div>
+    <div class="op-models">${modelBtns}</div>
+    ${anyCred?"":`<div class="op-warn">⚠ You haven't tracked any credentials yet. Open states on the 50-state map and tick what your org holds — then every model here resolves against real holdings. Until then everything shows as "Blocked".</div>`}
+    ${kpi}
+    <div class="op-tools"><button class="btn" id="opExport">⤓ Export action list (CSV)</button></div>
+    <div class="op-grid">${cardHtml}</div>
+  </div>`;
+
+  host.querySelectorAll(".op-model").forEach(b=>b.onclick=()=>{operateModel=b.dataset.m;renderOperate();});
+  host.querySelectorAll(".op-open").forEach(el=>el.onclick=()=>openModal(el.dataset.a));
+  document.getElementById("opExport").onclick=()=>exportOperateCSV(model,sorted);
+}
+
+/* Action-list CSV: one row per state×missing-credential, carrying the driving citation. */
+function exportOperateCSV(model,rows){
+  const out=[["Model","State","Abbr","Status","Missing credential","Why (state note)","Source agency","Source URL","Source date"]];
+  rows.forEach(r=>{
+    if(!r.missing.length){
+      out.push([model.name,r.n,r.a,OP_WORD[r.status],"—","All required credentials held","","",""]);
+    } else {
+      r.missing.forEach(req=>{
+        const c=operateCite(r.a,req);
+        out.push([model.name,r.n,r.a,OP_WORD[r.status],req.label,c.text,
+          c.kind==="ver"?c.agency:"",c.kind==="ver"?c.url:"",c.kind==="ver"?c.date:""]);
+      });
+    }
+  });
+  const stamp=new Date().toISOString().slice(0,10);
+  downloadCSV(csvRows(out),`telehealth-operate_${model.id}_${stamp}.csv`);
+}
+
 function renderCompare(){
   const host=document.getElementById("view-compare");
   const opts=(sel)=>`<option value="">— add state —</option>`+STATES.map(([a,n])=>`<option value="${a}" ${sel===a?"selected":""}>${n} (${a})</option>`).join("");
@@ -2223,6 +2614,139 @@ function renderCalendar(){
     ${section("Overdue",overdue)}
     ${section("Upcoming",upcoming)}
   </div>`;
+}
+
+/* ---------- SOURCE HEALTH ----------
+   Two honest layers. Layer 1 (no network): consolidate every citation into one
+   auditable registry and score each source's ROT RISK from statically-detectable
+   signals — age, Wayback/archive dependence, non-official aggregator mirror,
+   non-HTTPS, and explicit "no longer official / blocked / superseded / verify"
+   caveats already written into the note. Sorted worst-first = a re-verification
+   worklist. Layer 2 (opt-in): a domain-REACHABILITY probe (no-cors), labelled
+   precisely — it can confirm a domain still answers, but CANNOT see 404s or
+   content changes, and bot-walled .gov hosts may show unreachable though fine.
+   We never auto-assert a source is "dead" from a probe. */
+const AGG_RE=/justia|public\.law|findlaw|casetext|leagle|vlex/i;
+const ARC_RE=/wayback|internet archive|archive\.org|web\.archive/i;
+const CAV_RE=/no longer official|re-verify|not independently|could not|blocked|stale|superseded|casino|unreachable|SPA did not|did not hydrate/i;
+
+/* Which source keys are actually used, and by how many state×field citations. */
+function sourceUsage(){
+  const used={};
+  for(const a in DATA){const d=DATA[a];for(const g in d){for(const k in d[g]){
+    const f=d[g][k]; if(f&&f.src&&SOURCES[f.src]) used[f.src]=(used[f.src]||0)+1;
+  }}}
+  return used;
+}
+/* Risk signals + a 0–100 score for one source. Higher = re-verify sooner. */
+function sourceRisk(key){
+  const s=SOURCES[key]; const date=s.date||""; const url=s.url||"";
+  const age=sourceAgeDays(isoDateIn(date));
+  const sig=[];
+  let score=0;
+  if(age!=null){ if(age>STALE_DAYS){score+=40;sig.push("over 12mo old");} else if(age>FRESH_DAYS){score+=20;sig.push("6–12mo old");} }
+  else { score+=10; sig.push("no parseable date"); }
+  if(ARC_RE.test(date)||ARC_RE.test(url)){score+=25;sig.push("archive/Wayback-dependent");}
+  if(AGG_RE.test(date)||AGG_RE.test(url)){score+=20;sig.push("non-official mirror");}
+  if(!url.startsWith("https")){score+=15;sig.push("not HTTPS");}
+  if(CAV_RE.test(date)){score+=25;sig.push("caveat in note");}
+  return {score:Math.min(100,score),sig,age};
+}
+function riskTier(score){ if(score>=45) return "bad"; if(score>=20) return "warn"; return "ok"; }
+
+let healthProbe={}; // key -> {state:'checking'|'reachable'|'unreachable', ms}
+function renderHealth(){
+  const host=document.getElementById("view-health");
+  const used=sourceUsage();
+  const keys=Object.keys(SOURCES).filter(k=>used[k]); // only cited sources
+  const rows=keys.map(k=>({k,...sourceRisk(k),n:used[k],s:SOURCES[k]}));
+  const tiers={ok:0,warn:0,bad:0}; rows.forEach(r=>tiers[riskTier(r.score)]++);
+  rows.sort((a,b)=>b.score-a.score || (b.age||0)-(a.age||0) || a.k.localeCompare(b.k));
+
+  const kpi=`<div class="op-kpis" style="grid-template-columns:repeat(4,1fr)">
+    <div class="op-kpi"><div class="n">${keys.length}</div><div class="l">Cited sources</div></div>
+    <div class="op-kpi bad"><div class="n">${tiers.bad}</div><div class="l">High re-verify risk</div></div>
+    <div class="op-kpi warn"><div class="n">${tiers.warn}</div><div class="l">Watch</div></div>
+    <div class="op-kpi ok"><div class="n">${tiers.ok}</div><div class="l">Low risk</div></div>
+  </div>`;
+
+  const list=rows.map(r=>{
+    const t=riskTier(r.score);
+    const pr=healthProbe[r.k];
+    const probeBadge = !pr ? ""
+      : pr.state==="checking" ? `<span class="hp-badge checking">probing…</span>`
+      : pr.state==="reachable" ? `<span class="hp-badge reachable">domain answered${pr.ms?` · ${pr.ms}ms`:""}</span>`
+      : `<span class="hp-badge unreachable">no response (may be bot-walled)</span>`;
+    const sigChips=r.sig.map(x=>`<span class="hp-sig">${x}</span>`).join("")||`<span class="hp-sig ok">no static risk signals</span>`;
+    let host2=""; try{host2=new URL(r.s.url).hostname;}catch(e){host2=r.s.url;}
+    return `<div class="hp-card ${t}">
+      <div class="hp-top">
+        <span class="hp-score ${t}">${r.score}</span>
+        <div class="hp-agency"><b>${r.s.agency}</b>
+          <div class="hp-meta">${host2} · cited by ${r.n} field${r.n===1?"":"s"} · ${r.s.date}</div></div>
+        ${probeBadge}
+      </div>
+      <div class="hp-sigs">${sigChips}</div>
+      <div class="hp-actions">
+        <a class="btn tiny" href="${r.s.url}" target="_blank" rel="noopener">Open source ↗</a>
+        <button class="btn tiny probe" data-k="${r.k}">Probe domain</button>
+      </div>
+    </div>`;
+  }).join("");
+
+  host.innerHTML=`<div class="panelbox">
+    <div class="op-title">Source health &amp; re-verification queue</div>
+    <div class="note" style="margin-bottom:12px">
+      Every cited primary source, scored worst-first by <b>statically detectable rot risk</b> — age,
+      Wayback/archive dependence, non-official mirror, and any "no longer official / blocked / superseded"
+      caveat already in the note. This is a <b>re-verification worklist</b>, not a verdict: a high score
+      means "re-check this sooner," not "this is wrong."
+    </div>
+    <div class="hp-probe-note">
+      <b>Domain probe (optional):</b> "Probe domain" sends a no-cors reachability ping. It can confirm a
+      domain still answers, but <b>cannot see 404s or content changes</b>, and bot-walled .gov hosts may
+      show "no response" even when they're fine. It never marks a source dead automatically.
+      <button class="btn" id="hpProbeAll">Probe all domains</button>
+      <button class="btn" id="hpExport">⤓ Export queue (CSV)</button>
+    </div>
+    ${kpi}
+    <div class="hp-list">${list}</div>
+  </div>`;
+
+  host.querySelectorAll(".probe").forEach(b=>b.onclick=()=>probeDomain(b.dataset.k));
+  document.getElementById("hpProbeAll").onclick=()=>probeAll(rows.map(r=>r.k));
+  document.getElementById("hpExport").onclick=()=>exportHealthCSV(rows);
+}
+
+/* no-cors reachability probe. Resolves reachable on any settled fetch (opaque
+   responses have no status), unreachable on network error, with a timeout. */
+function probeDomain(key){
+  const s=SOURCES[key]; if(!s) return;
+  healthProbe[key]={state:"checking"};
+  if(activeView==="health") renderHealth();
+  const t0=performance.now();
+  const ctrl=new AbortController();
+  const timer=setTimeout(()=>ctrl.abort(),8000);
+  fetch(s.url,{mode:"no-cors",signal:ctrl.signal,cache:"no-store"})
+    .then(()=>{healthProbe[key]={state:"reachable",ms:Math.round(performance.now()-t0)};})
+    .catch(()=>{healthProbe[key]={state:"unreachable"};})
+    .finally(()=>{clearTimeout(timer);if(activeView==="health")renderHealth();});
+}
+function probeAll(keys){
+  // throttle a little so we don't fire 250 fetches at once
+  let i=0;
+  const step=()=>{ if(i>=keys.length) return; const batch=keys.slice(i,i+6); i+=6; batch.forEach(probeDomain); setTimeout(step,400); };
+  step();
+}
+function exportHealthCSV(rows){
+  const out=[["RiskScore","Tier","Agency","URL","SourceDate","CitedByFields","RiskSignals","ProbeResult"]];
+  rows.forEach(r=>{
+    const pr=healthProbe[r.k];
+    out.push([r.score,riskTier(r.score),r.s.agency,r.s.url,r.s.date,r.n,r.sig.join("; "),
+      pr?(pr.state+(pr.ms?` ${pr.ms}ms`:"")):""]);
+  });
+  const stamp=new Date().toISOString().slice(0,10);
+  downloadCSV(csvRows(out),`telehealth-source-health_${stamp}.csv`);
 }
 
 function renderChangelog(){
@@ -2359,13 +2883,15 @@ let activeView="map";
 function switchView(v){
   activeView=v;
   document.querySelectorAll("#tabbar button").forEach(b=>b.classList.toggle("active",b.dataset.view===v));
-  ["map","table","compare","calendar","changelog","ask"].forEach(n=>{
+  [["map","table","operate","compare","calendar","changelog","health","ask"]].flat().forEach(n=>{
     document.getElementById("view-"+n).hidden = (n!==v);
   });
   if(v==="table")renderTable();
+  else if(v==="operate")renderOperate();
   else if(v==="compare")renderCompare();
   else if(v==="calendar")renderCalendar();
   else if(v==="changelog")renderChangelog();
+  else if(v==="health")renderHealth();
   else if(v==="ask")renderAsk();
 }
 document.querySelectorAll("#tabbar button").forEach(b=>b.onclick=()=>switchView(b.dataset.view));
