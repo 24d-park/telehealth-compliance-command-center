@@ -37,3 +37,20 @@ each SOURCES entry. This is a genuine primary document, not an aggregator. Re-fe
 
 ---
 > **DISCLAIMER:** Operational research tool; **not legal advice.** Verify with counsel and the applicable board before acting.
+
+
+---
+
+## Update 2026-07-28 — more-research pass (13 -> 14/20)
+
+**relationship.consent WIRED** — Tenn. Code Ann. § 63-1-155(b) (Telehealth Services — Establishment of Provider-Patient Relationship): "a healthcare provider-patient relationship with respect to telemedicine or telehealth is created by mutual consent and mutual communication, except in an emergency, between the patient and the provider. The consent by the patient may be expressed or implied consent." TN codifies consent as a telehealth relationship-formation element (expressed OR implied) — a genuine sourced consent requirement, weaker than documented-informed-consent states (noted in-field). [src: tn_6301155]
+
+**ACCESS:** read verbatim from the Internet Archive `id_` capture of the official 2021 TN Code (Justia verbatim reproduction) — https://web.archive.org/web/20240805235525id_/https://law.justia.com/codes/tennessee/2021/title-63/chapter-1/part-1/section-63-1-155/ — same archived-mirror route used for IN/AR. Live TN Code hosts (advance.lexis.com, publications.tnsosfiles.com) remain Lexis/CloudFront-blocked. Only the 2021 capture of § 63-1-155 exists; re-verify current consolidated text when a live TN host is reachable.
+
+**Still red (6), confirmed NOT on the Justia archived mirror this pass:**
+- prescribing.pdmp (CSMD, TCA § 53-10-310) — Title 53 pharmacy chapters not reproduced on Justia TN mirror
+- prescribing.inPersonRx
+- pharmacy.nonresident (TCA § 63-10-216) — not archived
+- ecommerce.onlinePharmacy / ecommerce.website / ecommerce.dtc
+
+CDX enumeration confirmed Justia's TN captures cover only the Title 63 physician chapters (63-6-209 stale 2015; 63-1-155 telehealth 2021; 63-1-156 overdose-immunity). The pharmacy/CSMD sections need a live TN primary host or a Lexis session. Follow-up: retry live publications.tnsosfiles.com CSMD/1140 rule PDFs via Wayback for the § 53-10-310 mandatory-query verb + TN Board of Pharmacy nonresident (§ 63-10-216).

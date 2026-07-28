@@ -54,3 +54,18 @@ FDCA §503A adopted by rule (49 Pa. Code §27.601).
 
 ---
 > **DISCLAIMER:** Operational research tool; **not legal advice.** Verify with counsel and the applicable board before acting.
+
+
+---
+
+## Update 2026-07-28 — low-coverage push (14 -> 16/20), parent-verified
+
+- **provider.telehealthReg WIRED (verified-null)** — Medical Practice Act of 1985 § 10 (63 P.S. § 422.10): "No person other than a medical doctor shall ... Practice medicine and surgery" except as authorized in the act. Full PA licensure is the exclusive pathway to treat PA patients (incl. via telemedicine), and PA's only telemedicine statute (Act 42 of 2024, 40 Pa.C.S., INSURANCE title) creates NO separate telehealth registry. No standalone telehealth registration exists (OH/SC/UT/WI verified-null precedent). [reused src pa_med10]
+- **prescribing.inPersonRx WIRED** — 49 Pa. Code § 16.92(a)(1) (State Board of Medicine): "an initial medical history shall be taken and an initial physical examination shall be conducted prior to prescribing controlled substances unless emergency circumstances justify otherwise." § 16.92(a)(9) permits the initial exam by telehealth ONLY for OTP opioid-use-disorder patients (buprenorphine/methadone; full in-person exam within 14 days per 42 CFR 8.12). PA is stricter than most — a prior in-person exam is required before prescribing CS via telemedicine outside that narrow OTP carve-out. Amended 12/21/2024, 54 Pa.B. 8252. [new src pa_1692]
+
+### Still red (4) — honest holds
+- **relationship.inPerson + relationship.consent** — checked 49 Pa. Code Ch. 16 (General Provisions incl. Subch. F Minimum Standards §16.91/16.92): NO general telemedicine consent or relationship-establishment rule located there. Act 42 (SB 739) is insurance-title only. These likely live in Board of Medicine Ch. 16 Subch. F or Ch. 18 practice standards not yet isolated, or PA genuinely lacks a codified general telemedicine consent rule (many states do). Left red rather than assert.
+- **ecommerce.website** — Pharmacy Act § 4.1(b) requires the toll-free number on the drug LABEL, not a website; no on-website display mandate.
+- **ecommerce.dtc** — no online-questionnaire prescribing prohibition located in statute or the read rules.
+
+SOURCING confirmed this pass: palegis.us statute body reads via `window.frames[0].document.body.textContent` (take the LAST occurrence of a "Section N." heading to reach the body, not the TOC). pacodeandbulletin.gov § pages load the rule body async into `document.querySelector('article').innerText`. Confirmed SB 739 = Act 42 of 2024 is a Title 40 INSURANCE statute (not practice standards) — matches prior note.

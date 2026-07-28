@@ -28,3 +28,18 @@ Telehealth practice standard = **17 DCMR §4618** (DC Board of Medicine, eff. 12
 - **pharmacy.csDispense** — DC Code §48-903.01 et seq. + 22-B DCMR §1910 (chapter-level).
 - **ecommerce.website** — physical in-pharmacy posting only (§1901.3), no website mandate.
 - **ecommerce.dtc** — no standalone online-questionnaire ban; the §4618.3 evaluation requirement functionally precludes questionnaire-only prescribing but isn't an explicit DTC rule.
+
+
+---
+
+## Update 2026-07-28 — low-coverage push (14 -> 16/20), parent-verified
+
+- **provider.telehealthReg WIRED (verified-null)** — D.C. Code § 3-1205.01(a)(1) ("A license issued pursuant to this chapter is required to practice ... medicine ... pharmacy ... in the District, except as otherwise provided") + 17 DCMR § 4618.1 (DC license required for telemedicine). Only cross-border route is the adjoining-state in-person exemption § 3-1205.02(a)(4), NOT a telehealth credential. No separate DC telehealth registry. [new src dc_hora_120501]
+- **pharmacy.csDispense WIRED** — D.C. Code § 48-903.08: Schedule II written-Rx + no refill; III/IV 6-month/5-refill limit. Enacted Aug. 5, 1981, D.C. Law 4-29. [new src dc_48_903_08]
+
+### Still red (4) — genuine absences (17 DCMR §§ 4618/4612 read in full)
+- modality.audioOnly + modality.async — § 4618 authorizes only real-time; async only as narrow "interpretive services" (store-and-forward imaging). Audio-only appears only in DC insurance/Medicaid titles (excluded).
+- ecommerce.website — no on-website display mandate in the medicine chapter.
+- ecommerce.dtc — general § 4618.3 evaluation-before-prescribing duty but NO explicit online-questionnaire ban.
+
+SOURCING: DC Code = clean HTML deep-links (code.dccouncil.gov); DCMR = binary .doc downloads fetched same-origin via the RuleList page. All parent-verified verbatim.

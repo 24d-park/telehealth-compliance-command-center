@@ -29,3 +29,21 @@ Telehealth practice standard = **AS 08.64.364** (State Medical Board, Title 8 Bu
 
 ## FOLLOW-UP
 - 12 AAC 40.943 adopts the FSMB Model Policy (2014) + AMA Report 7 by reference as telemedicine standards — could add nuance to modality/standard-of-care if the AAC is later extractable.
+
+
+---
+
+## Update 2026-07-28 — low-coverage push (14 -> 18/20), parent-verified + PDMP CORRECTION
+
+akleg.gov SPA read via the in-page search box + `document.body.innerText`; AAC via aac.asp search. All parent-verified verbatim.
+
+- **provider.telehealthReg WIRED (verified-null)** — AS 08.64.170(a): "A person may not practice medicine, podiatry, or osteopathy in the state unless the person is licensed under this chapter." Telehealth § 08.64.364 creates no registry. [new src ak_08_64_170]
+- **pharmacy.csDispense WIRED** — AS 17.30.020(a): a person who dispenses a CS in the state "shall comply with the registration requirements of 21 U.S.C. 811 — 830." [new src ak_17_30_020]
+- **compounding.stateReg WIRED** — 12 AAC 52.440: compounders "shall adhere to the guidelines established by the board in the pamphlet titled, 'Compounding Practices,' dated February 2008." AK uses its OWN pamphlet, NOT USP-by-number. [new src ak_12aac52_440]
+- **prescribing.pdmp FLIPPED RED->GREEN (CORRECTION)** — AS 17.30.200(k)(4): board regulations must provide "that a practitioner review the information in the database ... before dispensing, prescribing, or administering a schedule II or III controlled substance" (enumerated exceptions only). MANDATORY targeted query. ***The prior note claiming § 17.30.200 was VOLUNTARY (citing a "Nothing in this section requires or obligates" disclaimer) was WRONG — that language is NOT in the current statute. I re-read the full section twice to confirm; the erroneous ak_pharmacy SOURCES note was corrected.*** [new src ak_17_30_200]
+
+### Still red (2) — genuine absences
+- relationship.consent — 12 AAC 40.943 only ADOPTS the FSMB Model Policy by reference; no explicit AK consent verb. The sole AK consent text (AS 08.64.364(a)(2)) is records-sharing consent, not treatment consent.
+- ecommerce.website — AS 08.80.240 (display of registration) REPEALED 1996; no website-display mandate. Internet pharmacies must merely license (12 AAC 52.020(h)).
+
+REUSABLE LESSON reinforced: a PDMP "shall provide that a practitioner review ... before prescribing" rulemaking-mandate = MANDATORY. Always read the operative (k)-type subsection; don't trust a prior "voluntary" label — verify the disclaimer actually exists in the CURRENT statute.

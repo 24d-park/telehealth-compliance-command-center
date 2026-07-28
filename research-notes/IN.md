@@ -87,3 +87,32 @@ Enactment: all sections added P.L.78-2016 SEC.2, amended through P.L.109-2022 (s
 - 856 IAC (compounding/USP) — only 6 stray pages archived, none on compounding.
 
 **The only clean unblock left: register a free api.iga.in.gov x-api-key** (docs.api.iga.in.gov) and fetch structured statute JSON for IC 25-1-9.5-6, 25-1-9.6, 25-26-13/17/18, and Title 35 ch. 7. The archived-mirror path is exhausted for Indiana.
+
+
+---
+
+## Update 2026-07-28 — UNBLOCK BREAKTHROUGH (10 -> 16/20)
+
+**The archived-mirror path was NOT exhausted after all** — the prior note said Justia/FindLaw/Casetext had no captures of IC 25-1-9.5-6, IC 25-26-*, etc. TRUE for the aggregators, but the breakthrough is a DIFFERENT source: **the OFFICIAL State of Indiana Indiana Code is archived on the Internet Archive** at `iga.in.gov/ic/2022/Title_25.html` (capture 2025-03-04) and `iga.in.gov/ic/2024/Title_35.html`. These are Indiana's own primary-source documents (not an aggregator), served as a single ~3MB HTML file per Title. Read verbatim via `browser_navigate` to the `id_` raw capture + `document.body.innerText` + indexOf/slice. Every quote below was PARENT-verified (re-read myself), not taken on the subagent's word.
+
+Access facts confirmed this pass:
+- Live `iga.in.gov` is still a dead JS SPA (serves the 691-byte shell for everything incl. `.json`) — do NOT retry it.
+- `api.iga.in.gov` requires a MANUALLY-approved MyIGA developer key (email approval to bamos@iga.in.gov) — NOT instant self-registration. Not usable autonomously.
+- The archived official Title HTML supersedes the aggregator route entirely.
+
+### WIRED (+6, parent-verified verbatim from the archived official IC)
+- **modality.video** — IC 25-1-9.5-6(a): telehealth "including: (1) secure videoconferencing; (2) store and forward technology; or (3) remote patient monitoring technology." [in_tele_6]
+- **modality.async** — IC 25-1-9.5-6(a)(2)-(3): "store and forward technology" + "remote patient monitoring technology." [in_tele_6]
+- **ecommerce.dtc** — IC 25-1-9.5-6(b): telehealth "does not include ... (4) Internet questionnaire. (5) Internet consultation" unless an established relationship exists. [in_tele_6]
+- **prescribing.pdmp** — IC 25-26-24-19(k): "shall obtain information about a patient from the data base ... before prescribing an opioid or benzodiazepine ... (4) Beginning January 1, 2021, all practitioners." MANDATORY. Added P.L.211-2019 SEC.38. **CORRECTION: the task-cited IC 35-48-7 is REPEALED (P.L.51-2019 SEC.21); INSPECT relocated to IC 25-26-24.** [in_inspect_2419]
+- **pharmacy.pic** — IC 25-26-13-18(a)(3): "a registered pharmacist will be in personal attendance and on duty in the licensed premises at all times ... and ... responsible for the lawful conduct of the pharmacy." IN's functional PIC (no "PIC"/"qualified pharmacist" term). [in_2526_13_18]
+- **pharmacy.nonresident** (re-pointed from provider-pathway in_tele_9) — IC 25-26-17-3: "A nonresident pharmacy must register with the board." Added P.L.183-1997; amended P.L.112-2014. [in_2526_17]
+- **ecommerce.onlinePharmacy** — IC 25-26-18 (Mail Order and Internet Based Pharmacies), §18-1 definition + §18-2 compliance. Added P.L.231-1999. [in_2526_18]
+
+### HELD RED (honest, 4)
+- **modality.audioOnly** — GENUINE ABSENCE: audio-only is NOT named in the IC 25-1-9.5-6 telehealth definition (video/store-forward/RPM only).
+- **pharmacy.csDispense** — CS-specific dispensing lives in IC 35-48 (Title 35) / 856 IAC, not the reachable Title 25 chapter; IC 25-26-13-16 is only the general professional-judgment/duty-to-honor standard. Not stretched to fit.
+- **compounding.stateReg (856 IAC 3)** — STILL ACCESS-BLOCKED: the IAC is administrative code, not in the Title 25 capture; in.gov/lsa/iac 404s and the IAC lives on the dead SPA. Needs a separate IAC Wayback hunt.
+- **ecommerce.website** — no on-website license-display mandate located (genuine absence, consistent with ~48 states).
+
+FOLLOW-UP: (1) 856 IAC 3 compounding via an IAC-specific Wayback capture or the archived Title on in.gov/lsa; (2) IC 35-48 CS-dispensing duties from the archived Title_35.html for pharmacy.csDispense.

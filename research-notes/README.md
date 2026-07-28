@@ -24,14 +24,14 @@ may differ by the ±2 federal defaults; see each note for the exact breakdown.
 
 | State | Verified / 20 | Notes |
 |---|---|---|
-| [Alaska](AK.md) | 14 / 20 |  |
+| [Alaska](AK.md) | 18 / 20 | +telehealthReg (AS 08.64.170 verified-null), csDispense (17.30.020), compounding (12 AAC 52.440 Board pamphlet not USP), pdmp CORRECTED to MANDATORY (17.30.200(k)(4)). Red: consent (FSMB by-ref only), website (repealed 1996) |
 | [Alabama](AL.md) | 18 / 20 | Telehealth statute §34-24-700 et seq. + pharmacy AAC 680-X-2 (2026-07-21); csDispense/e-commerce red (AAC 680-X-3 SPA won't hydrate) |
 | [Arkansas](AR.md) | 15 / 20 | UNBLOCKED 2026-07-22 via Justia/Wayback id_ (AR Telemedicine Act 17-80-402/403/404); Rx section 405 not archived |
 | [Arizona](AZ.md) | 17 / 20 |  |
 | [California](CA.md) | 18 / 20 | +csDispense (HSC 11200); telehealthReg left red (not exhaustively surveyed); website genuine null |
 | [Colorado](CO.md) | 15 / 20 | +async/consent/telehealthReg (C.R.S. 12-30-124 via OLLS Title 12 HTML; SECTION CORRECTED from mis-cited 12-30-108). audioOnly/inPersonRx/csDispense/e-commerce red (in 3 CCR 713 Board rules, unread) |
 | [Connecticut](CT.md) | 16 / 20 |  |
-| [District of Columbia](DC.md) | 14 / 20 |  |
+| [District of Columbia](DC.md) | 16 / 20 | +telehealthReg (DC Code 3-1205.01 verified-null) + csDispense (48-903.08). Red: audio-only/async (17 DCMR 4618 real-time only), website, dtc (genuine absences) |
 | [Delaware](DE.md) | 16 / 20 |  |
 | [Florida](FL.md) | 17 / 20 | +fullLicense/video/async/csDispense/pic (Fla. Stat. 458.311, 456.47(1), 893.04, 465.018). audioOnly red (def excludes only email/fax, NOT audio-only); consent red (64B8-9.0141 repealed); dtc red (456.47(2)(b) permits no-exam) |
 | [Georgia](GA.md) | 14 / 20 |  |
@@ -39,7 +39,7 @@ may differ by the ±2 federal defaults; see each note for the exact breakdown.
 | [Iowa](IA.md) | 15 / 20 |  |
 | [Idaho](ID.md) | 17 / 20 | +telehealthReg/consent/audio-only (Idaho Code 54-5713/5708/5703, Virtual Care Access Act) |
 | [Illinois](IL.md) | 17 / 20 |  |
-| [Indiana](IN.md) | 10 / 20 | +fullLicense (IC 25-22.5-3-1 via FindLaw/Wayback id_); IC 25-26 pharmacy + §6 modality def unreachable on any archive — needs api.iga.in.gov key |
+| [Indiana](IN.md) | 16 / 20 | UNBLOCKED via archived OFFICIAL iga.in.gov/ic/2022/Title_25.html (Wayback id_); +modality video/async, INSPECT pdmp (25-26-24-19k), pic, nonresident, online-pharmacy, dtc. Red: audio-only (absent), csDispense (IC 35-48), 856 IAC compounding (still blocked), website |
 | [Kansas](KS.md) | 14 / 20 | +telehealthReg (K.S.A. 40-2,211 verified-null) + audio-only exclusion. consent red (care-coord report only), pdmp voluntary (65-1685(c)). inPersonRx/compounding/website/dtc in K.A.R. — sos.ks.gov CloudFront-403, 68-13-3/4 not in Wayback (held) |
 | [Kentucky](KY.md) | 18 / 20 | +telehealthReg + no-in-person (KRS 311.5975/311.597, parent-reverified); compounding/dtc red |
 | [Louisiana](LA.md) | 19 / 20 | +8 fields via OSR-compiled LAC .docx (46:XLV consent/mandatory-PMP, 46:LIII nonresident/CDS/PIC/USP compounding/questionnaire ban); only ecommerce.website red (genuine absence) |
@@ -55,18 +55,18 @@ may differ by the ±2 federal defaults; see each note for the exact breakdown.
 | [North Dakota](ND.md) | 17 / 20 | +telehealthReg/audioOnly(excluded)/csDispense/onlinePharmacy (NDCC 43-17, 19-03.1-22, 43-15-34.1 via pdf.js). consent red (PA-list only), pdmp voluntary (19-03.5-05), website absent |
 | [Nebraska](NE.md) | 15 / 20 | +fullLicense + telehealthReg (Neb. Rev. Stat. 38-121 UCA); pdmp red (dispenser-report only, no mandatory query) |
 | [New Hampshire](NH.md) | 17 / 20 | +pdmp (RSA 318-B:41 mandatory opioid query; program moved to RSA 126-A:89-96) + telehealthReg/inPerson/consent (329:1-d, 318:1) + PIC/USP compounding (Ph 704.11/404.01); all via Wayback id_. csDispense/website/dtc red (dtc bar ophthalmic-only) |
-| [New Jersey](NJ.md) | 14 / 20 | Telehealth Act (P.L.2017 c.117) via pdf.js; pharmacy/e-commerce behind Imperva-blocked N.J.A.C. 13:39 |
+| [New Jersey](NJ.md) | 19 / 20 | +telehealthReg (45:1-62.b verified-null), dtc (45:1-62.d questionnaire ban), pic/csDispense/onlinePharmacy (N.J.A.C. 13:39 via Wayback id_ — Imperva bypassed). Red: website (genuine absence) |
 | [New Mexico](NM.md) | 17 / 20 | nmonesource.com 403; sourced via NMAC (srca.nm.gov) |
 | [Nevada](NV.md) | 16 / 20 |  |
 | [New York](NY.md) | 12 / 20 | +ecommerce.website (8 NYCRR 63.6 internet drug-price-list disclosure, resolved a prior contradiction). Structural ceiling: modality/consent/in-person only in excluded insurance-parity PHL 2999-cc. Genuine gaps, not access. |
 | [Ohio](OH.md) | 17 / 20 |  |
 | [Oklahoma](OK.md) | 16 / 20 | +telehealthReg/audioOnly(excluded)/consent (OAC 435:10-7-13 via Wayback MDRULES PDF; oscn.net Turnstile-blocked). csDispense/compounding red (USP 797-sterile only, 795 not by-number); dtc indirect |
 | [Oregon](OR.md) | 14 / 20 | +csDispense (OAR 855-080-0085 via oregon.public.law; OR hosts blocked). At honest ceiling: audioOnly/consent/inPersonRx/pdmp(voluntary)/website/dtc all genuine absences |
-| [Pennsylvania](PA.md) | 14 / 20 |  |
+| [Pennsylvania](PA.md) | 16 / 20 | +telehealthReg (63 P.S. 422.10 verified-null; Act 42 is insurance-title, no registry) + inPersonRx (49 Pa. Code 16.92 CS in-person exam, OTP telehealth carve-out). Red: relationship/consent (Board regs), ecommerce website/dtc |
 | [Rhode Island](RI.md) | 15 / 20 |  |
 | [South Carolina](SC.md) | 17 / 20 | +audio-only permitted (medium-neutral def 40-47-20(53)); async/consent/website remain |
 | [South Dakota](SD.md) | 16 / 20 | +telehealthReg (SDCL 34-52-2 full-licensure); audio-only/pdmp red (audio needs store-forward; 34-20E-11 non-mandatory) |
-| [Tennessee](TN.md) | 13 / 20 | Wayback-sourced statute text |
+| [Tennessee](TN.md) | 14 / 20 | Wayback-sourced statute text; +consent (TCA 63-1-155(b), archived 2021 TN Code) |
 | [Texas](TX.md) | 20 / 20 | COMPLETE — Occ. Code 151.056/562.056/562.101/562.1045 (incl. rare real on-website disclosure mandate) |
 | [Utah](UT.md) | 16 / 20 | +telehealthReg (26B-4-704 Title 58 licensure); reds genuine (audio-only needs A+V, no consent statute, DOPL e-commerce) |
 | [Virginia](VA.md) | 16 / 20 | +telehealthReg (§54.1-2901 no separate registry); reds are genuine nulls (consent guidance-only, audio-only insurance-only) + 18 VAC rules |

@@ -92,3 +92,19 @@ Read verbatim via pdf.js on the enacted P.L.2017 c.117 (Telemedicine/Telehealth 
 
 ### Still red (6) — all behind the Imperva block
 provider.telehealthReg, pharmacy.csDispense, pharmacy.pic, ecommerce.onlinePharmacy/website/dtc. The NJ Pharmacy Practice Act PDF is too large for pdf.js to fully parse and the sterile/PIC/e-commerce specifics live in **N.J.A.C. 13:39**, which is Imperva-blocked (njconsumeraffairs.gov). Left honest-red. FOLLOW-UP: N.J.A.C. 13:39 via an un-walled mirror or Wayback.
+
+
+---
+
+## Update 2026-07-28 — low-coverage push (14 -> 19/20), parent-verified
+
+**Imperva block on N.J.A.C. 13:39 CIRCUMVENTED** via a Wayback `id_` raw capture of the official Board of Pharmacy Chapter 39 PDF (web.archive.org/web/20150910195925id_/http://www.njconsumeraffairs.gov/regulations/Chapter-39-State-Board-of-Pharmacy.pdf, Last Revision 1/5/2015), read via pdf.js. NJ Telehealth Act quotes re-read via pdf.js on the enacted PL2017 c.117 PDF. All parent-verified verbatim.
+
+- **provider.telehealthReg WIRED (verified-null)** — N.J.S.A. 45:1-62.b(1): telehealth provider shall "(1) be validly licensed, certified, or registered, pursuant to Title 45 ... to provide such services in the State of New Jersey." No separate registry. [reused src nj_45_1_62]
+- **ecommerce.dtc WIRED** — N.J.S.A. 45:1-62.d: "Unless the provider has established a proper provider-patient relationship ... a provider shall not issue a prescription ... based solely on the responses provided in an online questionnaire." [reused src nj_45_1_62]
+- **pharmacy.pic WIRED** — N.J.A.C. 13:39-6.2(a): "Every pharmacy shall name a pharmacist whose license is in good standing in New Jersey as the pharmacist-in-charge." [new src nj_ac_1339]
+- **pharmacy.csDispense WIRED** — N.J.A.C. 13:39-7.9: Schedule II in a separate prescription file; III/IV/V separate/readily-retrievable. [nj_ac_1339]
+- **ecommerce.onlinePharmacy WIRED** — N.J.A.C. 13:39-4.20 out-of-state pharmacy registration (ships/mails/distributes into NJ); statutory anchor N.J.S.A. 45:14-73. NJ uses mail-order/out-of-state registration, no separate "internet pharmacy" class. [nj_ac_1339]
+
+### Still red (1) — genuine absence
+- ecommerce.website — no on-website display mandate in the 2015 Ch.39 text or statutes (display rules are physical-premises only: 13:39-4.3/3.1). Re-verify against a post-2015 consolidated Ch.39 if the live host becomes reachable.
