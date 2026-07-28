@@ -20,7 +20,7 @@
     -webkit-font-smoothing:antialiased;
   }
   a{color:var(--accent);text-decoration:none}
-  .wrap{max-width:1320px;margin:0 auto;padding:22px 22px 80px}
+  .wrap{max-width:1320px;margin:0 auto;padding:30px 26px 90px}
 
   header.top{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:14px}
   .brand{display:flex;align-items:center;gap:13px}
@@ -29,16 +29,18 @@
   h1{font-size:20px;margin:0;letter-spacing:.2px}
   .sub{color:var(--dim);font-size:12.5px;margin-top:2px}
 
-  .disclaimer{background:#2a1e10;border:1px solid #6b4e1d;color:#ffd98a;border-radius:12px;
-    padding:10px 14px;font-size:12.5px;margin:12px 0 18px;display:flex;gap:10px;align-items:flex-start}
-  .disclaimer b{color:#ffe6ad}
+  .disclaimer{background:linear-gradient(180deg,rgba(107,78,29,.16),rgba(107,78,29,.09));
+    border:1px solid rgba(120,90,40,.5);border-left:3px solid var(--warn);color:#d9c39a;border-radius:12px;
+    padding:13px 18px;font-size:12.5px;line-height:1.65;margin:14px 0 22px;display:flex;gap:12px;align-items:flex-start}
+  .disclaimer .ico{color:var(--warn);font-size:15px;line-height:1.4;flex:none}
+  .disclaimer b{color:#f2ddb0;font-weight:700}
 
   /* KPI strip */
-  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:18px}
+  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:13px;margin-bottom:22px}
   .kpi{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);
-    border-radius:14px;padding:14px 16px}
-  .kpi .n{font-size:26px;font-weight:800;line-height:1}
-  .kpi .l{color:var(--dim);font-size:11.5px;text-transform:uppercase;letter-spacing:.6px;margin-top:6px}
+    border-radius:14px;padding:16px 18px}
+  .kpi .n{font-size:28px;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+  .kpi .l{color:var(--dim);font-size:11px;text-transform:uppercase;letter-spacing:.7px;margin-top:8px}
   .kpi.ok .n{color:var(--ok)} .kpi.warn .n{color:var(--warn)}
   .kpi.bad .n{color:var(--bad)} .kpi.unk .n{color:var(--unk)}
 
@@ -60,10 +62,10 @@
   .btn.primary{background:var(--accent);color:#08101f;border-color:var(--accent);font-weight:700}
 
   /* grid */
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:11px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:13px}
   .card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);
-    border-radius:13px;padding:12px 13px;cursor:pointer;position:relative;transition:transform .08s,border-color .12s}
-  .card:hover{transform:translateY(-2px);border-color:var(--accent)}
+    border-radius:13px;padding:13px 14px;cursor:pointer;position:relative;transition:transform .12s ease,border-color .12s ease,box-shadow .12s ease}
+  .card:hover{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 8px 22px rgba(0,0,0,.28)}
   .card .st{display:flex;align-items:center;gap:7px}
   .abbr{font-weight:800;font-size:17px;letter-spacing:.5px}
   .cov{margin-left:auto;font-size:10.5px;font-weight:700;font-variant-numeric:tabular-nums;
@@ -75,9 +77,10 @@
   .dot.ok{background:var(--ok)} .dot.warn{background:var(--warn)}
   .dot.bad{background:var(--bad)} .dot.unk{background:var(--unk)}
   .card .name{color:var(--dim);font-size:11.5px;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .chips{display:flex;gap:4px;margin-top:9px;flex-wrap:wrap}
-  .chip{font-size:9.5px;padding:2px 6px;border-radius:6px;background:#0d1728;border:1px solid var(--line);color:var(--faint)}
-  .chip.on{color:var(--ok);border-color:#1f6f52} .chip.off{color:var(--bad);border-color:#6f2b2b}
+  .chips{display:flex;gap:5px;margin-top:10px;flex-wrap:wrap}
+  .chip{font-size:9.5px;padding:2px 7px;border-radius:6px;background:#0d1728;border:1px solid var(--line);color:var(--faint)}
+  .chip.on{color:var(--ok);border-color:rgba(52,211,153,.35);background:rgba(52,211,153,.07)}
+  .chip.off{color:var(--faint);border-color:var(--line);opacity:.7}
   .score{position:absolute;right:11px;bottom:10px;font-size:10px;color:var(--faint)}
 
   /* modal */
@@ -118,7 +121,7 @@
   .track label{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:7px 0;font-size:13px}
   .track input[type=checkbox]{width:18px;height:18px;accent-color:var(--accent)}
   .track select{min-width:auto;padding:5px 9px;font-size:12px}
-  .legend{display:flex;gap:16px;flex-wrap:wrap;margin:6px 0 18px;font-size:12px;color:var(--dim)}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;margin:2px 0 20px;font-size:12px;color:var(--dim)}
   .legend span{display:inline-flex;align-items:center;gap:6px}
   footer{color:var(--faint);font-size:11.5px;margin-top:26px;text-align:center}
   /* top-level view tabs */
@@ -130,10 +133,12 @@
   /* compare */
   .cmp-pick{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
   .cmp-pick select{min-width:200px}
-  .cmp-table{width:100%;border-collapse:collapse;font-size:13px}
-  .cmp-table th,.cmp-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
-  .cmp-table th{background:var(--panel2);position:sticky;top:0}
-  .cmp-table td.rowlabel{background:var(--panel);color:var(--dim);font-weight:600;width:200px}
+  .cmp-table{width:100%;border-collapse:collapse;font-size:13px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .cmp-table th,.cmp-table td{border-bottom:1px solid var(--line);padding:10px 13px;text-align:left;vertical-align:top}
+  .cmp-table tr:last-child td{border-bottom:0}
+  .cmp-table th{background:var(--panel2);position:sticky;top:0;font-weight:700}
+  .cmp-table td.rowlabel{background:rgba(13,23,40,.5);color:var(--dim);font-weight:600;width:200px}
+  .cmp-table td.grouprow{background:var(--panel2);color:var(--accent);font-size:10.5px;text-transform:uppercase;letter-spacing:.7px;font-weight:700}
   .cmp-b{font-size:9px;padding:2px 7px;border-radius:20px;font-weight:800;white-space:nowrap}
   .cmp-b.ver{background:#0f3d2c;color:#34d399}.cmp-b.rev{background:#3d1414;color:#f87171}.cmp-b.na{background:#1c2740;color:#8ea3c4}
   .cmp-b a{color:inherit}
@@ -181,13 +186,18 @@
   .ask-a-src{margin-top:9px;font-size:12px;color:var(--faint)}
   .empty{color:var(--faint);font-size:14px;line-height:1.7;text-align:center;padding:30px 10px}
   .empty b{color:var(--dim)}
-  .cl-item{border-left:3px solid var(--accent);padding:10px 0 14px 16px;margin-bottom:8px}
+  .cl-item{border-left:3px solid var(--accent);background:linear-gradient(180deg,var(--panel),var(--panel2));
+    border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;
+    padding:12px 16px;margin-bottom:10px}
   .cl-item .cl-top{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
-  .cl-item .cl-date{font-size:12px;color:var(--faint);font-variant-numeric:tabular-nums}
-  .cl-item .cl-state{font-weight:700;font-size:13px}
-  .cl-item .cl-what{margin-top:4px;font-size:13px}
-  .cl-item .cl-src{margin-top:5px;font-size:11px;word-break:break-all}
-  .cl-item .cl-meta{font-size:11px;color:var(--faint);margin-top:2px}
+  .cl-item .cl-date{font-size:11px;color:var(--faint);font-variant-numeric:tabular-nums;
+    background:#0d1728;border:1px solid var(--line);border-radius:6px;padding:1px 7px}
+  .cl-item .cl-state{font-weight:700;font-size:13.5px;color:var(--ink)}
+  .cl-item .cl-what{margin-top:7px;font-size:13px;line-height:1.55}
+  .cl-item .cl-src{margin-top:8px;font-size:11px;word-break:break-all}
+  .cl-item .cl-meta{font-size:11px;color:var(--faint);margin-top:5px;line-height:1.5}
+  .cl-intro{color:var(--dim);font-size:12.5px;line-height:1.6;margin-bottom:16px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+  .cl-intro b{color:var(--ink)}
   .cal-kind{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:var(--dim);
     border:1px solid var(--line);border-radius:20px;padding:1px 8px}
   .cal-rel{font-size:11px;font-weight:700;margin-left:auto}
@@ -213,13 +223,14 @@
   </header>
 
   <div class="disclaimer">
-    <span>&#9888;</span>
-    <div><b>Not legal advice — every regulatory field shows its provenance.</b> Open any state to see each field marked either
-      <span style="color:#34d399;font-weight:700">✓ VERIFIED SOURCE</span> (primary-source URL + agency + last-checked date, confirmed live)
-      or <span style="color:#f87171;font-weight:700">⚑ NEEDS LEGAL REVIEW</span> (no confirmed primary source in this build — do not rely on it until verified)
-      or <span style="color:#8ea3c4;font-weight:700">— NOT APPLICABLE</span> (requirement does not apply in this jurisdiction).
-      Each state card shows its live research coverage (verified fields / total applicable); open a state to see every field's exact source or hold status.
-      Compliance status reflects <b>your tracked org registrations</b> vs. requirements — it does not certify legality. Confirm with counsel before operating.</div>
+    <span class="ico">&#9888;</span>
+    <div><b>Not legal advice — every regulatory field shows its provenance.</b>
+      Open any state to see each field marked
+      <span style="color:#34d399;font-weight:700">✓ Verified source</span>,
+      <span style="color:#f87171;font-weight:700">⚑ Needs legal review</span>, or
+      <span style="color:#8ea3c4;font-weight:700">— Not applicable</span>.
+      Card badges show research coverage (verified / applicable fields). Compliance status reflects
+      <b>your tracked org registrations</b> vs. requirements — it does not certify legality. Confirm with counsel before operating.</div>
   </div>
 
   <div class="tabbar" id="tabbar">
@@ -2154,7 +2165,7 @@ function renderCompare(){
   } else {
     const head=`<tr><th class="rowlabel">Requirement</th>${chosen.map(a=>{const sm=stateSummary(a);return `<th>${STATES.find(s=>s[0]===a)[1]} (${a})<div class="pmeta" style="font-weight:400">${sm.ver}/${sm.total} verified${sm.lastReviewed?` · rev. ${sm.lastReviewed}`:""}</div></th>`;}).join("")}</tr>`;
     const rows=FIELD_DEFS.map(([title,fs])=>{
-      const section=`<tr><td class="rowlabel" colspan="${chosen.length+1}" style="background:var(--panel2);color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:.6px">${title}</td></tr>`;
+      const section=`<tr><td class="grouprow" colspan="${chosen.length+1}">${title}</td></tr>`;
       const body=fs.map(([p,label])=>`<tr><td class="rowlabel">${label}</td>${chosen.map(a=>`<td>${badgeMini(fieldAt(a,p))}</td>`).join("")}</tr>`).join("");
       return section+body;
     }).join("");
@@ -2226,9 +2237,8 @@ function renderChangelog(){
       ${s?`<div class="cl-src"><span class="badge ver">✓ VERIFIED SOURCE</span> <a href="${s.url}" target="_blank" rel="noopener">${s.agency}</a> · ${s.date}</div>`:""}
     </div>`;
   }).join("");
-  host.innerHTML=`<div class="panelbox">
-    <div class="note" style="margin-bottom:14px">Every entry records a real, sourced change made to this build. Nothing speculative — this log is the audit trail for the provenance rule.</div>
-    ${items}</div>`;
+  host.innerHTML=`<div class="cl-intro"><b>${CHANGELOG.length} sourced changes</b> — every entry records a real, sourced change made to this build. Nothing speculative; this log is the audit trail for the provenance rule.</div>
+    ${items}`;
 }
 
 /* ---------- GROUNDED QUERY BOX (retrieval only — NO LLM, NO generation) ----------
