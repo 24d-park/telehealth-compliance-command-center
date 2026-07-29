@@ -67,3 +67,20 @@ Newly wired:
 **IMPORTANT — the high-value telemedicine practice standards DO NOT EXIST in the current 243 CMR 2.00 (Aug 9 2019 version).** The subagent verified this by full-text search of all 54 pages (0 hits for in-person / distant-site / online questionnaire / physician-patient relationship), not by a load failure. So relationship.inPerson, relationship.consent, prescribing.inPersonRx stay red as GENUINE SILENCE, not access failures. Likewise 247 CMR has NO internet/online-pharmacy chapter and NO website-disclosure or questionnaire rule (0 hits) — ecommerce.onlinePharmacy/website/dtc stay red as genuine absences.
 
 Still red (6): relationship.inPerson, relationship.consent, prescribing.inPersonRx (243 CMR silent — would need 105 CMR 700 CS regs or a later telemedicine amendment); ecommerce.onlinePharmacy/website/dtc (247 CMR has no such provision). FOLLOW-UP: 105 CMR 700 (controlled substances) + 247 CMR 11 (CS Act registration) via the same /doc PDF path for any prescribing.inPersonRx rule.
+
+
+## UPDATE 2026-07-29 — final-research wave 5, NO CHANGE (stays 14/20)
+Parent-worked in-browser on malegislature.gov. Read M.G.L. c.112 §5O verbatim in full.
+- §5O has only TWO subsections: (a) the "telehealth" definition (synchronous/asynchronous audio, video,
+  incl. interactive audio-video, remote patient monitoring, audio-only telephone, online adaptive interviews —
+  already wired to modality.video/audioOnly/async) and (b) proxy credentialing/privileging. That is the entire
+  section.
+### Confirmed HOLDS (genuine practice-standard absences at the statutory level)
+- relationship.consent, relationship.inPerson, prescribing.inPersonRx — NOT in §5O. MA's telehealth consent /
+  standard-of-care parity language lives in the INSURANCE parity law (M.G.L. c.176O §38 + c.175/c.118E), which
+  this tracker excludes as reimbursement. MA never adopted a Board of Registration in Medicine telemedicine
+  practice reg imposing these (243 CMR 2.01 defines telemedicine as the practice of medicine — already wired to
+  telehealthReg verified-null — but imposes no separate consent/in-person/DTC clause reachable this session).
+- ecommerce.onlinePharmacy / ecommerce.website / ecommerce.dtc — no MA statute/reg located; genuine absences
+  (247 CMR governs pharmacy licensure generally; no on-website-display or questionnaire-ban rule).
+Net: MA's remaining reds are honest absences, not unmined law. Left at 14/20.

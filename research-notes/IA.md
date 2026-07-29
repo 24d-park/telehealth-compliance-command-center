@@ -42,3 +42,19 @@ nonresident pharmacy license + PIC (Ch. 551); compounding adopts **USP 795 (2023
 
 ---
 > **DISCLAIMER:** Operational research tool; **not legal advice.** Verify with counsel and the applicable board before acting.
+
+
+## UPDATE 2026-07-29 — final-research wave 2, +3 fields (15 -> 18/20)
+Subagent lead, parent-verified: statute on official Wayback-captured Iowa Code PDF; rule via Cornell LII mirror
+(legis.iowa.gov is WAF-blocked). RULE RENUMBER: telemedicine moved 653—13.11 → **653—13.9** eff. 5/21/2025.
+- **provider.telehealthReg** — VERIFIED-NULL. 653—13.9(3): "A physician who uses telemedicine ... shall hold
+  an active Iowa medical license." No separate telehealth registration.
+- **modality.audioOnly** — 653—13.9(1): telemedicine "shall not include the provision of medical services only
+  through an audio-only telephone, email ... facsimile ...". Audio-only EXCLUDED.
+- **ecommerce.dtc** — 653—13.9(21): questionnaire-only / telephonic-only prescribing prohibited.
+All three reuse ia_653_139.
+### Confirmed HOLD
+- prescribing.pdmp — Iowa Code §124.553(5) (read verbatim on official Wayback PDF): "Nothing in this section
+  shall require a ... prescribing practitioner to obtain information ... does not have a duty ... on the basis
+  that the ... practitioner did or did not seek or obtain or use information from the program." Access is
+  permissive (§124.553(1) "board may provide"). NOT a query mandate — stays red.

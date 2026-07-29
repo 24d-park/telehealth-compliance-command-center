@@ -108,3 +108,15 @@ Re-read **8 NYCRR Part 63** live on the reachable op.nysed.gov: it carries NO US
 - ecommerce.dtc — 8 NYCRR Part 29 + Part 63 + Art. 137 have no online-questionnaire prescribing ban; only general misconduct provisions. (The one Part 63 "questionnaire" hit is the 63.16 hormonal-contraceptive self-screening tool — a permission, not a ban.)
 
 NY is now at 12/20 and effectively at its honest ceiling: the remaining 8 reds are genuine statutory gaps (7 of them in the excluded insurance title or truly absent).
+
+
+## UPDATE 2026-07-29 — final-research wave 5, NO CHANGE (stays 12/20)
+Subagent lead, parent-reviewed. Statutes via public.law mirror + govt.westlaw NYCRR (nysenate.gov/Justia/leginfo blocked or timed out).
+- modality.video/audioOnly/async — defined ONLY in PHL Article 29-G (§2999-cc), the telehealth DELIVERY/
+  REIMBURSEMENT article. Tracker excludes reimbursement statutes → HOLD, not green.
+- relationship.consent, prescribing.inPersonRx, ecommerce.dtc — NO REQUIREMENT FOUND. Read Education Law §6530
+  (all 51 subdivisions) + 8 NYCRR Part 29 (§§29.1, 29.2): NY imposes no telehealth consent mandate, no
+  in-person-before-Rx rule, and no questionnaire-prescribing bar. (Task's §6530(31) lead is actually the
+  patient-harassment provision, not a DTC bar.)
+Net: NY's low count (12/20) reflects that NY genuinely regulates telehealth practice lightly at the
+professional-conduct level — most substance is in the excluded reimbursement article. Honest floor.

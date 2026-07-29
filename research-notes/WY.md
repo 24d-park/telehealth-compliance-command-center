@@ -115,3 +115,18 @@ Cleared two more WY reds via the tokenless `GetRuleVersionHTML` endpoint (parent
 - **prescribing.pdmp** — Ch.8 imposes registration but no mandatory pre-prescribe query (verified-null, wave 3).
 
 WY is now effectively at its honest ceiling given no Board-of-Medicine telemedicine rules exist; remaining reds are genuine absences, not access failures.
+
+
+## UPDATE 2026-07-29 — final-research wave 5, NO CHANGE (stays 12/20)
+Subagent lead, parent-reviewed. Read via wyoleg.gov (title33.pdf) + rules.wyo.gov (Board of Medicine Agency 052).
+STRUCTURAL FINDING: there is NO WY Board of Medicine telemedicine practice-standards chapter (assumed "Ch. 12"
+does not exist). Enabling statute is Wyo. Stat. §33-1-303(a)(iv): each licensing board "shall define"
+telehealth within its own rule. Board of Medicine Ch. 1 mentions telemedicine only in licensure-exemption context.
+- modality.audioOnly/async, relationship.consent, prescribing.inPersonRx — NO REQUIREMENT FOUND (zero
+  occurrences in Title 33 statutes or Board Ch. 1 rules).
+- relationship.inPerson — the only in-person language (Ch. 1 §7(e)) is a narrow out-of-state continuation-of-care
+  licensure exemption (relationship established in-person elsewhere may continue via telehealth ≤6 months), NOT a
+  general WY telehealth in-person mandate. Do NOT over-read → stays red.
+### Incomplete (re-run target)
+- prescribing.pdmp — subagent hit tool limit before reading Wyo. Stat. §35-7-1060 (Title 35) / Board of Pharmacy
+  (Agency 059) rules. Operative verb NOT read; left red. HIGHEST-priority WY follow-up next session.

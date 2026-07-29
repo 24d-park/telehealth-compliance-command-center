@@ -62,3 +62,25 @@ The AR Medical Board host (armedicalboard.org) was down and the AR Code is Lexis
 - relationship.consent — consent specifics live in AR State Medical Board rule (armedicalboard.org still unreachable).
 - ecommerce.onlinePharmacy / website — no dedicated AR internet-pharmacy display statute located (nonresident §17-92-401 covers ship/mail generally).
 FOLLOW-UP: §17-80-405 (prescribing) + AR State Medical Board telemedicine rule when armedicalboard.org is reachable.
+
+## UPDATE 2026-07-29 — final-research wave 1, +2 fields (15 -> 17/20)
+
+Parent-worked in-browser. Read **§ 17-80-404** verbatim via Wayback `id_` capture of the Justia reproduction
+of the official AR Code (armedicalboard.org STILL unreachable; AR Code Lexis-gated). The §404 capture was
+already the source for other AR fields — it also carries subsections (d) and (e), which close two more reds:
+
+- **provider.telehealthReg** — VERIFIED-NULL. §17-80-404(d)(1): "A healthcare professional who is treating
+  patients in Arkansas through telemedicine shall be fully licensed or certified to practice in Arkansas and
+  is subject to the rules of the appropriate state licensing or certification board." (d)(2) exempts only
+  out-of-state pros giving "episodic consultation services." Full AR licensure is the EXCLUSIVE pathway; the
+  Telemedicine Act creates NO separate telehealth registration. [ar_17_80_404]
+- **relationship.consent** — GREEN but CAVEATED as REFERENTIAL. §17-80-404(e): "A healthcare professional
+  shall follow applicable state and federal law, rules, and regulations for: (1) Informed consent; ..." It
+  incorporates existing informed-consent law rather than a telemedicine-specific documented-consent standard —
+  weaker than a documented-informed-consent mandate. [ar_17_80_404]
+
+Both reuse the existing ar_17_80_404 SOURCES key (reuse discipline — no new key).
+
+### Still red (3) — genuine holds
+- prescribing.inPersonRx — §17-80-405 (prescribing) still NOT archived on Justia; AR Code Lexis-gated.
+- ecommerce.onlinePharmacy / ecommerce.website — no dedicated AR internet-pharmacy display statute located.

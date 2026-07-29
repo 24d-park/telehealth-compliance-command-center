@@ -54,3 +54,26 @@ each SOURCES entry. This is a genuine primary document, not an aggregator. Re-fe
 - ecommerce.onlinePharmacy / ecommerce.website / ecommerce.dtc
 
 CDX enumeration confirmed Justia's TN captures cover only the Title 63 physician chapters (63-6-209 stale 2015; 63-1-155 telehealth 2021; 63-1-156 overdose-immunity). The pharmacy/CSMD sections need a live TN primary host or a Lexis session. Follow-up: retry live publications.tnsosfiles.com CSMD/1140 rule PDFs via Wayback for the § 53-10-310 mandatory-query verb + TN Board of Pharmacy nonresident (§ 63-10-216).
+
+
+## UPDATE 2026-07-29 — final-research wave 5, NO CHANGE (stays 14/20) — 2 HIGH-CONFIDENCE LEADS HELD
+Subagent lead. Statutory text came ONLY from the LawServer secondary mirror ("current as of 2024"); Justia
+(Cloudflare), TN SOS PDF publications.tnsosfiles.com (CloudFront 403), Wayback (not archived), and Justia-live
+(Cloudflare) were ALL unreachable this session. Per the tracker's primary-source rule, NOT wired — verify verbatim
+from the official LexisNexis-hosted TN Code or TN SOS next session, then green.
+### Held leads (ready to wire once primary confirmed)
+- **prescribing.pdmp** — Tenn. Code §53-10-310(e)(1): "When prescribing a controlled substance, all healthcare
+  practitioners ... shall check the controlled substance database prior to prescribing ... at the beginning of a
+  new episode of treatment, prior to the issuance of each new prescription ... for the first ninety (90) days ...
+  and ... at least every six (6) months when that prescribed controlled substance remains part of the treatment."
+  Triggers (e)(4): all opioids + benzodiazepines. Exceptions (e)(6): hospice; ≤3-day supply no refill; inpatient/
+  residential administration. → GREEN once primary-verified. (Would need a new source key, e.g. tn_53_10_310.)
+- **pharmacy.nonresident** — Tenn. Code §63-10-210: "A pharmacy that dispenses and mails a prescription into
+  Tennessee from another state shall first pay the licensure fee required of a Tennessee pharmacy ...". §63-10-216
+  adds out-of-state compounding-pharmacy inspection. → GREEN once primary-verified. (New source key, e.g. tn_63_10_210.)
+### Genuine holds
+- prescribing.inPersonRx — §63-1-155 imposes same-standard-of-care + a provider-patient relationship "created by
+  mutual consent and mutual communication," but NO prior-in-person-exam mandate at the statutory level. Any
+  questionnaire/in-person rule would be in BME rule 0880-02-.14/.16 (TN SOS 403 — unread). Red.
+- ecommerce.dtc — no explicit questionnaire bar in §63-1-155; likely in BME rules 0880-02-.14/.16 (unreachable). Red.
+- ecommerce.onlinePharmacy / ecommerce.website — genuine absences.

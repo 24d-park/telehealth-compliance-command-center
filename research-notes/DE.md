@@ -30,3 +30,20 @@ delcode.delaware.gov chapter index pages (e.g. /title24/c060/index.html) render 
 
 ## PENDING-LAW FLAG
 - **85 Del. Laws c.49** recodifies Pharmacy ch. 25 subchapters IV/V (nonresident §2535, PIC §2528) **effective June 30, 2026** — re-verify those section numbers after that date. §4798 PMP was amended by 85 Del. Laws c.19 (2025).
+
+
+## UPDATE 2026-07-29 — final-research wave 4, +1 field (16 -> 17/20)
+Parent-worked in-browser on delcode.delaware.gov.
+- **prescribing.inPersonRx** — 24 Del. C. §6004(a): a telehealth provider must "prior to diagnosis and
+  treatment, do at least 1 of the following: (1) Provide an appropriate examination in-person. (2) Require
+  another Delaware-licensed health-care provider be present ... (3) Make a diagnosis using audio or visual
+  communication. (4) Meet the standard of service required by applicable professional societies ...". In-person
+  is ONE of four options — a diagnosis by audio/visual (option 3) satisfies it, so NO mandatory in-person exam
+  before prescribing. (§6003(c) separately bars questionnaire-only prescribing — already wired to dtc.) Reused
+  de_telehealth (Ch. 60).
+### Structural note
+- 24 Del. C. §1769D (old Telemedicine section) was REPEALED eff. 7/1/2021 and replaced by 24 Del. C. Chapter 60
+  ("Provisions Applicable to Telehealth and Telemedicine", §§6001-6005). All DE telehealth fields cite Ch. 60.
+### Still red (pending subagent verification this wave)
+- prescribing.pdmp (16 Del. C. §4798 — conditional "reasonable belief" trigger, likely a hold),
+  pharmacy.csDispense (16 Del. C. §4739 CS Act), ecommerce.website (likely genuine absence).

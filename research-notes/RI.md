@@ -30,3 +30,17 @@ RICR rules are served ONLY as PDFs inside a JS viewer. **Read via pdf.js against
 
 ## FOLLOW-UP
 - Confirm the current (post-Jan-2023) §21-28-3.32 successor version if the legislature renumbered it; the mandatory-review verb (m) should carry forward.
+
+
+## UPDATE 2026-07-29 — final-research wave 2, +3 fields (15 -> 18/20)
+Subagent lead, parent-verified verbatim on rilegislature.gov + official RI SOS S3 rule PDF via pdf.js.
+- **provider.telehealthReg** — VERIFIED-NULL. R.I. Gen. Laws §5-37-2 (license issued by DOH director); Ch. 5-37
+  has NO telemedicine-registration section, and the Telemedicine Coverage Act (RIGL Ch. 27-81) is insurance-only.
+  Full RI licensure is the exclusive pathway. Reused ri_telemed.
+- **prescribing.inPersonRx** — 216-RICR-40-05-1 §1.5.9(H)(2): questionnaire-only / async-only prescribing barred;
+  a real-time "appropriate evaluation" suffices (no in-person mandate). Reused ri_telemed.
+- **pharmacy.csDispense** — R.I. Gen. Laws §21-28-3.18 (CS Rx form/validity; Sch II hard-copy no-refill).
+  New source ri_2128.
+### Confirmed HOLD
+- relationship.consent — the physician rule 216-RICR-40-05-1 has ZERO occurrences of "consent" (full 28-page PDF
+  verified). Genuine absence — stays red. (ecommerce.website also a genuine absence.)

@@ -71,3 +71,16 @@ NOTE on other Subpart C sections: 246-945-040 (Uniform Controlled Substance Act)
 - relationship.consent — former WAC 246-919-855 telehealth informed-consent rule REPEALED; only a narrow audio-only BILLING consent (RCW 74.09.325(8)) remains, too narrow for a general consent mandate.
 - prescribing.inPersonRx — no WA state CS in-person mandate (federal Ryan Haight governs separately).
 - ecommerce.website, ecommerce.dtc — not located in RCW/WAC read; no on-website display mandate or general questionnaire ban.
+
+
+## UPDATE 2026-07-29 — final-research wave 1, +1 field (14 -> 15/20)
+Subagent lead, parent-verified verbatim on app.leg.wa.gov.
+- **provider.telehealthReg** — VERIFIED-NULL. RCW 18.71.021: "No person may practice ... medicine without
+  first having a valid license to do so." Only telemedicine carve-outs: RCW 18.71.030(6) (out-of-state
+  CONSULTATION with a WA-licensed provider responsible for the patient) + (7) (in-person, no WA office) —
+  neither is a registry. Full WA licensure is the exclusive pathway. New source wa_1871021.
+### Confirmed HOLDS (subagent validated the prior red calls — no change)
+- relationship.inPerson / relationship.consent / prescribing.inPersonRx all live ONLY in the INSURANCE title
+  (RCW 48.43.735 / 41.05.700), which the project excludes (insurance-vs-practice rule). Genuine absences —
+  the former WAC 246-919-855 telehealth consent rule was repealed; only a narrow audio-only BILLING consent
+  remains. Matches the 2026-07-22 ceiling ruling. Stay red.

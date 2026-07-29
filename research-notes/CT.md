@@ -40,3 +40,17 @@ ecommerce.dtc (no statute located).
 
 ---
 > **DISCLAIMER:** Operational research tool; **not legal advice.** Verify with counsel and the applicable board before acting.
+
+
+## UPDATE 2026-07-29 — final-research wave 3, +1 field (16 -> 17/20)
+Parent-worked in-browser on cga.ct.gov (chapter 368a).
+- **modality.audioOnly** — Conn. Gen. Stat. §19a-906(a): the telehealth definition provides "Telehealth does
+  not include the use of facsimile, audio-only telephone, texting or electronic mail." Audio-only telephone is
+  EXCLUDED from telehealth (cannot be the sole modality). Reused ct_19a906.
+### Held
+- provider.telehealthReg — §20-9(d) requires full CT licensure to treat CT patients via electronic
+  communications, but the §19a-906(a) "telehealth provider" enumeration (all CT-licensed provider types, which
+  would establish the verified-null / no-separate-registry) sits in the 2026 Supplement that did not load
+  cleanly this session. Left RED rather than overreach — re-verify from the 2026 Supplement next session.
+- ecommerce.website / ecommerce.dtc — genuine absences (no CT on-website-display or questionnaire-ban statute
+  located).

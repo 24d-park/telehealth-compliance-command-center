@@ -66,3 +66,19 @@ The other 6 reds are CONFIRMED GENUINE ABSENCES (verbatim-verified where a rule 
 - prescribing.pdmp — ORS 431A.877 compels REGISTRATION only ("shall register"); query VOLUNTARY. Re-confirmed verbatim.
 - ecommerce.website — no on-website display mandate.
 - ecommerce.dtc — OAR ch.847 div.25 is titled "Rules for Licensure to Practice Medicine Across State Lines" and applies solely to out-of-state licensees; no general questionnaire ban.
+
+
+## UPDATE 2026-07-29 — final-research wave 1, +1 field (14 -> 15/20)
+Subagent lead, parent-verified verbatim on oregonlegislature.gov.
+- **prescribing.inPersonRx** — ORS 677.494(2): telemedicine may be used "including ... the prescription of
+  drugs, to a patient physically located in this state," provider "not required to be physically located in
+  this state." Prescribing via telemedicine is EXPRESSLY authorized — no in-person exam mandate. Reused
+  existing or_677494 source. (Note: current official text says "physician associate," not "physician
+  assistant.")
+### Confirmed HOLDS (subagent validated the red calls — no change)
+- prescribing.pdmp — decisively NOT a query mandate: ORS 431A.877 is registration-only, and ORS 431A.865(8)
+  EXPLICITLY states "Nothing ... requires a practitioner or pharmacist who prescribes or dispenses ... to
+  obtain information about a patient from the [PDMP]." Textbook voluntary. Stay red.
+- relationship.consent — no telemedicine informed-consent mandate in ORS 677.494 or OAR 847-025. Absence.
+- modality.audioOnly — only inferable from "electronic communications," not explicitly named. Hold red.
+(provider.telehealthReg was ALREADY green — OR has the ORS 677.139 cross-state-lines license; not re-touched.)

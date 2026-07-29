@@ -36,3 +36,17 @@ Read verbatim on nebraskalegislature.gov:
 - **provider.telehealthReg (wired):** Chapter 38 (incl. Telehealth Act definitions) creates NO separate telehealth registration — practice via telehealth uses the same underlying UCA credential. [ne_38121]
 
 Still red (5): prescribing.inPersonRx, prescribing.pdmp (§71-2454 is a dispenser-REPORTING mandate that only "allow[s]" prescriber access — NOT a mandatory query, so left red honestly), pharmacy.pic, ecommerce.website, ecommerce.dtc.
+
+
+## UPDATE 2026-07-29 — final-research wave 3, +1 field (15 -> 16/20)
+Subagent lead, parent-verified verbatim on nebraskalegislature.gov.
+- **pharmacy.pic** — Neb. Rev. Stat. §38-2833 ("Pharmacist in charge, defined"): PIC is "a pharmacist who is
+  designated on a pharmacy license ... as being responsible for the practice of pharmacy in the pharmacy for
+  which a pharmacy license ... is issued." New source ne_2833.
+### Confirmed HOLDS
+- prescribing.pdmp — §71-2454 is UNIVERSAL REPORTING ("shall be reported" / "entered ... by the dispenser")
+  + PERMISSIVE access ("Allow all prescribers ... to access"). NO pre-prescribe query mandate. Stays red.
+- prescribing.inPersonRx — §71-8506(1) waives in-person contact ONLY in the Medicaid reimbursement context
+  (not a general practice standard). Too narrow to assert. Stays red.
+- ecommerce.dtc — no statutory questionnaire bar; likely in 172 NAC (Board of Medicine regs) which was
+  unreachable this session. Honest hold.

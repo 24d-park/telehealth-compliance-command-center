@@ -37,3 +37,19 @@ ecommerce.website, ecommerce.dtc.
 
 ---
 > **DISCLAIMER:** Operational research tool; **not legal advice.** Verify with counsel and the applicable board before acting.
+
+
+## UPDATE 2026-07-29 — final-research wave 4, +2 fields (16 -> 18/20)
+Subagent lead, parent-verified: Rule 5.2 + Rule 7.1 verbatim on msbml.ms.gov; §73-25-34 via Wayback id_ of Justia.
+- **provider.telehealthReg** — VERIFIED-NULL. Miss. Admin. Code Pt. 2635 Ch. 5 Rule 5.2: "only providers
+  holding a valid Mississippi license are allowed to practice any form of telemedicine ... in Mississippi";
+  Miss. Code §73-25-34(2): "no person shall engage in the practice of medicine across state lines (telemedicine)
+  ... unless he has first obtained a license." Full MS licensure is the exclusive pathway; no separate registry.
+  Reused ms_2635_5.
+- **ecommerce.dtc** — Pt. 2635 Ch. 7 Rule 7.1 (Internet Prescribing): prescribing "based solely on answers to a
+  set of questions ... fails to meet an acceptable standard of care." Reused ms_2635_7.
+### Confirmed HOLDS
+- prescribing.pdmp — §73-21-127 is dispenser-reporting + PMP user-registration + permissive access; the ONLY
+  mandatory review duty is scoped to registered pain-management practices, NOT a universal prescriber query.
+  Stays red.
+- ecommerce.website — no on-website disclosure mandate. Genuine absence.

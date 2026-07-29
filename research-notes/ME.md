@@ -33,3 +33,21 @@ The Board rule is published only as a **.docx** at maine.gov/sos/sites/.../inlin
 
 ## FOLLOW-UP
 - Pin the 02-392 CMR PIC-designation subsection + CS-dispensing sections (unzip the pharmacy .docx the same way) to convert pharmacy.pic/csDispense from red to green.
+
+
+## UPDATE 2026-07-29 — final-research wave 4, +3 fields (16 -> 19/20)
+Subagent lead, parent-verified: telehealth statute subchapter confirmed on legislature.maine.gov (Title 32
+Ch. 48 Subch. 4 TELEHEALTH SERVICES, §3300-AA); Board rules read via the official ME SOS .docx.
+- **prescribing.inPersonRx** — 02-373 CMR Ch. 11 §3(7): in-person clinical interview + physical exam is the
+  general rule but "may not be in-person if the technology utilized ... is sufficient to establish an informed
+  diagnosis as though [it] had been performed in-person." No absolute mandate; static questionnaire insufficient.
+  Reused me_teterule.
+- **pharmacy.csDispense** — 02-392 CMR Ch. 19 §2: Sch II written Rx must comply w/ MDEA "Requirements for
+  Written Prescriptions of Schedule II Drugs" (incorporated); no CS pre-printing; 90-day fill limit; e-CS per
+  21 CFR 1300/1304/1306. New source me_392.
+- **pharmacy.pic** — 02-392 CMR Ch. 13 §3(1): "No retail pharmacy may operate without a pharmacist in charge."
+  New source me_392.
+### Confirmed HOLD
+- ecommerce.website — no on-website disclosure mandate in the Board rules (full Ch. 1-38 searched). Genuine
+  absence. Numbering corrections logged: telehealth rule is Ch. 11 (orig. Ch. 6); PIC is Ch. 13 (not Ch. 18/19,
+  Ch. 18 repealed); §3300-G is conversion-therapy, NOT telehealth (that's §§3300-AA..EE).

@@ -59,3 +59,16 @@ Still red (parent-confirmed honest):
 - **prescribing.pdmp** — HRS 329 dispenser REPORTING mandatory (§329-101(b)), but prescriber query permissive (§329-104(c)). VOLUNTARY. Red.
 
 HI section list confirms: no nonresident/internet subchapter exists. These reds are its honest ceiling absent new statute.
+
+
+## UPDATE 2026-07-29 — final-research wave 3, NO CHANGE (stays 15/20)
+Subagent lead, parent-reviewed. All four targeted reds confirmed as genuine absences/holds — nothing wired.
+Read via Wayback id_ captures of capitol.hawaii.gov (Justia + live site Cloudflare-blocked).
+- relationship.consent — HRS §453-1.3(b) imposes a documented-EVALUATION duty ("documented patient evaluation,
+  including history and a discussion of physical symptoms"), NOT a consent duty; the word "consent" is absent.
+  Genuine null (matches the project's evaluation≠consent rule). Stays red.
+- prescribing.pdmp — HRS §329-101(b) is a dispenser REGISTRATION + reporting duty; §329-104 is permissive
+  access. No prescriber query mandate. Stays red.
+- pharmacy.nonresident / ecommerce.onlinePharmacy — HRS ch. 461 has no nonresident/internet-pharmacy provision
+  (§461-14 permits are "within the State" only). HAR 16-95 (Board of Pharmacy rules) NOT retrieved this session
+  — flagged for rule-level re-check before final sign-off. Honest holds.

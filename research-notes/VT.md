@@ -30,3 +30,15 @@ legislature.vermont.gov `/statutes/section/TITLE/CHAP/SECTION` (zero-padded, e.g
 ## FOLLOW-UP
 - Retry the OPR / sos.vermont.gov Board of Pharmacy rules (different egress or Wayback) for nonresident/mail-order license, online-pharmacy permit, and USP compounding-by-number → would flip 3 reds green.
 - Re-read §§9361-9362 final text for the 2025 No. 11 (eff. 9/1/2025) amendments to confirm no substantive telehealth change.
+
+
+## UPDATE 2026-07-29 — final-research wave 2, +1 field (14 -> 15/20)
+Subagent lead, parent-verified verbatim on legislature.vermont.gov.
+- **prescribing.inPersonRx** — 18 V.S.A. §9361(b): provider "may prescribe, dispense, or administer drugs ...
+  after having performed an appropriate examination of the patient in person, through telemedicine, or by ...
+  instrumentation" — telemedicine exam is an explicit alternative, NO in-person mandate. Reused vt_telehealth.
+### Held (subagent CloudFront-blocked on VT OPR Board of Pharmacy admin rules)
+- pharmacy.nonresident, pharmacy.csDispense, compounding.stateReg — statutory hooks exist (26 V.S.A. §2061
+  biennial drug-outlet registration; §2061(b)(6) lists Compounding as a licensure class) but the USP-adoption +
+  nonresident specifics live in OPR admin rules unreachable this session. Honest access holds. ecommerce.website
+  also red (no on-website-display mandate located).

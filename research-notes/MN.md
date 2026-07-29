@@ -43,3 +43,19 @@ needs a MN license (§151.19); CS Rx form requirements (§152.11); PIC definitio
 
 ---
 > **DISCLAIMER:** Operational research tool; **not legal advice.** Verify with counsel and the applicable board before acting.
+
+
+## UPDATE 2026-07-29 — final-research wave 2, +1 field (15 -> 16/20)
+Parent-worked in-browser on revisor.mn.gov.
+- **compounding.stateReg** — Minn. R. 6800.3300 (Compounding Standards), read verbatim from the full ch. 6800
+  DOM. Subp. 1: "All licensed Minnesota pharmacies that compound nonsterile drug preparations must follow
+  United States Pharmacopeia, chapter 795, standards." Subp. 2: "Any licensed Minnesota pharmacy compounding a
+  sterile product must follow the United States Pharmacopeia, chapter 797, standards." USP 795 AND 797 adopted
+  BY NUMBER (mandatory "must follow") — stronger than a "chapters below 1000" by-reference pattern. Statutory
+  authority MS 151.06, 152.02. New source mn_6800_3300.
+### Confirmed HOLD
+- relationship.consent — read Minn. Stat. §147.033 (Practice of Telehealth) in FULL: only 3 subds (definition;
+  "a physician-patient relationship may be established through telehealth"; same-standard-of-care). NO consent
+  language. MN telehealth consent, if any, lives in the excluded insurance-coverage Telehealth Act §62A.673.
+  Genuine absence — stays red (matches the insurance-vs-practice exclusion rule).
+### Still red (4): relationship.consent, prescribing.inPersonRx, ecommerce.website, ecommerce.dtc.

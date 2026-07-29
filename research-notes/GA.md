@@ -48,3 +48,19 @@ CS dispensing per O.C.G.A. T.16 Ch.13 & T.26 Ch.4 (480-11-.02(1)(a)); pharmacist
 
 ---
 > **DISCLAIMER:** Operational research tool; **not legal advice.** Verify with counsel and the applicable board before acting.
+
+
+## UPDATE 2026-07-29 — final-research wave 1, +1 field (14 -> 15/20)
+Subagent lead, parent-verified verbatim on rules.sos.ga.gov.
+- **provider.telehealthReg** — POSITIVE requirement (NOT verified-null). Ga. Comp. R. & Regs. r. 360-2-.17
+  ("Requirements for Telemedicine Licensure", eff. Jan. 24, 2021): GA issues a distinct "Telemedicine License"
+  to an out-of-state physician who holds "a full and unrestricted license to practice medicine in another
+  state" (subd. 1); "limited to the practice of telemedicine and shall not be used to practice medicine
+  physically in this state" (subd. 2). A genuine out-of-state telehealth licensure pathway like NV/OR/NM/FL.
+  New source ga_360217. Authority O.C.G.A. 33-24-56.4, 43-34-31.1.
+### Confirmed HOLDS (genuine absences in Rule 360-3-.07 — no change)
+- modality.async — no store-and-forward/asynchronous definition in the telemedicine rule.
+- relationship.consent — Rule 360-3-.07 contains NO express informed-consent clause (only disclosure/records
+  duties in (6)-(7)). A general Chapter 360-14 "Informed Consent" exists but is not telemedicine-specific.
+- modality.video — technology-neutral functional-equivalence (360-3-.07(a)(3)(d)), no express video mandate.
+- ecommerce.website — genuine absence.

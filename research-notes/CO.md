@@ -79,3 +79,19 @@ Newly wired (all parent-verified verbatim on the OLLS HTML):
 - **provider.telehealthReg** — 12-30-124: out-of-state registration "provides an alternative to licensure" (10); registrant barred from opening a CO office (8)(a) and from prescribing controlled substances (11); in-state providers still need full CO licensure. A genuine out-of-state telehealth registration pathway. [co_1230124]
 
 Still red (confirmed ABSENT from Title 12 — 0 hits — so they live in 3 CCR 713 Board of Medicine rules, unread): **modality.audioOnly** (no "audio-only"/"audio only" anywhere in Title 12), **prescribing.inPersonRx** (no bright-line in-person mandate; 12-240-121(1)(aa) is a standard-of-care "fails to meet generally accepted standards" rule only), **pharmacy.csDispense**, **ecommerce.website**, **ecommerce.dtc**. FOLLOW-UP: 3 CCR 713 (Board of Medicine Rule 800 telemedicine) + 3 CCR 719-1 for the pharmacy CS/e-commerce fields.
+
+
+## UPDATE 2026-07-29 — final-research wave 3, +2 fields (15 -> 17/20)
+Subagent lead, parent-verified verbatim on OLLS CRS 2025 HTML (olls.info).
+- **prescribing.inPersonRx** — C.R.S. §12-30-124(6): in-person prescribing standards "apply to the provision
+  of health-care services through telehealth in Colorado" (parity standard) — NO prior in-person exam required.
+  Corroborated by full-text read of 3 CCR 713-1 (Medical Board rules, eff. 5/28/2026): no telemedicine in-person
+  rule. Reused co_1230124.
+- **pharmacy.csDispense** — C.R.S. §18-18-308 (Uniform CS Act, Prescriptions): Sch II written/e-Rx; Sch III-V
+  written/oral, 6-month/5-refill limit. New source co_1818308 (OLLS Title 18 HTML).
+### Confirmed HOLDS
+- modality.audioOnly — the term "audio-only" does not appear anywhere in Title 12; genuine silence, not a
+  requirement. Stays red.
+- ecommerce.dtc — no explicit online-questionnaire bar in §12-30-124 or 3 CCR 713-1; general standard-of-care +
+  §12-30-124(6) parity would govern. Stays red.
+Note: out-of-state telehealth registrants are separately barred from CS prescribing by §12-30-124(11).
