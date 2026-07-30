@@ -60,3 +60,19 @@ Parent tried to independently confirm the R4-23-404(F) questionnaire-ban quote b
 - Live apps.azsos.gov AND pharmacy.az.gov are BOTH Cloudflare bot-walled ("Just a moment...").
 - No per-section HTM capture exists in Wayback.
 STATUS: The subagent's verbatim quote is specific and plausible (R4-23-404(F): pharmacist "shall not dispense ... issued on the basis of an internet-based questionnaire or an internet-based consultation without a medical practitioner-patient relationship"), but per the non-fabrication rule it stays RED until a human/parent reads it verbatim. TO RETRY: a residential-proxy browser (to clear azsos.gov Cloudflare) or a curl-capable environment fetching the Wayback PDF, then pdf.js/pdftotext scan for "internet-based questionnaire".
+
+
+## UPDATE 2026-07-30 — gap-fill wave, +1 field (17 -> 18/20)
+Subagent lead, parent-verified verbatim via pdf.js on the Wayback capture (2025-03-05, Supp. 24-4) of the
+official A.A.C. Title 4 Ch.23 PDF (apps.azsos.gov; live host Cloudflare "verify you are human"-walled).
+- **ecommerce.dtc -> WIRED (closes a lead HELD in prior sessions).** A.A.C. R4-23-404(F) (Unethical Practices):
+  "(1) A pharmacist shall not dispense a drug from a prescription order if the pharmacist has knowledge, or
+  reasonably should know under the circumstances, that the prescription order was issued on the basis of an
+  internet-based questionnaire or an internet-based consultation without a medical practitioner-patient
+  relationship as defined in R4-23-110. (2) A pharmacist who dispenses ... in violation of this Section is
+  engaging in unethical conduct ..." A genuine questionnaire-only DTC ban. New key az_r4_23_404.
+### CONFIRMED RED (verified absence): compounding.stateReg — AZ regulates compounding by ISO CLASS, not USP
+chapter number. Governing rule R4-23-670 "Sterile Pharmaceutical Products" sets ISO Class 5/7 environment
+standards; full-chapter scan found ZERO occurrences of USP 795/797/800 by number (the only "USP" hit is an
+unrelated radiopharmaceutical molybdenum-99 limit in R4-23-682). Do NOT green as USP-by-number. Honest absence.
+### Still red (1 + website): compounding (ISO-class, verified non-USP-by-number), ecommerce.website (absence).

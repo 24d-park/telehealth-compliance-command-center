@@ -47,3 +47,22 @@ Still red (honest holds):
 - **compounding.stateReg** — OK Board of Pharmacy 2022 law-book: USP <797> adopted by number for STERILE (OAC 535:15-10-54), but "795" returns NO match — non-sterile compounding rules are self-contained, not a 795-by-number adoption. Held rather than green a partial. A newer 2023 red-marked Chapter 15 PDF may differ (not parsed).
 - **pharmacy.csDispense** — operative "shall ... legitimate medical purpose"/"shall not dispense ... without a valid preexisting relationship" language found in the concatenated law-book, but a clean standalone OAC 535 section cite couldn't be pinned. Held.
 - **ecommerce.website** — no on-website disclosure mandate (verified-absent). **ecommerce.dtc** — no standalone "online questionnaire" ban; the prohibition is achieved indirectly via the real-time-equipment/face-to-face requirement. Red.
+
+## UPDATE 2026-07-30 — gap-fill wave, +2 fields (16 -> 18/20) — OAC Title 535 cracked
+Subagent lead, parent-verified verbatim. The prior FOLLOW-UP (OAC 535 via archived PDF) is now DONE. The OK
+Board of Pharmacy publishes the consolidated OAC Title 535 as a blob PDF (oklahomarules.blob.core.windows.net/
+titlepdf/Title_535.pdf) linked from oklahoma.gov/pharmacy/laws-rules.html; the blob host is DNS-blocked live but
+the **Wayback id_ capture (2025-09-02)** resolves and extracts cleanly via pdf.js (241 pp, 587K chars).
+- **pharmacy.csDispense → WIRED.** OAC 535:15-3-13(c)-(d): "The pharmacy and pharmacist shall ensure that the
+  prescription drug or medication order ... has been issued for a legitimate medical purpose by an authorized
+  prescriber"; (d) "shall not dispense a prescription drug if the pharmacist knows or should have known that the
+  prescription was issued without a valid preexisting patient-prescriber relationship." Amended eff. 9-11-2022.
+  New key ok_535_15_3_13.
+- **compounding.stateReg → WIRED (caveated partial).** OAC 535:15-10-61(a) + Appendix B: sterile BUD governed by
+  "USP <797> standards"/Risk Level; nuclear compounding per "<USP 825>." USP <797>+<825> BY NUMBER. **CAVEAT:
+  USP 795 (nonsterile) and 800 (hazardous) NOT adopted by number — verified 0 occurrences of "795"/"800" in the
+  241-pp compilation; OK's nonsterile/hazardous rules are self-contained.** New key ok_535_compound. Eff.
+  8-27-2015. (Re-checked the 2026 Permanent Chapter 15 PDF — amends only Subch.3 staffing, adds no 795/800.)
+### Still red (2): ecommerce.website (no on-website disclosure mandate — genuine absence), ecommerce.dtc (no
+express questionnaire ban; achieved indirectly via the real-time-equipment/face-to-face requirement in OAC
+435:10-7-13 — held rather than green an indirect inference).

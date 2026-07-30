@@ -82,3 +82,27 @@ Subagent lead, parent-verified verbatim on oregonlegislature.gov.
 - relationship.consent — no telemedicine informed-consent mandate in ORS 677.494 or OAR 847-025. Absence.
 - modality.audioOnly — only inferable from "electronic communications," not explicitly named. Hold red.
 (provider.telehealthReg was ALREADY green — OR has the ORS 677.139 cross-state-lines license; not re-touched.)
+
+## UPDATE 2026-07-30 — gap-fill wave, NO CHANGE (stays 15/20) — one HELD lead for next session
+Subagent lead, parent-reviewed. NOTHING wired (primary source blocked / not a clean null).
+- **ecommerce.dtc → HELD LEAD (mirror-only, ready to wire).** OAR **847-025-0000(2)(d)**: a cross-state-lines
+  physician "shall refrain from writing prescriptions for medication resulting only from a sale or consultation
+  over the Internet" (+ (2)(a) establish physician-patient relationship, (2)(b) objective clinical judgment).
+  That IS a genuine internet/DTC-prescribing bar. BUT it was read ONLY on the public.law mirror — the official
+  SOS OARD (secure.sos.state.or.us/oard/) is bot-blocked ("Please Contact Us") and the query-string rule URL is
+  NOT archived on Wayback (CDX returned zero captures). Per the mirror-only rule, do NOT wire off public.law
+  alone. TO WIRE next session: pull OAR 847-025-0000 from the official SOS page (residential egress) OR the
+  Oregon Medical Board rules PDF, confirm (2)(d) verbatim + effective date, then green with a new key or_847_025.
+  CAVEAT: OAR 847-025 is the "Practice of Medicine Across State Lines" division — scoped to out-of-state
+  physicians, not general in-state telemedicine; note that scope when wiring.
+  RE-ATTEMPTED 2026-07-30 (parent): SOS OARD is hard-blocked for THIS stack too (viewSingleRule.action →
+  "Please Contact Us" wall; ruleVrsnRsn guess failed) and no Wayback capture exists. The official OMB
+  "Statement of Philosophy – Telemedicine" (oregon.gov/omb/board/Philosophy, adopted 2012, amended through Apr
+  2024) DOES restate the bar — "Treatment based solely on an online questionnaire without individualized review
+  and assessment does not constitute an acceptable standard of care" — which corroborates the rule is real, BUT
+  a Statement of Philosophy is NON-BINDING GUIDANCE, not a rule/statute, so it does NOT clear the greening bar
+  (same rule that rejects guidance-only consent). Still HELD until the binding OAR 847-025-0000(2)(d) text is
+  read on a non-blocked authoritative source (residential-egress SOS page, or an official OMB rules PDF).
+- **modality.audioOnly → stays RED.** Verified absent within OAR 847-025 (all 7 rules read), but that division
+  is cross-state-lines-scoped, so the absence is not a clean general verified-null. OR's general telemedicine
+  modality standard, if any, would live elsewhere (ORS 677.495–.535 / a different OMB division) — not yet read.

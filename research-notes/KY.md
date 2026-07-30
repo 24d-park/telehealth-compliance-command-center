@@ -63,3 +63,18 @@ Parent independently re-read both KY statute PDFs via pdf.js on apps.legislature
 - **relationship.inPerson (WIRED):** KRS 311.597(1)(e) verbatim — proper relationship requires identity verification + documented diagnosis + current medical record; "an electronic, on-line, or telephonic evaluation by questionnaire is inadequate for the initial evaluation ... or for any follow-up evaluation"; NO prior in-person exam mandated. [ky_311597]
 
 Still red (2): compounding.stateReg (201 KAR 2:076 / 2:370 — KAR PDF endpoints returned 404/HTML-wrapper, unreachable), ecommerce.dtc.
+
+
+## UPDATE 2026-07-30 — gap-fill wave, +1 field (18 -> 19/20)
+Subagent lead, parent-verified verbatim on the LIVE apps.legislature.ky.gov (LRC; body renders via
+main.innerText, headings-only in the a11y snapshot).
+- **compounding.stateReg -> WIRED (fullest by-number adoption on the board).** 201 KAR 2:076 Section 3
+  (Standards): "(1) All non-sterile compounded preparations shall be compounded pursuant to USP 795. (2) All
+  sterile compounded preparations shall be compounded pursuant to USP 797. (3) All preparation, compounding,
+  dispensing, and repackaging of radiopharmaceuticals shall be pursuant to USP 825. (4) All non-sterile or
+  sterile compounded preparations containing hazardous drugs shall be compounded pursuant to USP 800 ..." USP
+  795/797/800/825 ALL by number. Section 9 (Enforcement Discretion): the 2022 USP revisions of 795/797/800 are
+  enforced from 1/1/2026 (2014 USP 795 / 2008 USP 797 until then; 800 not enforced until 1/1/2026). Eff.
+  10-25-2023 (filed 9-12-2023). New key ky_2_076.
+### Still red (1): ecommerce.dtc (implied-only via the questionnaire-inadequacy standard in KRS 311.597 — no
+standalone dispenser questionnaire ban; left honest-red).

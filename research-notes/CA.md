@@ -107,3 +107,16 @@ All read verbatim in-browser on leginfo.legislature.ca.gov (clean, un-walled):
 - **pharmacy.csDispense** — Cal. Health & Safety Code §11200 read verbatim on leginfo: no CS Rx dispensed/refilled >6 months after date (a); Schedule III/IV capped at 5 refills / 120-day supply (b); Schedule II may not be refilled (c). [ca_11200]
 
 Still red: provider.telehealthReg — CA practices telehealth under an existing license (B&P §2290.5) and no separate telehealth registration was located, BUT the research pass did not exhaustively survey the entire Business & Professions Code, so this is left red rather than asserted as a verified null. ecommerce.website — no on-website display statute located (genuine null).
+
+
+## UPDATE 2026-07-30 — gap-fill wave, +1 field (18 -> 19/20)
+Subagent lead, parent-verified verbatim on leginfo.legislature.ca.gov.
+- **provider.telehealthReg -> WIRED (VERIFIED-NULL), reusing key ca_2052.** Full CA licensure is the exclusive
+  pathway; NO separate telehealth/out-of-state registration. Cal. B&P §2052(a): practicing/diagnosing/prescribing
+  in CA "without having at the time ... a valid, unrevoked, or unsuspended certificate as provided in this chapter
+  ... is guilty of a public offense." §2290.5 requires a telehealth "health care provider" be "licensed under this
+  division" and (e) "does not ... authorize the delivery of health care services ... not otherwise authorized by
+  law." Only out-of-state carve-out §2060 is consultation/education with a CA-licensed practitioner and bars direct
+  patient care/orders/primary diagnosis. B&P §2290.6 is NOT codified (leginfo returns no text); the prior note's
+  hypothesized "SB 1258 out-of-state telehealth registry" is an unrelated EV-charging bill. No new source key.
+### Still red (1): ecommerce.website (genuine null).

@@ -50,3 +50,23 @@ Subagent lead, parent-verified verbatim on nebraskalegislature.gov.
   (not a general practice standard). Too narrow to assert. Stays red.
 - ecommerce.dtc — no statutory questionnaire bar; likely in 172 NAC (Board of Medicine regs) which was
   unreachable this session. Honest hold.
+
+## UPDATE 2026-07-30 — gap-fill wave, +2 fields (16 -> 18/20) — Title 172 NAC cracked
+Subagent lead, parent-verified verbatim on the OFFICIAL rules.nebraska.gov API (live site was cert-blocked in
+prior passes; this session the API `chapter/GetByTitleId/101` loaded directly — effectiveDate 2024-06-02).
+The prior "FOLLOW-UP" (retrieve Title 172 NAC for the general practice standard) is now DONE.
+- **prescribing.inPersonRx + ecommerce.dtc → BOTH wired to 172 NAC Ch. 88 §009(F)** (Board of Medicine &
+  Surgery, Unprofessional Conduct). Verbatim: it is unprofessional conduct to provide "treatment or consultation
+  recommendations, including issuing a prescription, via electronic or other means, unless the physician has
+  obtained a history and physical evaluation of the patient adequate to establish diagnosis and identify
+  underlying conditions and contraindications ... and that arrangements exist to insure availability of the
+  physician or physician coverage for follow-up patient care." New key ne_172_88.
+  - inPersonRx: this is the GENERAL practice standard (NOT the Medicaid-scoped §71-8506 carve-out prior passes
+    correctly held too-narrow). NO literal in-person exam required — an adequate H&P (obtainable via telehealth)
+    suffices → telehealth-established prescribing permitted.
+  - dtc: prescribing electronically WITHOUT an adequate H&P is unprofessional conduct → functionally bars
+    questionnaire-only DTC prescribing. CAVEAT coded honestly: NE frames this as an H&P-adequacy requirement,
+    NOT a literal "online questionnaire" ban (Ch. 88 has zero occurrences of "questionnaire"/"online"/"telehealth").
+- Ch. 88 has NO standalone "telehealth" section — §009(F) is the single provision governing both fields.
+### Still red (2): prescribing.pdmp (§71-2454 universal reporting + permissive access — no query mandate),
+ecommerce.website (genuine absence).

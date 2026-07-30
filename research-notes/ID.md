@@ -35,3 +35,19 @@ Read verbatim on legislature.idaho.gov (Idaho Virtual Care Access Act, Title 54 
 - **modality.audioOnly (wired):** §54-5703(5) — "virtual care" is a technology-neutral umbrella ("synchronous and asynchronous ... telemedicine, telehealth, m-health, e-consults, e-visits, video visits, remote patient monitoring, and similar technologies"); audio-only is not excluded, so permitted at the standard of care. [id_virtualcare]
 
 Still red (3): prescribing.pdmp, pharmacy.csDispense, ecommerce.website.
+
+## UPDATE 2026-07-30 — gap-fill wave, +2 fields (17 -> 19/20) — one section closed both
+Subagent lead, parent-verified verbatim on legislature.idaho.gov. Idaho Code §37-2722 (Uniform Controlled
+Substances) carries BOTH remaining substantive reds:
+- **pharmacy.csDispense → WIRED.** §37-2722(b): Sch II "Be dispensed only pursuant to a valid prescription drug
+  order, except when dispensed directly by a prescriber" + "Not be refilled"; §37-2722(c): Sch III/IV "Not be
+  filled or refilled more than six (6) months after the date thereof or be refilled more than five (5) times."
+- **prescribing.pdmp → WIRED (genuine mandatory query).** §37-2722(f): "Prior to issuing to a patient a
+  prescription for outpatient use for an opioid analgesic or benzodiazepine listed in schedule II, III, or IV,
+  the prescriber or the prescriber's delegate shall review the patient's prescription drug history for the
+  preceding twelve (12) months from the prescription drug monitoring program." Exceptions: inpatient,
+  emergency/ambulance, hospice, skilled-nursing, or a ≤3-day-supply Rx. A real "shall review before prescribing"
+  mandate (like MT/OK/DC), NOT the voluntary-access pattern.
+- One new key id_37_2722 covers both. Note: §37-2731 (formerly the Sch II/refill section) was repurposed to a
+  labeling rule; the dispensing content consolidated into §37-2722 (am. 2026 ch.90).
+### Still red (1): ecommerce.website (no on-website-display mandate — genuine absence).

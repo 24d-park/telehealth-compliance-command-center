@@ -27,3 +27,22 @@
 ## FOLLOW-UP
 - Resolve compounding.stateReg by OCR-reading CSR 15-01 (readfile.aspx PDF) to nail the USP-by-number vs. general-reference distinction — WV is one field away from a very complete 15.
 - Several Board of Pharmacy CSRs (15-01, 15-06, 15-15, 15-19) now carry 7/1/2026 effective dates — re-confirm on next pass.
+
+
+## UPDATE 2026-07-30 — gap-fill wave, +1 field (18 -> 19/20)
+Subagent located the correct primary source (15 CSR 1, eff. 7/1/2026, DocId 58920) but its in-browser pdf.js
+was CSP-blocked; PARENT completed the extraction by navigating to the live SOS PDF first (same-origin) then
+fetching the ArrayBuffer and running pdf.js — clean 40-pp extract.
+- **compounding.stateReg -> WIRED (USP by number, stronger than OK/AZ partials).** WV Legislative Rule
+  15 CSR 1 §12.3 (Board of Pharmacy, Sterile Pharmaceutical Products): the compounding environment "shall ...
+  meet all the following standards of: 12.3.1. The 2023 United States Pharmacopeia (USP) Chapter 797
+  Pharmaceutical Compounding – Sterile Preparations; 12.3.2. The 2023 United States Pharmacopeia (USP) Chapter
+  800 Hazardous Drugs ..." Nonsterile compounding references USP 795 by number (§2.1.9, incl. 795 BUD). So
+  USP 795 + 797 + 800 all adopted BY NUMBER (2023 edition). Eff. 7/1/2026; auth. W. Va. Code §30-5-7 (HB 4265).
+  New key wv_15csr1.
+- **ACCESS TECHNIQUE BANKED:** apps.sos.wv.gov CSR PDFs (readfile.aspx?DocId=NNNNN&Format=PDF) ARE reachable
+  live in this browser stack — navigate to the PDF URL first (loads in the viewer, makes you same-origin), then
+  fetch(url).arrayBuffer() + injected pdf.js. The SOS FlateDecode streams that defeat naive DecompressionStream
+  extraction are handled fine by pdf.js. Not on Wayback ("has not archived that URL"), so the live same-origin
+  route is the one that works.
+### Still red (1): ecommerce.website (no on-website-display mandate — genuine absence).

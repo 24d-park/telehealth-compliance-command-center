@@ -59,3 +59,17 @@ Parent-worked in-browser on revisor.mn.gov.
   language. MN telehealth consent, if any, lives in the excluded insurance-coverage Telehealth Act §62A.673.
   Genuine absence — stays red (matches the insurance-vs-practice exclusion rule).
 ### Still red (4): relationship.consent, prescribing.inPersonRx, ecommerce.website, ecommerce.dtc.
+
+## UPDATE 2026-07-30 — gap-fill wave, +1 field (16 -> 17/20)
+Subagent lead, parent-verified verbatim on revisor.mn.gov.
+- **prescribing.inPersonRx → WIRED (reused mn_147033).** Minn. Stat. §147.033 subd. 2-3: "A physician-patient
+  relationship may be established through telehealth" + "shall be held to the same standards of practice and
+  conduct as ... for in-person health care services." MN imposes NO in-person-exam-before-prescribing mandate.
+  Confirmed by full reads of §147.091 (Grounds for Discipline — no questionnaire/in-person clause) and Minn. R.
+  ch. 6800 (no in-person-before-Rx clause); §152.11 is CS-form-only. Same greenable pattern as VT/DE/AK.
+### Confirmed HOLD (stays red)
+- **ecommerce.dtc** — the ONLY "solely by use of an online questionnaire" bar in MN law is Minn. Stat.
+  §145.713 subd. 4(c)(iii), which is scoped to OPHTHALMIC GOODS (contact lenses / eyeglasses) prescribed by
+  optometrists/physicians — NOT a general drug DTC bar. §147.081/§147.091/R.6800 contain no general
+  questionnaire-only prohibition. Honest absence for the general case — do NOT green off the ophthalmic statute.
+### Still red (3): relationship.consent, ecommerce.website, ecommerce.dtc.

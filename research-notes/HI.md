@@ -72,3 +72,19 @@ Read via Wayback id_ captures of capitol.hawaii.gov (Justia + live site Cloudfla
 - pharmacy.nonresident / ecommerce.onlinePharmacy — HRS ch. 461 has no nonresident/internet-pharmacy provision
   (§461-14 permits are "within the State" only). HAR 16-95 (Board of Pharmacy rules) NOT retrieved this session
   — flagged for rule-level re-check before final sign-off. Honest holds.
+
+## UPDATE 2026-07-30 — gap-fill wave, +1 field (15 -> 16/20) + CORRECTION
+Subagent lead, parent-verified verbatim via Wayback id_ capture (2011-09-30) of capitol.hawaii.gov.
+- **CORRECTION to the 2026-07-29 note:** ch. 461 DOES carry an out-of-state pharmacy permit — the prior pass
+  only read §461-14 (in-state) and missed **§461-15(a)(7)**. The permit obligation lives there, not §461-14.
+- **pharmacy.nonresident → WIRED.** HRS **§461-15(a)(7)** ("Miscellaneous permits"): it is unlawful "For any
+  out-of-state pharmacy or entity engaging in the practice of pharmacy, in any manner to distribute, ship, mail,
+  or deliver prescription drugs or devices into the State without first obtaining a permit from the board";
+  applicant must submit verification of "a valid unexpired license, permit, or registration in good standing" in
+  its home state and employ a registered pharmacist. History tail: [am L 2000 c 83; am L 2002 c 164]. NEW key
+  `hi_461_15`. NOTE: HI's term of art is "out-of-state pharmacy" — there is NO separate "nonresident" definition.
+- **ecommerce.onlinePharmacy → STAYS RED (honest absence, confirmed not a hold).** Subagent full-text-searched
+  HRS ch. 461 + the compiled HAR 16-95 (58 pp via pdf.js): "internet"/"online"/"web" = ZERO hits. HI regulates
+  online sellers ONLY through the general §461-15(a)(7) out-of-state permit; there is no internet-specific law.
+  This is a genuine null, NOT an access failure — do not green it (contrast VT §16.1(b) which expressly names
+  "pharmacies operating by means of the Internet").

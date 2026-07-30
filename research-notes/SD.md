@@ -37,3 +37,19 @@ Telehealth practice standard = **SDCL ch. 34-52** (SL 2019 ch 156, amended throu
 - **provider.telehealthReg (wired):** SDCL §34-52-2 read verbatim on sdlegislature.gov — telehealth providers "shall be (1) Fully licensed to practice in the state ... and (2) Subject to any rule adopted by the applicable South Dakota licensing body." Full SD licensure; no separate registration. [sd_telehealth]
 
 Still red (4), all honest: modality.audioOnly (§34-52-1(5) enumerates "interactive audio WITH store and forward," NOT standalone audio-only — not a clean permit), prescribing.pdmp (§34-20E-11 expressly makes the query non-mandatory), pharmacy.csDispense, ecommerce.website.
+
+## UPDATE 2026-07-30 — gap-fill wave, +1 field (16 -> 17/20)
+Subagent lead, parent-verified verbatim on sdlegislature.gov.
+- **pharmacy.csDispense → WIRED.** SDCL §34-20B-29: "Any person who prescribes, manufactures, distributes, or
+  dispenses any controlled drug or substance within this state ... shall obtain a registration issued by the
+  department according to the rules promulgated under this chapter." Corroborated by §34-20B-37: "Practitioners
+  shall be registered to dispense substances in Schedules II through IV if they are authorized to dispense under
+  the law of this state." Registration-gated CS dispensing (same shape as AK's wired csDispense). New key
+  sd_3420b_29. Source SL 1970 ch 229, amended SL 2004 ch 229.
+- **IMPORTANT REPEAL NOTE:** the Schedule II written-Rx / no-refill / fill-limit sections §§34-20B-70.1–80 that a
+  csDispense field would ideally cite were REPEALED by SL 2016 ch 138 §§23-33 (confirmed: §34-20B-70.1 renders
+  "Repealed"). Those refill limits now live in SD ADMIN RULES (ARSD), not ch. 34-20B. So the registration gate
+  (§34-20B-29/37) is the surviving section-level statutory CS-dispensing mandate — do NOT re-hunt the repealed
+  Sch II sections next session.
+### Still red (3), all honest: modality.audioOnly (not a clean standalone permit), prescribing.pdmp (§34-20E-11
+express non-mandatory disclaimer), ecommerce.website (§36-11-36 premises-display, not website).

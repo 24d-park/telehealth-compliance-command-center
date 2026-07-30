@@ -116,3 +116,20 @@ Access facts confirmed this pass:
 - **ecommerce.website** — no on-website license-display mandate located (genuine absence, consistent with ~48 states).
 
 FOLLOW-UP: (1) 856 IAC 3 compounding via an IAC-specific Wayback capture or the archived Title on in.gov/lsa; (2) IC 35-48 CS-dispensing duties from the archived Title_35.html for pharmacy.csDispense.
+
+
+## UPDATE 2026-07-30 — gap-fill wave, +1 field (16 -> 17/20)
+Subagent lead, parent-verified verbatim via Wayback id_ of the official iga.in.gov/ic/2022/Title_35.html.
+- **pharmacy.csDispense -> WIRED.** Ind. Code §35-48-3-9 (Prescriptions): (a) "no controlled substance in
+  schedule II may be dispensed without the written or electronic prescription of a practitioner" (48-hr
+  emergency / practitioner-direct exceptions); (b) "No prescription for a schedule II substance may be refilled";
+  (c) Sch III/IV "shall not be filled or refilled more than six (6) months after the date thereof or be refilled
+  more than five (5) times." Added Acts 1976 P.L.148; last am. P.L.114-2013. New key in_35_48_3_9. NOTE the
+  hinted IC 35-48-7 is NOT operative — the live section is 35-48-3-9.
+### HELD RED: compounding.stateReg — Indiana Title 25 (pharmacy statute) does NOT adopt USP 795/797/800 by
+number (IC 25-26-13-4.4 only *authorizes* the Board to make compounding rules; full keyword scan of archived
+Title 25 = zero USP/795/797 hits). The actual USP adoption (if any) lives in 856 IAC, which is UNREACHABLE:
+iga.in.gov IAC is a React SPA live and Wayback has ZERO captures of the 856 IAC pages (CDX empty); Justia
+regs Cloudflare-walled with no archive. Honest access-block, not an absence. FOLLOW-UP: 856 IAC 1
+(sterile-compounding) via a non-blocked network / fresh Wayback save.
+### Still red (1 substantive + website): compounding (access-block), ecommerce.website (absence).

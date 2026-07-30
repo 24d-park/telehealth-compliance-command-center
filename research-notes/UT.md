@@ -46,3 +46,15 @@ actual charge" (R156-17b-603); compounding adopts **USP 795/797/800/825** (R156-
 - **provider.telehealthReg (now wired):** Utah Code 26B-4-704 authorizes telehealth by a provider holding the applicable Title 58 license (58-67-301 medicine); NO separate telehealth registration or telehealth-only credential exists — full Utah licensure is the pathway. [src: ut_teleact]
 
 Remaining red (4) are genuine: modality.audioOnly (26B-4-704 "synchronous interaction" requires two-way audio AND video — audio-only not authorized), relationship.consent (no dedicated telehealth informed-consent statute, only a credentials-disclosure duty), ecommerce.website/dtc (DOPL rule-level, not located).
+
+## UPDATE 2026-07-30 — gap-fill, +1 field (16 -> 17/20) — reuse-existing-source win
+Parent, re-verified verbatim on le.utah.gov.
+- **ecommerce.dtc → WIRED, reusing ut_teleact.** Utah Code 26B-4-704(4): "A provider offering telemedicine
+  services may not diagnose a patient, provide treatment, or prescribe a prescription drug based solely on ...
+  (a) an online questionnaire; (b) an email message; or (c) a patient-generated medical history." This is the
+  SAME subsection already cited for prescribing.inPersonRx — a textbook questionnaire-only DTC ban that a prior
+  pass had left red despite the source already being in SOURCES. Lesson (matches the skill's re-read-existing-
+  source discipline): before hunting a new host for a DTC red, check whether the state's already-wired telehealth
+  section carries the questionnaire clause. No new key.
+### Still red (3): modality.audioOnly (needs A+V), relationship.consent (no statute, credentials-disclosure only),
+ecommerce.website (DOPL rule-level / genuine absence).

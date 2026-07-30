@@ -103,3 +103,21 @@ Newly wired:
 2. **ecommerce.dtc stays RED.** 456.47(2)(b) affirmatively states a telehealth provider "is not required to research a patient's medical history or conduct a physical examination" — FL does NOT ban questionnaire-only prescribing. The old Board of Medicine rules 64B8-9.014 (Repealed 10-26-14) and 64B8-9.0141 (Repealed 10-14-19) are both gone. No positive requirement to green → honest red.
 
 Still red (3): modality.audioOnly (not addressed), relationship.consent (no active F.A.C. rule — 64B8-9.0141 repealed; 456.47 has no consent clause), ecommerce.dtc (no ban exists). These are genuine absences, not access failures.
+
+
+## UPDATE 2026-07-30 — gap-fill wave attempted, NO change (stays 17/20) + an important currency CORRECTION
+Subagent + parent, verified verbatim on leg.state.fl.us (year-by-year) and flrules.org. All three targeted reds
+confirmed HONEST-RED against the binding practice statute Fla. Stat. §456.47 (NOT insurance):
+- **modality.audioOnly — CORRECTION BANKED.** The historical audio-only EXCLUSION was REPEALED in 2023. §456.47(1)(a)
+  read "does not include audio-only telephone calls, e-mail messages, or facsimile transmissions" in 2020/2021/2022,
+  but the 2023-2025 text reads "does not include e-mail messages or facsimile transmissions" — "audio-only telephone
+  calls" was struck (s. 7, ch. 2023-21). So audio-only is now NEITHER mandated NOR excluded → no greenable
+  requirement either way. Confirmed the FL audioOnly field was already src:null (NOT a stale "excluded" green), so no
+  correction needed — it correctly stays red. Lesson: a field greened as "audio-only excluded" in another state
+  should be re-checked for a post-2022 repeal before trusting it.
+- **relationship.consent — RED.** §456.47 has NO consent provision (read subsections (1)-(7)); the only rule that
+  carried telemedicine consent, Board of Medicine 64B8-9.0141, was REPEALED 10/14/2019 (confirmed on flrules.org).
+- **ecommerce.dtc — RED.** §456.47(2)(b) AFFIRMATIVELY removes any exam/history prerequisite ("not required to
+  research a patient's medical history or conduct a physical examination ... before using telehealth"); the old
+  questionnaire-only bar was in the repealed 64B8-9.0141. §458.3265 is the pain-clinics statute, not a DTC ban.
+### FL ceiling: these 3 fields are genuine post-repeal gaps, not access failures. Still red: audioOnly, consent, dtc.

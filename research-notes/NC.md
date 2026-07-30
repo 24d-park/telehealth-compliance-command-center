@@ -55,3 +55,26 @@ Still red: telehealthReg (no registry; §90-18(c)(11) exceptions only), modality
 
 ---
 > **DISCLAIMER:** Operational research tool; **not legal advice.** Verify with counsel and the applicable board before acting.
+
+
+## UPDATE 2026-07-30 — gap-fill wave, +1 field (16 -> 17/20)
+Subagent lead, parent-verified verbatim via Wayback id_ capture (2019-09-25) of the official OAH page (live
+reports.oah.state.nc.us ERR_BLOCKED_BY_CLIENT / 504-timeout).
+- **compounding.stateReg -> WIRED.** 21 NCAC 46 .2801 (Compounding): (d) "The preparation, labeling, and
+  dispensing of non-sterile compounded drug preparations shall comply with the standards established by United
+  States Pharmacopeia chapter <795> ..."; (e) "... sterile compounded preparations shall comply with standards
+  established by United States Pharmacopeia chapter <797> ..."; (i) the pharmacist-manager "shall comply with
+  all quality assurance requirements and standards of United States Pharmacopeia chapters <795> and <797>." USP
+  <795> (nonsterile) + <797> (sterile) adopted BY NUMBER, incl. subsequent amendments/editions. CAVEAT: USP
+  <800> (hazardous) NOT named in .2801 (an honest 795/797 partial; .2802 not read for a separate 800 adoption).
+  Auth. G.S. 90-85.6; 90-85.32. Eff. 10/1/1990; am. 1/1/2015. New key nc_46_2801.
+- **WIRING NOTE:** NC (like AL/CO/NY/LA) has a LATENT DUPLICATE NC block in STATE_OVERRIDES; the live block is
+  the LAST one (fullLicense=nc_statute). Field placed there after a first mis-placement in the dead block
+  (fullLicense=nc_9018). See skill pitfall.
+### HELD RED (honest, binding-source rule):
+- **prescribing.inPersonRx** — NCGS §90-106 (read verbatim, ncleg.gov) and §90-18 contain NO in-person-exam
+  prerequisite for telehealth prescribing. The only in-person-exam expectation is the NC Medical Board's
+  non-binding Position Statement (excluded per the primary-source bar). Stays red.
+- **modality.audioOnly** — no binding Chapter 90 / Board rule; audio-only appears only in excluded
+  insurance-parity / Medicaid contexts. Stays red.
+### Still red (3): inPersonRx (guidance-only), audioOnly (insurance-only), ecommerce.website (absence).

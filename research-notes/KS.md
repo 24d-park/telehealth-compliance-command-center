@@ -82,3 +82,25 @@ Tried to close the two K.A.R.-locked fields (compounding.stateReg = K.A.R. 68-13
 - **Historical kansas.gov/pharmacy** — CDX shows no pharmacy regs PDFs (only old INK board agendas).
 
 **Honest hold** (access-blocked, NOT a research gap): compounding.stateReg + prescribing.inPersonRx + ecommerce.website/dtc all live in the unreachable K.A.R. Do NOT guess the USP-adoption or telemedicine-prescribing text. FOLLOW-UP to close: obtain a CURRENT KS Board of Pharmacy "Pharmacy Act & Regulations" consolidated PDF (the 2014 book the subagent found is stale) or a current Board of Healing Arts Art.100 rulebook PDF from a direct download link, or retry sos.ks.gov when the CloudFront block lifts / from a residential-proxy session.
+
+
+## UPDATE 2026-07-30 — gap-fill RETRY (prior CloudFront block), NO change (stays 14/20)
+Subagent + parent. Fresh working route found for KS STATUTES (ksrevisor.gov loads clean), but the two remaining
+substantive fields resolve to excluded/unreadable sources:
+- **prescribing.inPersonRx + relationship.consent — HELD RED (excluded insurance title).** Both live ONLY in
+  the Kansas Telemedicine Act, K.S.A. 40-2,212, which sits in **Chapter 40 (Insurance)** — excluded per the
+  project rule (same basis as the prior 40-2,211 verified-null telehealthReg). Moreover 40-2,212(b) expressly
+  says "Telemedicine may be used to establish a valid provider-patient relationship" — so there is NO in-person
+  mandate to wire anyway. 40-2,212(d)(2) is a consent-triggered 3-business-day PCP-report duty (care-coordination,
+  not a blanket informed-consent mandate), and still in the excluded insurance title. Stay red.
+- **compounding.stateReg — HELD (scanned-image near-miss).** The correct reg IS located: K.A.R. 68-13-2/3/4
+  (Board of Pharmacy compounding article), archived at
+  web.archive.org/web/20180413154211id_/http://pharmacy.ks.gov/docs/default-source/statues-regulations/kar-68-13-2-68-13-3-and-68-13-4.pdf
+  (31 pp.). BUT the PDF is a **scanned image with NO text layer** — pdf.js extracted 0 characters across all 31
+  pages. Reading the verbatim USP 795/797/800 chapter numbers would require OCR/vision transcription. sos.ks.gov
+  (the live KAR host) remains CloudFront-403; pharmacy.ks.gov live is bot-blocked. Per the primary-source rule,
+  NOT greened from a blank text layer. FOLLOW-UP: OCR/vision-read KAR 68-13-3/68-13-4 pages from the archived PDF
+  to capture the USP chapter references (a bounded vision task — the source is in hand).
+### Kansas ceiling: 14/20. Fillable-but-held: compounding (scanned image, needs OCR). The rest are genuine
+excluded-insurance-title (inPersonRx/consent/telehealthReg) or documented absences (website/dtc) or voluntary
+(pdmp 65-1685(c)).

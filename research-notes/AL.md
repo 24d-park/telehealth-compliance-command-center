@@ -70,3 +70,22 @@ Still red (honest): pharmacy.csDispense (680-X-3 chapter-level), ecommerce.websi
 ## UPDATE 2026-07-22 — gap-fill attempted, NO change (stays 18/20)
 
 Target was pharmacy.csDispense (AAC 680-X-3 controlled-substance dispensing). **admincode.legislature.state.al.us did NOT hydrate this session** — fetch returns only "You need to enable JavaScript to run this app" and navigate timed out with an empty DOM. NOTE: the 680-X-2 pharmacy rules DID hydrate in the 2026-07-21 session, so this is an intermittent SPA-hydration issue, not a permanent block. ecommerce.website/dtc remain genuine gaps (no verbatim on-website-display or questionnaire-ban rule located; dtc is implied only by the relationship/legitimate-purpose standard). Left honest-red. FOLLOW-UP: retry AAC 680-X-3 via navigate when the SPA hydrates.
+
+## UPDATE 2026-07-30 — gap-fill wave, +1 field (18 -> 19/20)
+Subagent lead, parent-verified verbatim. csDispense closed NOT via the AAC 680-X-3 admin rule (still SPA-blocked)
+but via the STATUTE:
+- **pharmacy.csDispense → WIRED.** Ala. Code §20-2-58 (Alabama Uniform Controlled Substances Act): (a) "A
+  pharmacist may dispense directly a controlled substance in Schedule II only pursuant to a written prescription
+  signed by the practitioner"; (e) a Sch III/IV prescription drug "shall not be filled or refilled more than six
+  months after the date thereof or be refilled more than five times, unless renewed by the practitioner." Read
+  verbatim via Wayback id_ capture of Justia's 2006 Alabama Code (live Justia/ALISON Cloudflare/JS-gated; text
+  stable since the Act 98-617 (1998) amendment per the embedded history line). New key al_20_2_58.
+- **WIRING PITFALL BANKED:** STATE_OVERRIDES has a LATENT DUPLICATE `AL:{` block — an older 680-X-only block
+  (pharmacy.nonresident=al_680x207 etc.) that is SHADOWED by the later, live telehealth AL block
+  (pharmacy.nonresident=al_pharmacy etc.). JS keeps the LAST block, so edits to the earlier one are dead code and
+  render red with a silent parse-free failure. The csDispense field was (after a first mis-placement) put into
+  the LIVE block. Next editor: always confirm which duplicate block DATA actually reflects (query
+  DATA.AL.pharmacy.nonresident.src → 'al_pharmacy' = live block) before wiring an AL field. Consider deleting the
+  dead duplicate block in a cleanup pass.
+### Still red (1): ecommerce.website (genuine absence). ecommerce.dtc remains implied-only (relationship/
+legitimate-purpose standard, no verbatim questionnaire ban) — left red honestly.

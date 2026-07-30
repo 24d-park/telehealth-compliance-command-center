@@ -54,3 +54,17 @@ Parent-worked in-browser on cga.ct.gov (chapter 368a).
   cleanly this session. Left RED rather than overreach — re-verify from the 2026 Supplement next session.
 - ecommerce.website / ecommerce.dtc — genuine absences (no CT on-website-display or questionnaire-ban statute
   located).
+
+
+## UPDATE 2026-07-30 — gap-fill wave, +1 field (17 -> 18/20) — closes a prior HELD lead
+Subagent lead, parent-verified verbatim on cga.ct.gov. Prior session HELD this red because it looked for §19a-906
+in Chapter 368a and the 2026 Supplement wouldn't load; the CORRECT location is **Chapter 368ll** (Miscellaneous
+Provisions), and it loads fine.
+- **provider.telehealthReg -> WIRED (VERIFIED-NULL), reusing key ct_19a906.** Conn. Gen. Stat. §19a-906(a)(12):
+  a "Telehealth provider" means (A) "any health care provider licensed pursuant to title 20 and any pharmacist
+  licensed by the Department of Consumer Protection pursuant to title 20 ..." The only out-of-state pathway, branch
+  (B), was time-limited "on or before June 30, 2025" (now EXPIRED), and the separate §19a-906a out-of-state-order
+  pathway is "repealed, effective June 4, 2024." So as of 2026 only title-20 CT-licensed providers qualify —
+  licensure is EXCLUSIVE. This exceeds the prior §20-9(d) "license required" hold basis (which alone would have
+  been overreach): the enumeration + the sunset/repeal together prove exclusivity. No new source key.
+### Still red (2): ecommerce.website, ecommerce.dtc (genuine absences).

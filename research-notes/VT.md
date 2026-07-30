@@ -42,3 +42,27 @@ Subagent lead, parent-verified verbatim on legislature.vermont.gov.
   biennial drug-outlet registration; §2061(b)(6) lists Compounding as a licensure class) but the USP-adoption +
   nonresident specifics live in OPR admin rules unreachable this session. Honest access holds. ecommerce.website
   also red (no on-website-display mandate located).
+
+## UPDATE 2026-07-30 — gap-fill wave, +4 fields (15 -> 19/20) — the OPR follow-up cracked
+Subagent lead, parent-verified verbatim. The prior "FOLLOW-UP" (retry OPR rules via Wayback) worked: the
+live sos.vermont.gov PDF is CloudFront-403, but the **Wayback `id_` capture (2023-05-11) of the official OPR
+rules PDF** (`5-rx-rules-2015-final-adopted-august-24-2015.pdf`) extracts cleanly via pdf.js (89 pp, 237K chars).
+Navigate to the archive.org id_ URL FIRST (same-origin fetch), inject pdf.js from cdnjs, then keyword-search.
+- **pharmacy.nonresident** — Admin Rules of the Bd of Pharmacy **Part 16 §§16.1–16.2**: "Non-resident pharmacy
+  means a drug outlet or business located outside of Vermont which dispenses ... and which mails, ships, or
+  delivers such prescription drugs or devices into this state"; §16.2 initial licensure requires "evidence that
+  the applicant holds a pharmacy license, registration, or permit issued by the state in which the pharmacy is
+  located that is valid and in good standing." NEW key `vt_rxrules`.
+- **ecommerce.onlinePharmacy** — §16.1(b): "Non-resident pharmacies include pharmacies operating by means of the
+  Internet." No standalone internet permit; online pharmacies folded into Part 16. Reused `vt_rxrules`.
+- **compounding.stateReg** — **§13.22 (USP 797 Compliance)**: "All pharmacies, either in state or out of state,
+  dispensing or distributing compounded sterile products as defined by USP 797 to Vermont patients ... shall meet
+  all requirements of USP 797," + must file proof of compliance. Reused `vt_rxrules`. **IMPORTANT: VT adopts USP
+  <797> ONLY — USP 795 and 800 are verified ABSENT** (full-text search: "795"/"800" = 0 hits). Note the strength
+  honestly: 797 sterile-only, not the 795/797/800 trifecta some states adopt.
+- **pharmacy.csDispense** — **18 V.S.A. §4215(a)/(b)(3)** (readable on legislature.vermont.gov): pharmacist may
+  sell/dispense regulated drugs upon written/oral Rx, no refill unless authorized; Sch II Rx without future fill
+  date not filled >30 days after issued. NEW key `vt_4215`.
+- Rules are the 2015-adopted set (eff. 9/15/2015) — flagged in SOURCES date to re-verify no post-2015 amendment,
+  esp. re: USP 800 which VT had not adopted as of this text.
+### Remaining red: ecommerce.website (genuine absence — no on-website-display mandate).
